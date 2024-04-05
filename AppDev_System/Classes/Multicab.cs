@@ -29,7 +29,7 @@ namespace AppDev_System
             {
                 this.seatsAvailable = seatsAvailable;
             }
-            routes = new Routes(barangay, multicab_id, cost);
+           // routes = new Routes(barangay, multicab_id, cost);
         }
     }
 }

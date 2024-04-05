@@ -36,9 +36,10 @@
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -98,7 +99,7 @@
             this.SubmitButtonRoute.Image = null;
             this.SubmitButtonRoute.ImageSize = new System.Drawing.Size(20, 20);
             this.SubmitButtonRoute.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.SubmitButtonRoute.Location = new System.Drawing.Point(12, 397);
+            this.SubmitButtonRoute.Location = new System.Drawing.Point(12, 330);
             this.SubmitButtonRoute.Name = "SubmitButtonRoute";
             this.SubmitButtonRoute.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.SubmitButtonRoute.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -128,7 +129,9 @@
             this.gunaTextBox2.PasswordChar = '\0';
             this.gunaTextBox2.Size = new System.Drawing.Size(376, 35);
             this.gunaTextBox2.TabIndex = 5;
-            this.gunaTextBox2.Text = "ID";
+            this.gunaTextBox2.Text = "Input Distance";
+            this.gunaTextBox2.Enter += new System.EventHandler(this.gunaTextBox2_Enter);
+            this.gunaTextBox2.Leave += new System.EventHandler(this.gunaTextBox2_Leave);
             // 
             // gunaLabel3
             // 
@@ -137,27 +140,19 @@
             this.gunaLabel3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel3.Location = new System.Drawing.Point(12, 115);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(109, 23);
+            this.gunaLabel3.Size = new System.Drawing.Size(142, 23);
             this.gunaLabel3.TabIndex = 4;
-            this.gunaLabel3.Text = "Multicab ID";
+            this.gunaLabel3.Text = "Distance (kms)";
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.gunaLabel4.Location = new System.Drawing.Point(12, 253);
+            this.gunaLabel4.Location = new System.Drawing.Point(88, 408);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(146, 23);
+            this.gunaLabel4.Size = new System.Drawing.Size(0, 23);
             this.gunaLabel4.TabIndex = 6;
-            this.gunaLabel4.Text = "Departure Date";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 279);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(302, 22);
-            this.dateTimePicker1.TabIndex = 7;
             // 
             // gunaTextBox3
             // 
@@ -175,6 +170,8 @@
             this.gunaTextBox3.Size = new System.Drawing.Size(376, 35);
             this.gunaTextBox3.TabIndex = 9;
             this.gunaTextBox3.Text = "In Pesos";
+            this.gunaTextBox3.Enter += new System.EventHandler(this.gunaTextBox3_Enter);
+            this.gunaTextBox3.Leave += new System.EventHandler(this.gunaTextBox3_Leave);
             // 
             // gunaLabel5
             // 
@@ -183,18 +180,49 @@
             this.gunaLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel5.Location = new System.Drawing.Point(12, 179);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(51, 23);
+            this.gunaLabel5.Size = new System.Drawing.Size(125, 23);
             this.gunaLabel5.TabIndex = 8;
-            this.gunaLabel5.Text = "Cost";
+            this.gunaLabel5.Text = "Regular Fare";
+            // 
+            // gunaTextBox4
+            // 
+            this.gunaTextBox4.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox4.BorderColor = System.Drawing.Color.Silver;
+            this.gunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaTextBox4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gunaTextBox4.Location = new System.Drawing.Point(12, 272);
+            this.gunaTextBox4.Name = "gunaTextBox4";
+            this.gunaTextBox4.PasswordChar = '\0';
+            this.gunaTextBox4.Size = new System.Drawing.Size(376, 35);
+            this.gunaTextBox4.TabIndex = 11;
+            this.gunaTextBox4.Text = "In Pesos";
+            this.gunaTextBox4.Enter += new System.EventHandler(this.gunaTextBox4_Enter);
+            this.gunaTextBox4.Leave += new System.EventHandler(this.gunaTextBox4_Leave);
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.gunaLabel6.Location = new System.Drawing.Point(12, 246);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(272, 23);
+            this.gunaLabel6.TabIndex = 10;
+            this.gunaLabel6.Text = "Student/Elderly/Disabled Fare";
             // 
             // AddRouteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 440);
+            this.ClientSize = new System.Drawing.Size(417, 377);
+            this.Controls.Add(this.gunaTextBox4);
+            this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.gunaTextBox3);
             this.Controls.Add(this.gunaLabel5);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.gunaTextBox2);
             this.Controls.Add(this.gunaLabel3);
@@ -219,8 +247,9 @@
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox4;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
     }
 }

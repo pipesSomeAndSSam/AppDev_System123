@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppDev_System.UserControls;
 using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -53,22 +54,24 @@ namespace AppDev_System
             {
                 MessageBox.Show("There was an Error");
             }
+            con.Close();
+
             return res;
         }
 
-        public Boolean insertRoute(string barangay, int multicab_id, int cost)
+        public Boolean insertRoute(string barangay_name, float distance, float regular_fare_new, float special_fare_new)
         {
             bool res = false;
             try
             {
                 con.Open();
-                string query = "insert into routes(barangay,multicab_id,cost) value('" + barangay + "','" + multicab_id + "','" + cost + "')";
+                string query = "insert into routes(barangay_name,distance,regular_fare_new,special_fare_new) value('" + barangay_name + "','" + distance + "','" + regular_fare_new + "','" + special_fare_new + "')";
                 MySqlCommand cmd = new MySqlCommand(query, con);
 
                 int i = cmd.ExecuteNonQuery();
                 if (i > -1)
                 {
-                    MessageBox.Show("Successfully registered");
+                    MessageBox.Show("Successful input in Database");
                 }
                 res = true;
             }
@@ -76,7 +79,43 @@ namespace AppDev_System
             {
                 MessageBox.Show("There was an Error");
             }
+            con.Close();
+
             return res;
+        }
+
+        public string get_total_numOfRoutes()
+        {
+            string numOfRoutes;
+
+            MySqlCommand cmd_routes = new MySqlCommand("select id,barangay_name,distance,regular_fare_new,special_fare_new,regular_fare_old,special_fare_old from routes ", con);
+
+            MySqlDataAdapter adapter_routes = new MySqlDataAdapter();
+            DataTable dt_routs = new DataTable();
+
+            adapter_routes.SelectCommand = cmd_routes;
+            dt_routs.Clear();
+            adapter_routes.Fill(dt_routs);
+
+            numOfRoutes = dt_routs.Rows.Count.ToString();
+            return numOfRoutes;
+        }
+
+        public string get_total_numOfUsers()
+        {
+            string numOfUsers;
+
+            MySqlCommand cmd_routes = new MySqlCommand("select id from users ", con);
+
+            MySqlDataAdapter adapter_users = new MySqlDataAdapter();
+            DataTable dt_users = new DataTable();
+
+            adapter_users.SelectCommand = cmd_routes;
+            //dt_users.Clear();
+            adapter_users.Fill(dt_users);
+
+            numOfUsers = dt_users.Rows.Count.ToString();
+            return numOfUsers;
         }
 
         

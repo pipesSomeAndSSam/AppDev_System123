@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppDev_System.UserControls;
+using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Crmf;
 
@@ -18,6 +20,7 @@ namespace AppDev_System
     {
         public string forms1Email;
 
+
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
 
 
@@ -26,6 +29,7 @@ namespace AppDev_System
         public Dashboard()
         {
             InitializeComponent();
+            userControl1_Dash1.BringToFront();
         }
 
         public void setforms1Email(string x)
@@ -72,18 +76,6 @@ namespace AppDev_System
             {
                 MessageBox.Show("Error");
             }
-
-            //GET NUMBER OF ROUTES
-            MySqlCommand cmd_routes = new MySqlCommand("select id,barangay,multicab_id,cost from routes ", con);
-
-            MySqlDataAdapter adapter_routes = new MySqlDataAdapter();
-            DataTable dt_routs = new DataTable();
-            
-            adapter_routes.SelectCommand = cmd_routes;
-            dt_routs.Clear();
-            adapter_routes.Fill(dt_routs);
-
-            gunaLabel8.Text = dt_routs.Rows.Count.ToString();
         }
 
         private void LOGOUTButt_Click(object sender, EventArgs e)
@@ -95,38 +87,19 @@ namespace AppDev_System
 
         private void MulticabsButton_Click(object sender, EventArgs e)                  //MUTICAB BUTTON
         {
-            Multicabs_forms multicabs_Forms = new Multicabs_forms();
-            multicabs_Forms.Show();
-            Visible=false;
-
-            /*
-            multicabPanel.Show();
-            dashboardPanel.Hide();
-            routesPanel.Hide();
-            */
+           
         }
 
-        private void RoutesButton_Click(object sender, EventArgs e)
+        private void RoutesButton_Click(object sender, EventArgs e)                  //ROUTES BUTTON
         {
-            routesPanel.Show();
-            //multicabPanel.Hide();
-            dashboardPanel.Hide();
-            
+            userControl_Routes1.BringToFront();
+          //  userControl1_Dash1.Hide();
         }
 
-        
-        private void DashboardButton_Click(object sender, EventArgs e)              //USELESS EVENT HANDLER
+        private void DashboardButton_Click(object sender, EventArgs e)                  //DASHBOARD BUTTON
         {
-            dashboardPanel.Show();
-           // multicabPanel.Hide();
-            routesPanel.Hide();
-        }
-        
-
-        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
-        {
-            AddRouteForm addroutefrm = new AddRouteForm();
-            addroutefrm.Show();
+            userControl1_Dash1.BringToFront();
+           // userControl_Routes1.Hide();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace AppDev_System.UserControls
 {
-    partial class Dashboard
+    partial class UserControl1_Dash
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,61 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1_Dash));
             this.dashboardPanel = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel25 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel6 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel22 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton8 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel23 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox6 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel7 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel24 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel19 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton7 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel20 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox5 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel5 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel21 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton6 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton4 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton5 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
-            this.routesPanel = new Guna.UI.WinForms.GunaPanel();
-            this.gunaDataGridView2 = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaLabel17 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel7 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.totalBookingsNum = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel22 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.label = new Guna.UI.WinForms.GunaLabel();
+            this.totalBookingsNum = new Guna.UI.WinForms.GunaLabel();
             this.dashboardPanel.SuspendLayout();
             this.gunaShadowPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox6)).BeginInit();
@@ -99,8 +92,6 @@
             this.gunaShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.gunaPanel2.SuspendLayout();
-            this.routesPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).BeginInit();
             this.gunaShadowPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.gunaShadowPanel5.SuspendLayout();
@@ -110,17 +101,16 @@
             // 
             // dashboardPanel
             // 
-            this.dashboardPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dashboardPanel.Controls.Add(this.gunaLabel25);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel6);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel4);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel3);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel2);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel1);
-            this.dashboardPanel.Controls.Add(this.routesPanel);
             this.dashboardPanel.Controls.Add(this.gunaLabel15);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel7);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel5);
+            this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dashboardPanel.Location = new System.Drawing.Point(0, 0);
             this.dashboardPanel.Name = "dashboardPanel";
             this.dashboardPanel.Size = new System.Drawing.Size(1570, 970);
@@ -145,7 +135,7 @@
             this.gunaShadowPanel6.Controls.Add(this.gunaLabel23);
             this.gunaShadowPanel6.Controls.Add(this.gunaPictureBox6);
             this.gunaShadowPanel6.Controls.Add(this.gunaPanel7);
-            this.gunaShadowPanel6.Location = new System.Drawing.Point(393, 348);
+            this.gunaShadowPanel6.Location = new System.Drawing.Point(429, 354);
             this.gunaShadowPanel6.Margin = new System.Windows.Forms.Padding(8);
             this.gunaShadowPanel6.Name = "gunaShadowPanel6";
             this.gunaShadowPanel6.Radius = 6;
@@ -155,17 +145,6 @@
             this.gunaShadowPanel6.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel6.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel6.TabIndex = 7;
-            // 
-            // gunaLabel22
-            // 
-            this.gunaLabel22.AutoSize = true;
-            this.gunaLabel22.BackColor = System.Drawing.Color.White;
-            this.gunaLabel22.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel22.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel22.Name = "gunaLabel22";
-            this.gunaLabel22.Size = new System.Drawing.Size(45, 54);
-            this.gunaLabel22.TabIndex = 4;
-            this.gunaLabel22.Text = "0";
             // 
             // gunaAdvenceButton8
             // 
@@ -242,12 +221,12 @@
             // gunaShadowPanel4
             // 
             this.gunaShadowPanel4.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel4.Controls.Add(this.gunaLabel19);
+            this.gunaShadowPanel4.Controls.Add(this.label);
             this.gunaShadowPanel4.Controls.Add(this.gunaAdvenceButton7);
             this.gunaShadowPanel4.Controls.Add(this.gunaLabel20);
             this.gunaShadowPanel4.Controls.Add(this.gunaPictureBox5);
             this.gunaShadowPanel4.Controls.Add(this.gunaPanel5);
-            this.gunaShadowPanel4.Location = new System.Drawing.Point(11, 348);
+            this.gunaShadowPanel4.Location = new System.Drawing.Point(47, 354);
             this.gunaShadowPanel4.Margin = new System.Windows.Forms.Padding(8);
             this.gunaShadowPanel4.Name = "gunaShadowPanel4";
             this.gunaShadowPanel4.Radius = 6;
@@ -257,17 +236,6 @@
             this.gunaShadowPanel4.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel4.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel4.TabIndex = 6;
-            // 
-            // gunaLabel19
-            // 
-            this.gunaLabel19.AutoSize = true;
-            this.gunaLabel19.BackColor = System.Drawing.Color.White;
-            this.gunaLabel19.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel19.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel19.Name = "gunaLabel19";
-            this.gunaLabel19.Size = new System.Drawing.Size(45, 54);
-            this.gunaLabel19.TabIndex = 4;
-            this.gunaLabel19.Text = "0";
             // 
             // gunaAdvenceButton7
             // 
@@ -349,7 +317,7 @@
             this.gunaShadowPanel3.Controls.Add(this.gunaLabel13);
             this.gunaShadowPanel3.Controls.Add(this.gunaPictureBox4);
             this.gunaShadowPanel3.Controls.Add(this.gunaPanel4);
-            this.gunaShadowPanel3.Location = new System.Drawing.Point(1157, 75);
+            this.gunaShadowPanel3.Location = new System.Drawing.Point(1193, 81);
             this.gunaShadowPanel3.Margin = new System.Windows.Forms.Padding(8);
             this.gunaShadowPanel3.Name = "gunaShadowPanel3";
             this.gunaShadowPanel3.Radius = 6;
@@ -359,17 +327,6 @@
             this.gunaShadowPanel3.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel3.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel3.TabIndex = 8;
-            // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.BackColor = System.Drawing.Color.White;
-            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(45, 54);
-            this.gunaLabel11.TabIndex = 4;
-            this.gunaLabel11.Text = "0";
             // 
             // gunaAdvenceButton6
             // 
@@ -416,9 +373,9 @@
             this.gunaPictureBox4.BackColor = System.Drawing.Color.White;
             this.gunaPictureBox4.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox4.Image = global::AppDev_System.Properties.Resources.grids_256x256;
-            this.gunaPictureBox4.Location = new System.Drawing.Point(295, 18);
+            this.gunaPictureBox4.Location = new System.Drawing.Point(291, 18);
             this.gunaPictureBox4.Name = "gunaPictureBox4";
-            this.gunaPictureBox4.Size = new System.Drawing.Size(44, 44);
+            this.gunaPictureBox4.Size = new System.Drawing.Size(48, 44);
             this.gunaPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox4.TabIndex = 1;
             this.gunaPictureBox4.TabStop = false;
@@ -451,7 +408,7 @@
             this.gunaShadowPanel2.Controls.Add(this.gunaLabel9);
             this.gunaShadowPanel2.Controls.Add(this.gunaPictureBox3);
             this.gunaShadowPanel2.Controls.Add(this.gunaPanel3);
-            this.gunaShadowPanel2.Location = new System.Drawing.Point(775, 75);
+            this.gunaShadowPanel2.Location = new System.Drawing.Point(811, 81);
             this.gunaShadowPanel2.Margin = new System.Windows.Forms.Padding(8);
             this.gunaShadowPanel2.Name = "gunaShadowPanel2";
             this.gunaShadowPanel2.Radius = 6;
@@ -461,17 +418,6 @@
             this.gunaShadowPanel2.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel2.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel2.TabIndex = 7;
-            // 
-            // gunaLabel8
-            // 
-            this.gunaLabel8.AutoSize = true;
-            this.gunaLabel8.BackColor = System.Drawing.Color.White;
-            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel8.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(89, 54);
-            this.gunaLabel8.TabIndex = 4;
-            this.gunaLabel8.Text = "100";
             // 
             // gunaAdvenceButton4
             // 
@@ -553,7 +499,7 @@
             this.gunaShadowPanel1.Controls.Add(this.gunaLabel6);
             this.gunaShadowPanel1.Controls.Add(this.gunaPictureBox2);
             this.gunaShadowPanel1.Controls.Add(this.gunaPanel2);
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(393, 75);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(429, 81);
             this.gunaShadowPanel1.Margin = new System.Windows.Forms.Padding(8);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.Radius = 6;
@@ -563,17 +509,6 @@
             this.gunaShadowPanel1.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel1.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel1.TabIndex = 6;
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.BackColor = System.Drawing.Color.White;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(45, 54);
-            this.gunaLabel5.TabIndex = 4;
-            this.gunaLabel5.Text = "0";
             // 
             // gunaAdvenceButton5
             // 
@@ -647,121 +582,12 @@
             this.gunaLabel7.TabIndex = 0;
             this.gunaLabel7.Text = "Multicabs";
             // 
-            // routesPanel
-            // 
-            this.routesPanel.Controls.Add(this.gunaDataGridView2);
-            this.routesPanel.Controls.Add(this.gunaAdvenceButton2);
-            this.routesPanel.Controls.Add(this.gunaLabel17);
-            this.routesPanel.Location = new System.Drawing.Point(811, 413);
-            this.routesPanel.Name = "routesPanel";
-            this.routesPanel.Size = new System.Drawing.Size(863, 558);
-            this.routesPanel.TabIndex = 10;
-            this.routesPanel.Visible = false;
-            // 
-            // gunaDataGridView2
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gunaDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gunaDataGridView2.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gunaDataGridView2.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.Location = new System.Drawing.Point(31, 105);
-            this.gunaDataGridView2.Name = "gunaDataGridView2";
-            this.gunaDataGridView2.RowHeadersVisible = false;
-            this.gunaDataGridView2.RowHeadersWidth = 51;
-            this.gunaDataGridView2.RowTemplate.Height = 24;
-            this.gunaDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView2.Size = new System.Drawing.Size(808, 436);
-            this.gunaDataGridView2.TabIndex = 2;
-            this.gunaDataGridView2.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.Height = 4;
-            this.gunaDataGridView2.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.Height = 24;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // gunaAdvenceButton2
-            // 
-            this.gunaAdvenceButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton2.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaAdvenceButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton2.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton2.CheckedImage")));
-            this.gunaAdvenceButton2.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaAdvenceButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.Image = null;
-            this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.Location = new System.Drawing.Point(11, 51);
-            this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
-            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.SystemColors.Highlight;
-            this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.OnHoverImage = null;
-            this.gunaAdvenceButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.Size = new System.Drawing.Size(170, 32);
-            this.gunaAdvenceButton2.TabIndex = 1;
-            this.gunaAdvenceButton2.Text = "ADD ROUTE";
-            this.gunaAdvenceButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // gunaLabel17
-            // 
-            this.gunaLabel17.AutoSize = true;
-            this.gunaLabel17.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel17.Location = new System.Drawing.Point(14, 7);
-            this.gunaLabel17.Name = "gunaLabel17";
-            this.gunaLabel17.Size = new System.Drawing.Size(184, 41);
-            this.gunaLabel17.TabIndex = 0;
-            this.gunaLabel17.Text = "Route Status";
-            // 
             // gunaLabel15
             // 
             this.gunaLabel15.AutoSize = true;
             this.gunaLabel15.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaLabel15.Location = new System.Drawing.Point(12, 671);
+            this.gunaLabel15.Location = new System.Drawing.Point(12, 640);
             this.gunaLabel15.Name = "gunaLabel15";
             this.gunaLabel15.Size = new System.Drawing.Size(241, 50);
             this.gunaLabel15.TabIndex = 8;
@@ -771,7 +597,7 @@
             // 
             this.gunaShadowPanel7.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel7.Controls.Add(this.gunaCirclePictureBox2);
-            this.gunaShadowPanel7.Location = new System.Drawing.Point(28, 724);
+            this.gunaShadowPanel7.Location = new System.Drawing.Point(47, 693);
             this.gunaShadowPanel7.Name = "gunaShadowPanel7";
             this.gunaShadowPanel7.Radius = 6;
             this.gunaShadowPanel7.ShadowColor = System.Drawing.Color.DimGray;
@@ -804,7 +630,7 @@
             this.gunaShadowPanel5.Controls.Add(this.gunaLabel4);
             this.gunaShadowPanel5.Controls.Add(this.gunaPictureBox1);
             this.gunaShadowPanel5.Controls.Add(this.gunaPanel6);
-            this.gunaShadowPanel5.Location = new System.Drawing.Point(11, 75);
+            this.gunaShadowPanel5.Location = new System.Drawing.Point(47, 81);
             this.gunaShadowPanel5.Margin = new System.Windows.Forms.Padding(8);
             this.gunaShadowPanel5.Name = "gunaShadowPanel5";
             this.gunaShadowPanel5.Radius = 6;
@@ -814,17 +640,6 @@
             this.gunaShadowPanel5.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel5.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel5.TabIndex = 5;
-            // 
-            // totalBookingsNum
-            // 
-            this.totalBookingsNum.AutoSize = true;
-            this.totalBookingsNum.BackColor = System.Drawing.Color.White;
-            this.totalBookingsNum.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBookingsNum.Location = new System.Drawing.Point(17, 115);
-            this.totalBookingsNum.Name = "totalBookingsNum";
-            this.totalBookingsNum.Size = new System.Drawing.Size(45, 54);
-            this.totalBookingsNum.TabIndex = 4;
-            this.totalBookingsNum.Text = "0";
             // 
             // gunaAdvenceButton3
             // 
@@ -899,12 +714,78 @@
             this.gunaLabel12.TabIndex = 0;
             this.gunaLabel12.Text = "Bookings";
             // 
-            // Dashboard
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.BackColor = System.Drawing.Color.White;
+            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(128, 54);
+            this.gunaLabel11.TabIndex = 4;
+            this.gunaLabel11.Text = "Lezgo";
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.BackColor = System.Drawing.Color.White;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel8.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(102, 54);
+            this.gunaLabel8.TabIndex = 4;
+            this.gunaLabel8.Text = "wew";
+            // 
+            // gunaLabel22
+            // 
+            this.gunaLabel22.AutoSize = true;
+            this.gunaLabel22.BackColor = System.Drawing.Color.White;
+            this.gunaLabel22.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel22.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel22.Name = "gunaLabel22";
+            this.gunaLabel22.Size = new System.Drawing.Size(285, 54);
+            this.gunaLabel22.TabIndex = 4;
+            this.gunaLabel22.Text = "i love chaewon";
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.BackColor = System.Drawing.Color.White;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(95, 54);
+            this.gunaLabel5.TabIndex = 4;
+            this.gunaLabel5.Text = "0asf";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.White;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(17, 115);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(340, 54);
+            this.label.TabIndex = 5;
+            this.label.Text = "Ahn,Yujin my wife";
+            // 
+            // totalBookingsNum
+            // 
+            this.totalBookingsNum.AutoSize = true;
+            this.totalBookingsNum.BackColor = System.Drawing.Color.White;
+            this.totalBookingsNum.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBookingsNum.Location = new System.Drawing.Point(17, 115);
+            this.totalBookingsNum.Name = "totalBookingsNum";
+            this.totalBookingsNum.Size = new System.Drawing.Size(194, 54);
+            this.totalBookingsNum.TabIndex = 4;
+            this.totalBookingsNum.Text = "Ahn Yujin";
+            // 
+            // UserControl1_Dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dashboardPanel);
-            this.Name = "Dashboard";
+            this.Name = "UserControl1_Dash";
             this.Size = new System.Drawing.Size(1570, 970);
             this.dashboardPanel.ResumeLayout(false);
             this.dashboardPanel.PerformLayout();
@@ -933,9 +814,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
-            this.routesPanel.ResumeLayout(false);
-            this.routesPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).EndInit();
             this.gunaShadowPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.gunaShadowPanel5.ResumeLayout(false);
@@ -952,53 +830,49 @@
         private Guna.UI.WinForms.GunaPanel dashboardPanel;
         private Guna.UI.WinForms.GunaLabel gunaLabel25;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel6;
-        private Guna.UI.WinForms.GunaLabel gunaLabel22;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton8;
         private Guna.UI.WinForms.GunaLabel gunaLabel23;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox6;
         private Guna.UI.WinForms.GunaPanel gunaPanel7;
         private Guna.UI.WinForms.GunaLabel gunaLabel24;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel4;
-        private Guna.UI.WinForms.GunaLabel gunaLabel19;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton7;
         private Guna.UI.WinForms.GunaLabel gunaLabel20;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox5;
         private Guna.UI.WinForms.GunaPanel gunaPanel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel21;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel3;
-        private Guna.UI.WinForms.GunaLabel gunaLabel11;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton6;
         private Guna.UI.WinForms.GunaLabel gunaLabel13;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox4;
         private Guna.UI.WinForms.GunaPanel gunaPanel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel14;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton4;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox3;
         private Guna.UI.WinForms.GunaPanel gunaPanel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel10;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton5;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
-        private Guna.UI.WinForms.GunaPanel routesPanel;
-        private Guna.UI.WinForms.GunaDataGridView gunaDataGridView2;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel17;
         private Guna.UI.WinForms.GunaLabel gunaLabel15;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel7;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel5;
-        private Guna.UI.WinForms.GunaLabel totalBookingsNum;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton3;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaPanel gunaPanel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
+        private Guna.UI.WinForms.GunaLabel gunaLabel22;
+        private Guna.UI.WinForms.GunaLabel label;
+        private Guna.UI.WinForms.GunaLabel gunaLabel11;
+        private Guna.UI.WinForms.GunaLabel gunaLabel8;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaLabel totalBookingsNum;
     }
 }
