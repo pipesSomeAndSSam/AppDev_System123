@@ -107,7 +107,7 @@ namespace AppDev_System
             }
             catch
             {
-                MessageBox.Show("Something whent wrong");
+                MessageBox.Show("Incorrect Input");
             }
         }
     }

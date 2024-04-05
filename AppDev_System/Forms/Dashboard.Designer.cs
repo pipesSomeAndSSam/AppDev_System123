@@ -43,6 +43,7 @@
             this.LOGOUTButt = new Guna.UI.WinForms.GunaAdvenceButton();
             this.userControl_Routes1 = new AppDev_System.UserControls.UserControl_Routes();
             this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
+            this.userControl_Routes2 = new AppDev_System.UserControls.UserControl_Routes();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -335,13 +336,20 @@
             this.userControl1_Dash1.Size = new System.Drawing.Size(1570, 970);
             this.userControl1_Dash1.TabIndex = 4;
             // 
+            // userControl_Routes2
+            // 
+            this.userControl_Routes2.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Routes2.Name = "userControl_Routes2";
+            this.userControl_Routes2.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Routes2.TabIndex = 5;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.userControl_Routes1);
+            this.Controls.Add(this.userControl_Routes2);
             this.Controls.Add(this.userControl1_Dash1);
             this.Controls.Add(this.LOGOUTButt);
             this.Controls.Add(this.userName);
@@ -377,5 +385,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private UserControls.UserControl1_Dash userControl1_Dash1;
         private UserControls.UserControl_Routes userControl_Routes1;
+        private UserControls.UserControl_Routes userControl_Routes2;
     }
 }

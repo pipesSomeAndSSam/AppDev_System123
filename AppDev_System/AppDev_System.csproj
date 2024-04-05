@@ -242,5 +242,8 @@
   <ItemGroup>
     <None Include="Resources\plus.511x512%28WHITE%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-left-square3.512x512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

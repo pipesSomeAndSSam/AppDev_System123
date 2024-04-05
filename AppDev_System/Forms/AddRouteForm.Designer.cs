@@ -70,7 +70,7 @@
             this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
             this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.DimGray;
             this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
@@ -120,7 +120,7 @@
             this.gunaTextBox2.BorderColor = System.Drawing.Color.Silver;
             this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.DimGray;
             this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
@@ -160,7 +160,7 @@
             this.gunaTextBox3.BorderColor = System.Drawing.Color.Silver;
             this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.DimGray;
             this.gunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
@@ -190,7 +190,7 @@
             this.gunaTextBox4.BorderColor = System.Drawing.Color.Silver;
             this.gunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.DimGray;
             this.gunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox4.ForeColor = System.Drawing.SystemColors.ButtonShadow;

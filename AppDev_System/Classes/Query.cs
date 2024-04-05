@@ -65,15 +65,26 @@ namespace AppDev_System
             try
             {
                 con.Open();
-                string query = "insert into routes(barangay_name,distance,regular_fare_new,special_fare_new) value('" + barangay_name + "','" + distance + "','" + regular_fare_new + "','" + special_fare_new + "')";
-                MySqlCommand cmd = new MySqlCommand(query, con);
-
-                int i = cmd.ExecuteNonQuery();
-                if (i > -1)
+                MySqlCommand comToCheck = new MySqlCommand("select * from routes where barangay_name ='" + barangay_name + "' and distance=  '" + distance + "' and regular_fare_new = '" + regular_fare_new + "' and special_fare_new = '" + special_fare_new + "'",con);
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Successful input in Database");
+                    MessageBox.Show("Route already exists");
                 }
-                res = true;
+                else
+                {
+                    string query = "insert into routes(barangay_name,distance,regular_fare_new,special_fare_new) value('" + barangay_name + "','" + distance + "','" + regular_fare_new + "','" + special_fare_new + "')";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > -1)
+                    {
+                        MessageBox.Show("Successful input in Database");
+                    }
+                    res = true;
+                }
             }
             catch (Exception ex)
             {
