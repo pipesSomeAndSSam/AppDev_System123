@@ -32,75 +32,94 @@
             this.dashboardPanel = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel25 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel6 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaAdvenceButton8 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaLabel22 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel23 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox6 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel7 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel24 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaAdvenceButton7 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.label = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel20 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox5 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel5 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel21 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaAdvenceButton6 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaAdvenceButton4 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaAdvenceButton5 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel7 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.totalBookingsNum = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel22 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.label = new Guna.UI.WinForms.GunaLabel();
-            this.totalBookingsNum = new Guna.UI.WinForms.GunaLabel();
+            this.gunaPictureBox12 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox11 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox10 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox9 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox8 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox7 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaAdvenceButton8 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPictureBox6 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaAdvenceButton7 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPictureBox5 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaAdvenceButton6 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaAdvenceButton4 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaAdvenceButton5 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.dashboardPanel.SuspendLayout();
             this.gunaShadowPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox6)).BeginInit();
             this.gunaPanel7.SuspendLayout();
             this.gunaShadowPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox5)).BeginInit();
             this.gunaPanel5.SuspendLayout();
             this.gunaShadowPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).BeginInit();
             this.gunaPanel4.SuspendLayout();
             this.gunaShadowPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             this.gunaPanel3.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.gunaPanel2.SuspendLayout();
             this.gunaShadowPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.gunaShadowPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dashboardPanel
             // 
+            this.dashboardPanel.BackColor = System.Drawing.Color.White;
+            this.dashboardPanel.Controls.Add(this.gunaPictureBox12);
+            this.dashboardPanel.Controls.Add(this.gunaPictureBox11);
+            this.dashboardPanel.Controls.Add(this.gunaPictureBox10);
+            this.dashboardPanel.Controls.Add(this.gunaPictureBox9);
+            this.dashboardPanel.Controls.Add(this.gunaPictureBox8);
+            this.dashboardPanel.Controls.Add(this.gunaPictureBox7);
             this.dashboardPanel.Controls.Add(this.gunaLabel25);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel6);
             this.dashboardPanel.Controls.Add(this.gunaShadowPanel4);
@@ -146,34 +165,16 @@
             this.gunaShadowPanel6.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel6.TabIndex = 7;
             // 
-            // gunaAdvenceButton8
+            // gunaLabel22
             // 
-            this.gunaAdvenceButton8.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton8.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton8.BaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton8.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton8.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton8.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton8.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton8.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton8.CheckedImage")));
-            this.gunaAdvenceButton8.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaAdvenceButton8.Image = global::AppDev_System.Properties.Resources.right_arrow_LimeGreen;
-            this.gunaAdvenceButton8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.gunaAdvenceButton8.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton8.Location = new System.Drawing.Point(168, 193);
-            this.gunaAdvenceButton8.Name = "gunaAdvenceButton8";
-            this.gunaAdvenceButton8.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton8.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton8.OnHoverForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaAdvenceButton8.OnHoverImage = null;
-            this.gunaAdvenceButton8.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton8.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton8.Size = new System.Drawing.Size(168, 42);
-            this.gunaAdvenceButton8.TabIndex = 3;
-            this.gunaAdvenceButton8.Text = "View More";
+            this.gunaLabel22.AutoSize = true;
+            this.gunaLabel22.BackColor = System.Drawing.Color.White;
+            this.gunaLabel22.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel22.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel22.Name = "gunaLabel22";
+            this.gunaLabel22.Size = new System.Drawing.Size(285, 54);
+            this.gunaLabel22.TabIndex = 4;
+            this.gunaLabel22.Text = "i love chaewon";
             // 
             // gunaLabel23
             // 
@@ -185,18 +186,6 @@
             this.gunaLabel23.Size = new System.Drawing.Size(223, 31);
             this.gunaLabel23.TabIndex = 2;
             this.gunaLabel23.Text = "Total Earnings Today";
-            // 
-            // gunaPictureBox6
-            // 
-            this.gunaPictureBox6.BackColor = System.Drawing.Color.White;
-            this.gunaPictureBox6.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox6.Image = global::AppDev_System.Properties.Resources.peso_838x1024;
-            this.gunaPictureBox6.Location = new System.Drawing.Point(291, 18);
-            this.gunaPictureBox6.Name = "gunaPictureBox6";
-            this.gunaPictureBox6.Size = new System.Drawing.Size(45, 45);
-            this.gunaPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox6.TabIndex = 1;
-            this.gunaPictureBox6.TabStop = false;
             // 
             // gunaPanel7
             // 
@@ -237,34 +226,16 @@
             this.gunaShadowPanel4.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel4.TabIndex = 6;
             // 
-            // gunaAdvenceButton7
+            // label
             // 
-            this.gunaAdvenceButton7.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton7.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton7.BaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton7.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton7.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton7.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton7.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton7.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton7.CheckedImage")));
-            this.gunaAdvenceButton7.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.gunaAdvenceButton7.Image = global::AppDev_System.Properties.Resources.right_arrow;
-            this.gunaAdvenceButton7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.gunaAdvenceButton7.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton7.Location = new System.Drawing.Point(171, 193);
-            this.gunaAdvenceButton7.Name = "gunaAdvenceButton7";
-            this.gunaAdvenceButton7.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton7.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton7.OnHoverForeColor = System.Drawing.SystemColors.InfoText;
-            this.gunaAdvenceButton7.OnHoverImage = null;
-            this.gunaAdvenceButton7.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton7.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton7.Size = new System.Drawing.Size(168, 42);
-            this.gunaAdvenceButton7.TabIndex = 3;
-            this.gunaAdvenceButton7.Text = "View More";
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.White;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(17, 115);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(340, 54);
+            this.label.TabIndex = 5;
+            this.label.Text = "Ahn,Yujin my wife";
             // 
             // gunaLabel20
             // 
@@ -276,18 +247,6 @@
             this.gunaLabel20.Size = new System.Drawing.Size(147, 31);
             this.gunaLabel20.TabIndex = 2;
             this.gunaLabel20.Text = "Total Admins";
-            // 
-            // gunaPictureBox5
-            // 
-            this.gunaPictureBox5.BackColor = System.Drawing.Color.White;
-            this.gunaPictureBox5.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox5.Image = global::AppDev_System.Properties.Resources.user;
-            this.gunaPictureBox5.Location = new System.Drawing.Point(291, 18);
-            this.gunaPictureBox5.Name = "gunaPictureBox5";
-            this.gunaPictureBox5.Size = new System.Drawing.Size(48, 50);
-            this.gunaPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox5.TabIndex = 1;
-            this.gunaPictureBox5.TabStop = false;
             // 
             // gunaPanel5
             // 
@@ -328,34 +287,16 @@
             this.gunaShadowPanel3.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel3.TabIndex = 8;
             // 
-            // gunaAdvenceButton6
+            // gunaLabel11
             // 
-            this.gunaAdvenceButton6.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton6.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton6.BaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton6.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton6.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton6.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton6.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton6.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton6.CheckedImage")));
-            this.gunaAdvenceButton6.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton6.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.gunaAdvenceButton6.Image = global::AppDev_System.Properties.Resources.right_arrow_goldendark;
-            this.gunaAdvenceButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.gunaAdvenceButton6.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton6.Location = new System.Drawing.Point(171, 193);
-            this.gunaAdvenceButton6.Name = "gunaAdvenceButton6";
-            this.gunaAdvenceButton6.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton6.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton6.OnHoverForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.gunaAdvenceButton6.OnHoverImage = null;
-            this.gunaAdvenceButton6.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton6.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton6.Size = new System.Drawing.Size(168, 42);
-            this.gunaAdvenceButton6.TabIndex = 3;
-            this.gunaAdvenceButton6.Text = "View More";
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.BackColor = System.Drawing.Color.White;
+            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(128, 54);
+            this.gunaLabel11.TabIndex = 4;
+            this.gunaLabel11.Text = "Lezgo";
             // 
             // gunaLabel13
             // 
@@ -367,18 +308,6 @@
             this.gunaLabel13.Size = new System.Drawing.Size(230, 31);
             this.gunaLabel13.TabIndex = 2;
             this.gunaLabel13.Text = "Total Available Steats";
-            // 
-            // gunaPictureBox4
-            // 
-            this.gunaPictureBox4.BackColor = System.Drawing.Color.White;
-            this.gunaPictureBox4.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox4.Image = global::AppDev_System.Properties.Resources.grids_256x256;
-            this.gunaPictureBox4.Location = new System.Drawing.Point(291, 18);
-            this.gunaPictureBox4.Name = "gunaPictureBox4";
-            this.gunaPictureBox4.Size = new System.Drawing.Size(48, 44);
-            this.gunaPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox4.TabIndex = 1;
-            this.gunaPictureBox4.TabStop = false;
             // 
             // gunaPanel4
             // 
@@ -419,34 +348,17 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel2.TabIndex = 7;
             // 
-            // gunaAdvenceButton4
+            // gunaLabel8
             // 
-            this.gunaAdvenceButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton4.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton4.BaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton4.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton4.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton4.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton4.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton4.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton4.CheckedImage")));
-            this.gunaAdvenceButton4.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton4.ForeColor = System.Drawing.Color.Chocolate;
-            this.gunaAdvenceButton4.Image = global::AppDev_System.Properties.Resources.right_arrow_chocolate;
-            this.gunaAdvenceButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.gunaAdvenceButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton4.Location = new System.Drawing.Point(171, 193);
-            this.gunaAdvenceButton4.Name = "gunaAdvenceButton4";
-            this.gunaAdvenceButton4.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton4.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton4.OnHoverForeColor = System.Drawing.Color.Chocolate;
-            this.gunaAdvenceButton4.OnHoverImage = null;
-            this.gunaAdvenceButton4.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton4.Size = new System.Drawing.Size(168, 42);
-            this.gunaAdvenceButton4.TabIndex = 3;
-            this.gunaAdvenceButton4.Text = "View More";
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.BackColor = System.Drawing.Color.White;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel8.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel8.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(102, 54);
+            this.gunaLabel8.TabIndex = 4;
+            this.gunaLabel8.Text = "wew";
             // 
             // gunaLabel9
             // 
@@ -454,28 +366,18 @@
             this.gunaLabel9.BackColor = System.Drawing.Color.White;
             this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel9.Location = new System.Drawing.Point(11, 84);
+            this.gunaLabel9.Margin = new System.Windows.Forms.Padding(0);
             this.gunaLabel9.Name = "gunaLabel9";
             this.gunaLabel9.Size = new System.Drawing.Size(138, 31);
             this.gunaLabel9.TabIndex = 2;
             this.gunaLabel9.Text = "Total Routes";
-            // 
-            // gunaPictureBox3
-            // 
-            this.gunaPictureBox3.BackColor = System.Drawing.Color.White;
-            this.gunaPictureBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox3.Image = global::AppDev_System.Properties.Resources.road_with_broken_line1;
-            this.gunaPictureBox3.Location = new System.Drawing.Point(291, 18);
-            this.gunaPictureBox3.Name = "gunaPictureBox3";
-            this.gunaPictureBox3.Size = new System.Drawing.Size(48, 44);
-            this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox3.TabIndex = 1;
-            this.gunaPictureBox3.TabStop = false;
             // 
             // gunaPanel3
             // 
             this.gunaPanel3.BackColor = System.Drawing.Color.Chocolate;
             this.gunaPanel3.Controls.Add(this.gunaLabel10);
             this.gunaPanel3.Location = new System.Drawing.Point(17, 18);
+            this.gunaPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.gunaPanel3.Name = "gunaPanel3";
             this.gunaPanel3.Size = new System.Drawing.Size(259, 63);
             this.gunaPanel3.TabIndex = 0;
@@ -510,34 +412,16 @@
             this.gunaShadowPanel1.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel1.TabIndex = 6;
             // 
-            // gunaAdvenceButton5
+            // gunaLabel5
             // 
-            this.gunaAdvenceButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton5.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton5.BaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton5.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton5.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton5.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton5.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton5.CheckedImage")));
-            this.gunaAdvenceButton5.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton5.ForeColor = System.Drawing.Color.DarkCyan;
-            this.gunaAdvenceButton5.Image = global::AppDev_System.Properties.Resources.right_arrow_darkCyan;
-            this.gunaAdvenceButton5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.gunaAdvenceButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton5.Location = new System.Drawing.Point(171, 193);
-            this.gunaAdvenceButton5.Name = "gunaAdvenceButton5";
-            this.gunaAdvenceButton5.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton5.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton5.OnHoverForeColor = System.Drawing.Color.DarkCyan;
-            this.gunaAdvenceButton5.OnHoverImage = null;
-            this.gunaAdvenceButton5.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton5.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton5.Size = new System.Drawing.Size(168, 42);
-            this.gunaAdvenceButton5.TabIndex = 3;
-            this.gunaAdvenceButton5.Text = "View More";
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.BackColor = System.Drawing.Color.White;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(17, 115);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(95, 54);
+            this.gunaLabel5.TabIndex = 4;
+            this.gunaLabel5.Text = "0asf";
             // 
             // gunaLabel6
             // 
@@ -549,18 +433,6 @@
             this.gunaLabel6.Size = new System.Drawing.Size(170, 31);
             this.gunaLabel6.TabIndex = 2;
             this.gunaLabel6.Text = "Total Multicabs";
-            // 
-            // gunaPictureBox2
-            // 
-            this.gunaPictureBox2.BackColor = System.Drawing.Color.White;
-            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox2.Image = global::AppDev_System.Properties.Resources.bus_vehicle;
-            this.gunaPictureBox2.Location = new System.Drawing.Point(291, 18);
-            this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(48, 44);
-            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox2.TabIndex = 1;
-            this.gunaPictureBox2.TabStop = false;
             // 
             // gunaPanel2
             // 
@@ -607,23 +479,9 @@
             this.gunaShadowPanel7.Size = new System.Drawing.Size(240, 237);
             this.gunaShadowPanel7.TabIndex = 7;
             // 
-            // gunaCirclePictureBox2
-            // 
-            this.gunaCirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaCirclePictureBox2.BackColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox2.Image = global::AppDev_System.Properties.Resources.user;
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(31, 3);
-            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
-            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(151, 153);
-            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox2.TabIndex = 0;
-            this.gunaCirclePictureBox2.TabStop = false;
-            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
-            // 
             // gunaShadowPanel5
             // 
+            this.gunaShadowPanel5.BackColor = System.Drawing.Color.White;
             this.gunaShadowPanel5.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel5.Controls.Add(this.totalBookingsNum);
             this.gunaShadowPanel5.Controls.Add(this.gunaAdvenceButton3);
@@ -640,6 +498,340 @@
             this.gunaShadowPanel5.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel5.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel5.TabIndex = 5;
+            // 
+            // totalBookingsNum
+            // 
+            this.totalBookingsNum.AutoSize = true;
+            this.totalBookingsNum.BackColor = System.Drawing.Color.White;
+            this.totalBookingsNum.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBookingsNum.Location = new System.Drawing.Point(17, 115);
+            this.totalBookingsNum.Name = "totalBookingsNum";
+            this.totalBookingsNum.Size = new System.Drawing.Size(194, 54);
+            this.totalBookingsNum.TabIndex = 4;
+            this.totalBookingsNum.Text = "Ahn Yujin";
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.BackColor = System.Drawing.Color.White;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Location = new System.Drawing.Point(11, 84);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(162, 31);
+            this.gunaLabel4.TabIndex = 2;
+            this.gunaLabel4.Text = "Total Bookings";
+            // 
+            // gunaPanel6
+            // 
+            this.gunaPanel6.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gunaPanel6.Controls.Add(this.gunaLabel12);
+            this.gunaPanel6.Location = new System.Drawing.Point(17, 18);
+            this.gunaPanel6.Name = "gunaPanel6";
+            this.gunaPanel6.Size = new System.Drawing.Size(259, 63);
+            this.gunaPanel6.TabIndex = 0;
+            // 
+            // gunaLabel12
+            // 
+            this.gunaLabel12.AutoSize = true;
+            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel12.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel12.Location = new System.Drawing.Point(12, 11);
+            this.gunaLabel12.Name = "gunaLabel12";
+            this.gunaLabel12.Size = new System.Drawing.Size(141, 41);
+            this.gunaLabel12.TabIndex = 0;
+            this.gunaLabel12.Text = "Bookings";
+            // 
+            // gunaPictureBox12
+            // 
+            this.gunaPictureBox12.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox12.Image = global::AppDev_System.Properties.Resources.dashBoardDesignForPanel_new_black;
+            this.gunaPictureBox12.Location = new System.Drawing.Point(44, 354);
+            this.gunaPictureBox12.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaPictureBox12.Name = "gunaPictureBox12";
+            this.gunaPictureBox12.Size = new System.Drawing.Size(10, 238);
+            this.gunaPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox12.TabIndex = 13;
+            this.gunaPictureBox12.TabStop = false;
+            // 
+            // gunaPictureBox11
+            // 
+            this.gunaPictureBox11.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox11.Image = global::AppDev_System.Properties.Resources.dashBoardDesignForPanel_new_limeGreen;
+            this.gunaPictureBox11.Location = new System.Drawing.Point(426, 354);
+            this.gunaPictureBox11.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaPictureBox11.Name = "gunaPictureBox11";
+            this.gunaPictureBox11.Size = new System.Drawing.Size(10, 238);
+            this.gunaPictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox11.TabIndex = 12;
+            this.gunaPictureBox11.TabStop = false;
+            // 
+            // gunaPictureBox10
+            // 
+            this.gunaPictureBox10.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox10.Image = global::AppDev_System.Properties.Resources.dashBoardDesignForPanel_new_goldenDark;
+            this.gunaPictureBox10.Location = new System.Drawing.Point(1190, 81);
+            this.gunaPictureBox10.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaPictureBox10.Name = "gunaPictureBox10";
+            this.gunaPictureBox10.Size = new System.Drawing.Size(10, 238);
+            this.gunaPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox10.TabIndex = 11;
+            this.gunaPictureBox10.TabStop = false;
+            // 
+            // gunaPictureBox9
+            // 
+            this.gunaPictureBox9.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox9.Image = global::AppDev_System.Properties.Resources.dashBoardDesignForPanel_new_blue;
+            this.gunaPictureBox9.Location = new System.Drawing.Point(44, 81);
+            this.gunaPictureBox9.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaPictureBox9.Name = "gunaPictureBox9";
+            this.gunaPictureBox9.Size = new System.Drawing.Size(10, 238);
+            this.gunaPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox9.TabIndex = 10;
+            this.gunaPictureBox9.TabStop = false;
+            // 
+            // gunaPictureBox8
+            // 
+            this.gunaPictureBox8.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox8.Image = global::AppDev_System.Properties.Resources.dashBoardDesignForPanel_new_darkCyan;
+            this.gunaPictureBox8.Location = new System.Drawing.Point(426, 81);
+            this.gunaPictureBox8.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaPictureBox8.Name = "gunaPictureBox8";
+            this.gunaPictureBox8.Size = new System.Drawing.Size(10, 238);
+            this.gunaPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox8.TabIndex = 9;
+            this.gunaPictureBox8.TabStop = false;
+            // 
+            // gunaPictureBox7
+            // 
+            this.gunaPictureBox7.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox7.Image = global::AppDev_System.Properties.Resources.dashBoardDesignForPanel_new;
+            this.gunaPictureBox7.Location = new System.Drawing.Point(808, 81);
+            this.gunaPictureBox7.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaPictureBox7.Name = "gunaPictureBox7";
+            this.gunaPictureBox7.Size = new System.Drawing.Size(10, 238);
+            this.gunaPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox7.TabIndex = 5;
+            this.gunaPictureBox7.TabStop = false;
+            // 
+            // gunaAdvenceButton8
+            // 
+            this.gunaAdvenceButton8.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton8.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton8.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton8.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton8.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton8.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton8.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton8.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton8.CheckedImage")));
+            this.gunaAdvenceButton8.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton8.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaAdvenceButton8.Image = global::AppDev_System.Properties.Resources.right_arrow_LimeGreen;
+            this.gunaAdvenceButton8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gunaAdvenceButton8.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton8.Location = new System.Drawing.Point(168, 193);
+            this.gunaAdvenceButton8.Name = "gunaAdvenceButton8";
+            this.gunaAdvenceButton8.OnHoverBaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton8.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton8.OnHoverForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaAdvenceButton8.OnHoverImage = null;
+            this.gunaAdvenceButton8.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton8.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton8.Size = new System.Drawing.Size(168, 42);
+            this.gunaAdvenceButton8.TabIndex = 3;
+            this.gunaAdvenceButton8.Text = "View More";
+            // 
+            // gunaPictureBox6
+            // 
+            this.gunaPictureBox6.BackColor = System.Drawing.Color.White;
+            this.gunaPictureBox6.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox6.Image = global::AppDev_System.Properties.Resources.peso_838x1024;
+            this.gunaPictureBox6.Location = new System.Drawing.Point(291, 18);
+            this.gunaPictureBox6.Name = "gunaPictureBox6";
+            this.gunaPictureBox6.Size = new System.Drawing.Size(45, 45);
+            this.gunaPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox6.TabIndex = 1;
+            this.gunaPictureBox6.TabStop = false;
+            // 
+            // gunaAdvenceButton7
+            // 
+            this.gunaAdvenceButton7.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton7.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton7.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton7.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton7.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton7.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton7.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton7.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton7.CheckedImage")));
+            this.gunaAdvenceButton7.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton7.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.gunaAdvenceButton7.Image = global::AppDev_System.Properties.Resources.right_arrow;
+            this.gunaAdvenceButton7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gunaAdvenceButton7.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton7.Location = new System.Drawing.Point(171, 193);
+            this.gunaAdvenceButton7.Name = "gunaAdvenceButton7";
+            this.gunaAdvenceButton7.OnHoverBaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton7.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton7.OnHoverForeColor = System.Drawing.SystemColors.InfoText;
+            this.gunaAdvenceButton7.OnHoverImage = null;
+            this.gunaAdvenceButton7.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton7.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton7.Size = new System.Drawing.Size(168, 42);
+            this.gunaAdvenceButton7.TabIndex = 3;
+            this.gunaAdvenceButton7.Text = "View More";
+            // 
+            // gunaPictureBox5
+            // 
+            this.gunaPictureBox5.BackColor = System.Drawing.Color.White;
+            this.gunaPictureBox5.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox5.Image = global::AppDev_System.Properties.Resources.user;
+            this.gunaPictureBox5.Location = new System.Drawing.Point(291, 18);
+            this.gunaPictureBox5.Name = "gunaPictureBox5";
+            this.gunaPictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.gunaPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox5.TabIndex = 1;
+            this.gunaPictureBox5.TabStop = false;
+            // 
+            // gunaAdvenceButton6
+            // 
+            this.gunaAdvenceButton6.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton6.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton6.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton6.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton6.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton6.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton6.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton6.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton6.CheckedImage")));
+            this.gunaAdvenceButton6.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton6.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.gunaAdvenceButton6.Image = global::AppDev_System.Properties.Resources.right_arrow_goldendark;
+            this.gunaAdvenceButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gunaAdvenceButton6.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton6.Location = new System.Drawing.Point(171, 193);
+            this.gunaAdvenceButton6.Name = "gunaAdvenceButton6";
+            this.gunaAdvenceButton6.OnHoverBaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton6.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton6.OnHoverForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.gunaAdvenceButton6.OnHoverImage = null;
+            this.gunaAdvenceButton6.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton6.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton6.Size = new System.Drawing.Size(168, 42);
+            this.gunaAdvenceButton6.TabIndex = 3;
+            this.gunaAdvenceButton6.Text = "View More";
+            // 
+            // gunaPictureBox4
+            // 
+            this.gunaPictureBox4.BackColor = System.Drawing.Color.White;
+            this.gunaPictureBox4.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox4.Image = global::AppDev_System.Properties.Resources.grids_256x256;
+            this.gunaPictureBox4.Location = new System.Drawing.Point(291, 18);
+            this.gunaPictureBox4.Name = "gunaPictureBox4";
+            this.gunaPictureBox4.Size = new System.Drawing.Size(48, 44);
+            this.gunaPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox4.TabIndex = 1;
+            this.gunaPictureBox4.TabStop = false;
+            // 
+            // gunaAdvenceButton4
+            // 
+            this.gunaAdvenceButton4.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton4.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton4.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton4.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton4.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton4.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton4.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton4.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton4.CheckedImage")));
+            this.gunaAdvenceButton4.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton4.ForeColor = System.Drawing.Color.Chocolate;
+            this.gunaAdvenceButton4.Image = global::AppDev_System.Properties.Resources.right_arrow_chocolate;
+            this.gunaAdvenceButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gunaAdvenceButton4.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton4.Location = new System.Drawing.Point(171, 193);
+            this.gunaAdvenceButton4.Name = "gunaAdvenceButton4";
+            this.gunaAdvenceButton4.OnHoverBaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton4.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton4.OnHoverForeColor = System.Drawing.Color.Chocolate;
+            this.gunaAdvenceButton4.OnHoverImage = null;
+            this.gunaAdvenceButton4.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton4.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton4.Size = new System.Drawing.Size(168, 42);
+            this.gunaAdvenceButton4.TabIndex = 3;
+            this.gunaAdvenceButton4.Text = "View More";
+            // 
+            // gunaPictureBox3
+            // 
+            this.gunaPictureBox3.BackColor = System.Drawing.Color.White;
+            this.gunaPictureBox3.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox3.Image = global::AppDev_System.Properties.Resources.road_with_broken_line1;
+            this.gunaPictureBox3.Location = new System.Drawing.Point(291, 18);
+            this.gunaPictureBox3.Name = "gunaPictureBox3";
+            this.gunaPictureBox3.Size = new System.Drawing.Size(48, 44);
+            this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox3.TabIndex = 1;
+            this.gunaPictureBox3.TabStop = false;
+            // 
+            // gunaAdvenceButton5
+            // 
+            this.gunaAdvenceButton5.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton5.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton5.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton5.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton5.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton5.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton5.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton5.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton5.CheckedImage")));
+            this.gunaAdvenceButton5.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.gunaAdvenceButton5.Image = global::AppDev_System.Properties.Resources.right_arrow_darkCyan;
+            this.gunaAdvenceButton5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gunaAdvenceButton5.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton5.Location = new System.Drawing.Point(171, 193);
+            this.gunaAdvenceButton5.Name = "gunaAdvenceButton5";
+            this.gunaAdvenceButton5.OnHoverBaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton5.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton5.OnHoverForeColor = System.Drawing.Color.DarkCyan;
+            this.gunaAdvenceButton5.OnHoverImage = null;
+            this.gunaAdvenceButton5.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton5.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton5.Size = new System.Drawing.Size(168, 42);
+            this.gunaAdvenceButton5.TabIndex = 3;
+            this.gunaAdvenceButton5.Text = "View More";
+            // 
+            // gunaPictureBox2
+            // 
+            this.gunaPictureBox2.BackColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Image = global::AppDev_System.Properties.Resources.bus_vehicle;
+            this.gunaPictureBox2.Location = new System.Drawing.Point(291, 18);
+            this.gunaPictureBox2.Name = "gunaPictureBox2";
+            this.gunaPictureBox2.Size = new System.Drawing.Size(48, 44);
+            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox2.TabIndex = 1;
+            this.gunaPictureBox2.TabStop = false;
+            // 
+            // gunaCirclePictureBox2
+            // 
+            this.gunaCirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaCirclePictureBox2.BackColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox2.Image = global::AppDev_System.Properties.Resources.user;
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(31, 3);
+            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
+            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(151, 153);
+            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox2.TabIndex = 0;
+            this.gunaCirclePictureBox2.TabStop = false;
+            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
             // 
             // gunaAdvenceButton3
             // 
@@ -671,17 +863,6 @@
             this.gunaAdvenceButton3.TabIndex = 3;
             this.gunaAdvenceButton3.Text = "View More";
             // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.White;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(11, 84);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(162, 31);
-            this.gunaLabel4.TabIndex = 2;
-            this.gunaLabel4.Text = "Total Bookings";
-            // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BackColor = System.Drawing.Color.White;
@@ -694,92 +875,6 @@
             this.gunaPictureBox1.TabIndex = 1;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // gunaPanel6
-            // 
-            this.gunaPanel6.BackColor = System.Drawing.SystemColors.Highlight;
-            this.gunaPanel6.Controls.Add(this.gunaLabel12);
-            this.gunaPanel6.Location = new System.Drawing.Point(17, 18);
-            this.gunaPanel6.Name = "gunaPanel6";
-            this.gunaPanel6.Size = new System.Drawing.Size(259, 63);
-            this.gunaPanel6.TabIndex = 0;
-            // 
-            // gunaLabel12
-            // 
-            this.gunaLabel12.AutoSize = true;
-            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel12.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel12.Location = new System.Drawing.Point(12, 11);
-            this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(141, 41);
-            this.gunaLabel12.TabIndex = 0;
-            this.gunaLabel12.Text = "Bookings";
-            // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.BackColor = System.Drawing.Color.White;
-            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(128, 54);
-            this.gunaLabel11.TabIndex = 4;
-            this.gunaLabel11.Text = "Lezgo";
-            // 
-            // gunaLabel8
-            // 
-            this.gunaLabel8.AutoSize = true;
-            this.gunaLabel8.BackColor = System.Drawing.Color.White;
-            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel8.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(102, 54);
-            this.gunaLabel8.TabIndex = 4;
-            this.gunaLabel8.Text = "wew";
-            // 
-            // gunaLabel22
-            // 
-            this.gunaLabel22.AutoSize = true;
-            this.gunaLabel22.BackColor = System.Drawing.Color.White;
-            this.gunaLabel22.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel22.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel22.Name = "gunaLabel22";
-            this.gunaLabel22.Size = new System.Drawing.Size(285, 54);
-            this.gunaLabel22.TabIndex = 4;
-            this.gunaLabel22.Text = "i love chaewon";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.BackColor = System.Drawing.Color.White;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(95, 54);
-            this.gunaLabel5.TabIndex = 4;
-            this.gunaLabel5.Text = "0asf";
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.BackColor = System.Drawing.Color.White;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(17, 115);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(340, 54);
-            this.label.TabIndex = 5;
-            this.label.Text = "Ahn,Yujin my wife";
-            // 
-            // totalBookingsNum
-            // 
-            this.totalBookingsNum.AutoSize = true;
-            this.totalBookingsNum.BackColor = System.Drawing.Color.White;
-            this.totalBookingsNum.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBookingsNum.Location = new System.Drawing.Point(17, 115);
-            this.totalBookingsNum.Name = "totalBookingsNum";
-            this.totalBookingsNum.Size = new System.Drawing.Size(194, 54);
-            this.totalBookingsNum.TabIndex = 4;
-            this.totalBookingsNum.Text = "Ahn Yujin";
-            // 
             // UserControl1_Dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -791,36 +886,42 @@
             this.dashboardPanel.PerformLayout();
             this.gunaShadowPanel6.ResumeLayout(false);
             this.gunaShadowPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox6)).EndInit();
             this.gunaPanel7.ResumeLayout(false);
             this.gunaPanel7.PerformLayout();
             this.gunaShadowPanel4.ResumeLayout(false);
             this.gunaShadowPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox5)).EndInit();
             this.gunaPanel5.ResumeLayout(false);
             this.gunaPanel5.PerformLayout();
             this.gunaShadowPanel3.ResumeLayout(false);
             this.gunaShadowPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).EndInit();
             this.gunaPanel4.ResumeLayout(false);
             this.gunaPanel4.PerformLayout();
             this.gunaShadowPanel2.ResumeLayout(false);
             this.gunaShadowPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
             this.gunaPanel3.ResumeLayout(false);
             this.gunaPanel3.PerformLayout();
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
             this.gunaShadowPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.gunaShadowPanel5.ResumeLayout(false);
             this.gunaShadowPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.gunaPanel6.ResumeLayout(false);
             this.gunaPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -874,5 +975,11 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel totalBookingsNum;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox7;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox8;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox12;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox11;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox10;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox9;
     }
 }

@@ -15,14 +15,16 @@ namespace AppDev_System.UserControls
     public partial class UserControl_Routes : UserControl
     {
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
-        private bool addRoute_isOpen = false;
+        //private bool addRoute_isOpen = false;
 
         public UserControl_Routes()
         {
             InitializeComponent();
+            customizeDataGridView();
 
-
-
+        }
+        private void customizeDataGridView()
+        {
             con.Open();
 
             string query = "SELECT * FROM routes";
@@ -31,16 +33,21 @@ namespace AppDev_System.UserControls
             dataAdapter.Fill(dt_users);
             gunaDataGridView2.DataSource = dt_users;
 
+            gunaDataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+            gunaDataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            gunaDataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            gunaDataGridView2.EnableHeadersVisualStyles = false;
             gunaDataGridView2.ColumnHeadersVisible = true;
             gunaDataGridView2.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12);
-            gunaDataGridView2.DefaultCellStyle.ForeColor = Color.Black;
+            gunaDataGridView2.DefaultCellStyle.ForeColor = Color.DimGray;
+            gunaDataGridView2.DefaultCellStyle.BackColor = Color.White;
 
             gunaDataGridView2.RowsDefaultCellStyle = gunaDataGridView2.DefaultCellStyle;
 
             gunaDataGridView2.AllowUserToResizeRows = false;
             gunaDataGridView2.AllowUserToResizeColumns = false;
             gunaDataGridView2.AllowUserToAddRows = false;
-            
+
             gunaDataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             gunaDataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             //gunaDataGridView2.AllowUserToDeleteRows = false;
@@ -48,8 +55,8 @@ namespace AppDev_System.UserControls
             gunaDataGridView2.ColumnHeadersHeight = 40;
             gunaDataGridView2.RowTemplate.Height = 30;
 
-            gunaDataGridView2.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            gunaDataGridView2.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            gunaDataGridView2.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            gunaDataGridView2.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
             gunaDataGridView2.Columns["id"].Visible = false;
             gunaDataGridView2.Columns["regular_fare_old"].Visible = false;
@@ -60,21 +67,56 @@ namespace AppDev_System.UserControls
             gunaDataGridView2.Columns[1].ReadOnly = true;
             gunaDataGridView2.Columns[2].HeaderText = "Distance";
             gunaDataGridView2.Columns[2].ReadOnly = true;
-            gunaDataGridView2.Columns[3].HeaderText = "Regular Fare";
+            gunaDataGridView2.Columns[3].HeaderText = "Regular Fare in ₱";
             gunaDataGridView2.Columns[3].ReadOnly = true;
-            gunaDataGridView2.Columns[4].HeaderText = "Discounted Fare";
+            gunaDataGridView2.Columns[4].HeaderText = "Discounted Fare in ₱";
             gunaDataGridView2.Columns[4].ReadOnly = true;
 
+            gunaDataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            gunaDataGridView2.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            gunaDataGridView2.DefaultCellStyle.SelectionBackColor = Color.White;
+            gunaDataGridView2.DefaultCellStyle.SelectionForeColor = Color.FromArgb(38, 38, 38);
+            gunaDataGridView2.DefaultCellStyle.ForeColor = Color.FromArgb(38, 38, 38);
+            gunaDataGridView2.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White;
+
+            DataGridViewButtonColumn dataGridViewButtonColumn_edit = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn dataGridViewButtonColumn_delete = new DataGridViewButtonColumn();
+            dataGridViewButtonColumn_delete.Name = "Del_button";
+            dataGridViewButtonColumn_delete.HeaderText = "Action";
+            dataGridViewButtonColumn_edit.Name = "Edit_button";
+            dataGridViewButtonColumn_edit.HeaderText = "";
+
+            dataGridViewButtonColumn_delete.FlatStyle = FlatStyle.Popup;
+            dataGridViewButtonColumn_edit.FlatStyle = FlatStyle.Popup;
+            dataGridViewButtonColumn_delete.Text = "  DELETE";
+            dataGridViewButtonColumn_edit.Text = "    EDIT";
+
+            dataGridViewButtonColumn_delete.UseColumnTextForButtonValue = true;
+            dataGridViewButtonColumn_edit.UseColumnTextForButtonValue = true;
+            // dataGridViewButtonColumn_delete.Text
+            //  dataGridViewButtonColumn_delete.DefaultCellStyle.ForeColor = Color.White;
+            // dataGridViewButtonColumn_delete.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(223, 0, 0);
+            // dataGridViewButtonColumn_edit.DefaultCellStyle.BackColor = Color.FromArgb(223, 0, 0);
+
+
+
+            gunaDataGridView2.Columns.Add(dataGridViewButtonColumn_delete);
+            gunaDataGridView2.Columns.Add(dataGridViewButtonColumn_edit);
+
+            gunaDataGridView2.Columns[8].Width = 80;
+            gunaDataGridView2.Columns[9].Width = 80;
+
+           // gunaDataGridView2.Columns[8].DefaultCellStyle.ForeColor = Color.White;
+           // gunaDataGridView2.Columns[9].DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(223, 0, 0); ;
+            
+
+            /*
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
             comboBoxColumn.Items.AddRange("Update", "View", "Delete");
             comboBoxColumn.Name = "Action";
             comboBoxColumn.HeaderText = "Action";
             comboBoxColumn.ValueType = typeof(String);
-            gunaDataGridView2.Columns.Add(comboBoxColumn);
-
-
-
-
+            gunaDataGridView2.Columns.Add(comboBoxColumn);*/
 
             /*
                         // Reset Table
@@ -130,20 +172,33 @@ namespace AppDev_System.UserControls
                         gunaDataGridView2.Columns["DateLastChanged"].HeaderText = "Date Last Changed";
                      */
             con.Close();
-
-
         }
 
         private void gunaAdvenceButton2_Click(object sender, EventArgs e)
         {
-            if (addRoute_isOpen == false)
+            bool isOpen = false;
+            foreach(Form f in Application.OpenForms)
+            {
+                if(f.Text == "AddRouteForm")
+                {   isOpen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (isOpen == false)
             {
                 AddRouteForm addroutefrm = new AddRouteForm();
                 addroutefrm.Show();
             }
-            addRoute_isOpen = true;
         }
 
-        
+        private void gunaAdvenceButton1_Click(object sender, EventArgs e) //REFRESHES THE DATA DISPLAYED IN THE GRIDVIEW IN ROUTES USERCONTROL
+        {
+            string sqlstm = "SELECT * FROM routes";
+            MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "routes");
+            gunaDataGridView2.DataSource = DS.Tables[0];
+        }
     }
 }

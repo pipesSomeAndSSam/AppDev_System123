@@ -245,5 +245,26 @@
   <ItemGroup>
     <None Include="Resources\refresh-left-square3.512x512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new_darkCyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new_goldenDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new_limeGreen.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

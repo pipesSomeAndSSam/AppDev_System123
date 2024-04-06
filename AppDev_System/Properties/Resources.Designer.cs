@@ -73,6 +73,76 @@ namespace AppDev_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_black {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_blue {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_darkCyan {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_darkCyan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_goldenDark {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_goldenDark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_limeGreen {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_limeGreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grids_256x256 {
             get {
                 object obj = ResourceManager.GetObject("grids.256x256", resourceCulture);

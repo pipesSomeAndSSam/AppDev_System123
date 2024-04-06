@@ -41,9 +41,8 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.userName = new Guna.UI.WinForms.GunaLabel();
             this.LOGOUTButt = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.userControl_Routes1 = new AppDev_System.UserControls.UserControl_Routes();
             this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
-            this.userControl_Routes2 = new AppDev_System.UserControls.UserControl_Routes();
+            this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +98,7 @@
             this.SeatsButtons.BaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.SeatsButtons.BorderColor = System.Drawing.Color.Black;
             this.SeatsButtons.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.SeatsButtons.CheckedBaseColor = System.Drawing.Color.White;
+            this.SeatsButtons.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.SeatsButtons.CheckedBorderColor = System.Drawing.Color.Black;
             this.SeatsButtons.CheckedForeColor = System.Drawing.Color.Black;
             this.SeatsButtons.CheckedImage = global::AppDev_System.Properties.Resources.road_with_broken_line;
@@ -128,7 +127,7 @@
             this.BookingsButton.BaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.BookingsButton.BorderColor = System.Drawing.Color.Black;
             this.BookingsButton.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.BookingsButton.CheckedBaseColor = System.Drawing.Color.White;
+            this.BookingsButton.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.BookingsButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.BookingsButton.CheckedForeColor = System.Drawing.Color.Black;
             this.BookingsButton.CheckedImage = global::AppDev_System.Properties.Resources.road_with_broken_line;
@@ -157,7 +156,7 @@
             this.RoutesButton.BaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.RoutesButton.BorderColor = System.Drawing.Color.Black;
             this.RoutesButton.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.RoutesButton.CheckedBaseColor = System.Drawing.Color.White;
+            this.RoutesButton.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.RoutesButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.RoutesButton.CheckedForeColor = System.Drawing.Color.Black;
             this.RoutesButton.CheckedImage = global::AppDev_System.Properties.Resources.road_with_broken_line;
@@ -187,7 +186,7 @@
             this.MulticabsButton.BaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.MulticabsButton.BorderColor = System.Drawing.Color.Black;
             this.MulticabsButton.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.MulticabsButton.CheckedBaseColor = System.Drawing.Color.White;
+            this.MulticabsButton.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.MulticabsButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.MulticabsButton.CheckedForeColor = System.Drawing.Color.Black;
             this.MulticabsButton.CheckedImage = global::AppDev_System.Properties.Resources.speedometer;
@@ -219,7 +218,7 @@
             this.DashboardButton.BorderColor = System.Drawing.Color.Black;
             this.DashboardButton.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
             this.DashboardButton.Checked = true;
-            this.DashboardButton.CheckedBaseColor = System.Drawing.Color.White;
+            this.DashboardButton.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.DashboardButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.DashboardButton.CheckedForeColor = System.Drawing.Color.Black;
             this.DashboardButton.CheckedImage = global::AppDev_System.Properties.Resources.speedometer;
@@ -322,13 +321,6 @@
             this.LOGOUTButt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.LOGOUTButt.Click += new System.EventHandler(this.LOGOUTButt_Click);
             // 
-            // userControl_Routes1
-            // 
-            this.userControl_Routes1.Location = new System.Drawing.Point(350, 110);
-            this.userControl_Routes1.Name = "userControl_Routes1";
-            this.userControl_Routes1.Size = new System.Drawing.Size(1570, 970);
-            this.userControl_Routes1.TabIndex = 5;
-            // 
             // userControl1_Dash1
             // 
             this.userControl1_Dash1.Location = new System.Drawing.Point(350, 110);
@@ -336,20 +328,20 @@
             this.userControl1_Dash1.Size = new System.Drawing.Size(1570, 970);
             this.userControl1_Dash1.TabIndex = 4;
             // 
-            // userControl_Routes2
+            // userControl_Routes
             // 
-            this.userControl_Routes2.Location = new System.Drawing.Point(350, 110);
-            this.userControl_Routes2.Name = "userControl_Routes2";
-            this.userControl_Routes2.Size = new System.Drawing.Size(1570, 970);
-            this.userControl_Routes2.TabIndex = 5;
+            this.userControl_Routes.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Routes.Name = "userControl_Routes";
+            this.userControl_Routes.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Routes.TabIndex = 5;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.userControl_Routes2);
+            this.Controls.Add(this.userControl_Routes);
             this.Controls.Add(this.userControl1_Dash1);
             this.Controls.Add(this.LOGOUTButt);
             this.Controls.Add(this.userName);
@@ -384,7 +376,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel18;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private UserControls.UserControl1_Dash userControl1_Dash1;
-        private UserControls.UserControl_Routes userControl_Routes1;
-        private UserControls.UserControl_Routes userControl_Routes2;
+        private UserControls.UserControl_Routes userControl_Routes;
     }
 }
