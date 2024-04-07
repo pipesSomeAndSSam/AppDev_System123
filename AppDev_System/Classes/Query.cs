@@ -96,7 +96,76 @@ namespace AppDev_System
 
             return res;
         }
+        public Boolean editRoute_New(string barangay_name, float distance, float regular_fare_new, float special_fare_new, float regular_fare_old, float special_fare_old, int routeID)
+        {
+            var dateString2 = DateTime.Now.ToString("yyyy-MM-dd");
+            bool res = false;
+            try
+            {
+                /*using (MySqlConnection con1 = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem"))
+                {
+                    using (MySqlCommand cmd_edit_route = new MySqlCommand("UPDATE routes SET barangay_name = '" + barangay_name +
+                              "', distance =  '" + distance + "', regular_fare_new = '" + regular_fare_new +
+                              "', special_fare_new = '" + special_fare_new + "', regular_fare_old = '" + regular_fare_old +
+                              "', special_fare_old = '" + special_fare_old +
+                              "', date_fare_changed = '" + dateString2 + "' WHERE barangay_name = '" + routes.barangayName +
+                              "'AND distance =  '" + routes.distance + "'AND regular_fare_new = '" + routes.regularFareNew +
+                              "'AND special_fare_new = '" + routes.specialFareNew + "'", con1))
+                    {
+                        con1.Open();
+                        cmd_edit_route.ExecuteNonQuery();
+                        MessageBox.Show("Update Successful");
+                        con1.Close();
+                    }
+                }*/
+                con.Open();
+               // MessageBox.Show(routes.barangayName + "," + routes.distance + "," + routes.regularFareNew + "," + routes.specialFareNew + "asd");
+                MySqlCommand comToCheck = new MySqlCommand("SELECT barangay_name, distance, regular_fare_new, special_fare_new FROM routes WHERE id = '" + routeID + "'", con);
+                
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                string I4D = "";
+                string Name = "";
+                string FamilyName = "";
+                string FamilyNamexx = "";
+                foreach (DataRow row in dt.Rows)
+                {
+                     I4D = row["barangay_name"].ToString();
+                     Name = row["distance"].ToString();
+                     FamilyName = row["regular_fare_new"].ToString();
+                     FamilyNamexx = row["special_fare_new"].ToString();
+                }
 
+                if (dt.Rows.Count > 0)
+                {
+                    string updt = "UPDATE routes SET barangay_name = '" + barangay_name +
+                             "', distance =  '" + distance + "', regular_fare_new = '" + regular_fare_new +
+                             "', special_fare_new = '" + special_fare_new + "', regular_fare_old = '" + regular_fare_old +
+                             "', special_fare_old = '" + special_fare_old +
+                             "', date_fare_changed = '" + dateString2 + "' WHERE id = '" + routeID + "'";
+
+                    MySqlCommand command_update = new MySqlCommand(updt, con);
+
+                    command_update.ExecuteNonQuery();
+                    MessageBox.Show("Update Successful");
+
+                    res = true;
+                }
+                else
+                {
+                    MessageBox.Show("IT DOES NOT EXIST EXISTS");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("mali ka duy");
+            }
+           // MessageBox.Show("eraafffGGGi");
+            con.Close();
+
+            return res;
+        }
         public Boolean editRoute(string barangay_name, float distance, float regular_fare_new, float special_fare_new, int rowNumber, float regular_fare_old, float special_fare_old)
         {
             bool res = false;
@@ -128,6 +197,15 @@ namespace AppDev_System
                 MessageBox.Show("There was an Error");
             }
             con.Close();
+
+            return res;
+        }
+
+        public Boolean deleteRow()
+        {
+            bool res = false;
+
+            //query shit nasad thiz lez fucking GOOOOOOOOO
 
             return res;
         }

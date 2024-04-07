@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -197,6 +198,14 @@ namespace AppDev_System.UserControls
                 addroutefrm.Show();
             }
         }
+        private void load_the_gridView()
+        {
+            string sqlstm = "SELECT * FROM routes";
+            MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "routes");
+            gunaDataGridView2.DataSource = DS.Tables[0];
+        }
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e) //REFRESHES THE DATA DISPLAYED IN THE GRIDVIEW IN ROUTES USERCONTROL
         {
@@ -228,10 +237,28 @@ namespace AppDev_System.UserControls
                 if (isOpen_Edit == false)
                 {
                     EditRouteForm edit_routefrm = new EditRouteForm();
-                  //  MessageBox.Show((e.RowIndex + 1).ToString());
+                    //  MessageBox.Show((e.RowIndex + 1).ToString());
+                    DataGridViewRow row_to_edit = gunaDataGridView2.Rows[e.RowIndex];
+
+                    
+                   // MessageBox.Show(row_to_edit.Cells[3].Value.ToString() + ", " + row_to_edit.Cells[4].Value.ToString() + ", " + row_to_edit.Cells[5].Value.ToString() + ", " + row_to_edit.Cells[6].Value.ToString());
+
+                    string idye = row_to_edit.Cells[2].Value.ToString(); //MAO NI ID
+                    string value_distance = row_to_edit.Cells[4].Value.ToString(); //distance
+                    string value_regFare = row_to_edit.Cells[5].Value.ToString(); //reg_new
+                    string value_specFre = row_to_edit.Cells[6].Value.ToString(); //spec_new
+
+
+                    //MessageBox.Show(value_regFare);
+
+                 //   Routes rts_to_ed = new Routes(row_to_edit.Cells[3].Value.ToString(), float.Parse(value_distance, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_regFare, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_specFre, CultureInfo.InvariantCulture.NumberFormat));
+                    //edit_routefrm.edit_set_row(row_to_edit);
+                    edit_routefrm.routeID = Int32.Parse(idye);
                     edit_routefrm.setrowNumber((e.RowIndex));
+                 //   edit_routefrm.edit_set_routes(rts_to_ed);
                     edit_routefrm.Show();
                 }
+                //load_the_gridView();
             }
         }
     }

@@ -14,6 +14,9 @@ namespace AppDev_System
     public partial class EditRouteForm : Form
     {
         public int rowNumber {get; set;}
+        public DataGridViewRow row_grid;
+        //public Routes routes;
+        public int routeID { get; set;}
         public EditRouteForm()
         {
             InitializeComponent();
@@ -111,7 +114,7 @@ namespace AppDev_System
                     float route_special_fare = float.Parse(Edit_SpecialFee_textBox.Text);
 
                     Routes routes = new Routes(Edit_brgy_textBox.Text, route_distance, route_regular_fare, route_special_fare);
-                    routes.editRoute(Edit_brgy_textBox.Text, route_distance, route_regular_fare, route_special_fare,this.rowNumber);
+                    routes.editRoute(Edit_brgy_textBox.Text, route_distance, route_regular_fare, route_special_fare,this.routeID);
                     this.Close();
                 }
             }

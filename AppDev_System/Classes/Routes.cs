@@ -42,7 +42,7 @@ namespace AppDev_System
             return res;
         }
 
-        public Boolean editRoute(string barangay, float distance, float regularFareNew, float specialFareNew, int id)
+        public Boolean editRoute(string barangay, float distance, float regularFareNew, float specialFareNew, int routeID)
         {
             bool res = false;
 
@@ -51,6 +51,21 @@ namespace AppDev_System
 
             try
             {
+                using (MySqlConnection con1 = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem"))
+                {
+                    con1.Open();
+                    using (MySqlCommand cmd_routes = new MySqlCommand("SELECT * FROM routes WHERE id = '" + routeID + "'", con1))
+                    {
+                        MySqlDataReader reader_routes = cmd_routes.ExecuteReader();
+                        while (reader_routes.Read())
+                        {
+                            regular_fare_old = (float)reader_routes["regular_fare_new"];
+                            special_fare_old = (float)reader_routes["special_fare_new"];
+                        }
+                        con1.Close();
+                    }
+                }
+                /*
                 string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
                 MySqlConnection conConn = new MySqlConnection(conne);
                 conConn.Open();
@@ -63,7 +78,7 @@ namespace AppDev_System
                 {
                     regular_fare_old = (float)reader_routes["regular_fare_new"];
                 }
-                conConn.Close();
+                conConn.Close();*/
             }
             catch
             {
@@ -77,13 +92,14 @@ namespace AppDev_System
             Query q = new Query();
             try
             {
-                q.editRoute(barangay,distance, regularFareNew,specialFareNew,id, regular_fare_old, special_fare_old);
+                EditRouteForm edrtf = new EditRouteForm();
+                q.editRoute_New(this.barangayName, this.distance, this.regularFareNew, this.specialFareNew, regular_fare_old, special_fare_old, routeID);
+                //q.editRoute();
             }
             catch (Exception ex)
             {
                 return res;
             }
-
             return res;
         }
     }
