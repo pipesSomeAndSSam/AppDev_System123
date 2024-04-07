@@ -95,6 +95,24 @@ namespace AppDev_System
             return res;
         }
 
+        public Boolean editRoute(string barangay_name, float distance, float regular_fare_new, float special_fare_new, float regular_fare_old, float special_fare_old, int rowNumber)
+        {
+            bool res = false;
+            try
+            {
+                con.Open();
+
+                MySqlCommand command = new MySqlCommand("UPDATE routes SET barangay_name = '" + barangay_name + "' ,distance =  '" + distance + "', regular_fare_new = '" + regular_fare_new + "', special_fare_new = '" + special_fare_new + "', regular_fare_old = '" + regular_fare_old + "', special_fare_old = '" + special_fare_old + "' WHERE id = '" + rowNumber + "'" );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an Error");
+            }
+            con.Close();
+
+            return res;
+        }
+
         public string get_total_numOfRoutes()
         {
             string numOfRoutes;

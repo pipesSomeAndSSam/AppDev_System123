@@ -14,6 +14,7 @@ namespace AppDev_System.UserControls
 {
     public partial class UserControl_Routes : UserControl
     {
+        private List<Routes> routes;
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
         //private bool addRoute_isOpen = false;
 
@@ -106,9 +107,11 @@ namespace AppDev_System.UserControls
             gunaDataGridView2.Columns[8].Width = 80;
             gunaDataGridView2.Columns[9].Width = 80;
 
+            //gunaDataGridView2.Columns[8].
+
            // gunaDataGridView2.Columns[8].DefaultCellStyle.ForeColor = Color.White;
            // gunaDataGridView2.Columns[9].DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(223, 0, 0); ;
-            
+
 
             /*
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
@@ -173,6 +176,10 @@ namespace AppDev_System.UserControls
                      */
             con.Close();
         }
+        public void addRoutes(Routes route)
+        {
+            this.routes.Add(route);
+        }
 
         private void gunaAdvenceButton2_Click(object sender, EventArgs e)
         {
@@ -199,6 +206,34 @@ namespace AppDev_System.UserControls
             DataSet DS = new System.Data.DataSet();
             SDA.Fill(DS, "routes");
             gunaDataGridView2.DataSource = DS.Tables[0];
+        }
+
+        private void gunaDataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) //FOR EDIT AND DELETE BUTTON COLUMN
+        {
+            if(e.ColumnIndex == gunaDataGridView2.Columns["Del_button"].Index) //DELETE
+            {
+
+            }
+            else if (e.ColumnIndex == gunaDataGridView2.Columns["Edit_button"].Index) //EDIT
+            {
+                bool isOpen_Edit = false;
+                foreach (Form f in Application.OpenForms)
+                {
+                    if (f.Text == "EditRouteForm")
+                    {
+                        isOpen_Edit = true;
+                        f.BringToFront();
+                        break;
+                    }
+                }
+                if (isOpen_Edit == false)
+                {
+                    EditRouteForm edit_routefrm = new EditRouteForm();
+                  //  MessageBox.Show((e.RowIndex + 1).ToString());
+                    edit_routefrm.setrowNumber((e.RowIndex));
+                    edit_routefrm.Show();
+                }
+            }
         }
     }
 }

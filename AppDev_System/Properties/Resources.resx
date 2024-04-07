@@ -139,6 +139,9 @@
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dashBoardDesignForPanel_new_limeGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashBoardDesignForPanel_new_limeGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="main" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,6 +178,9 @@
   <data name="dashBoardDesignForPanel_new_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashBoardDesignForPanel_new_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="right-arrow-chocolate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\right-arrow-chocolate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dashBoardDesignForPanel_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashBoardDesignForPanel_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -190,9 +196,6 @@
   <data name="refresh-left-square3.512x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh-left-square3.512x512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus.511x512(WHITE)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus.511x512(WHITE).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="grids.256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grids.256x256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,10 +205,10 @@
   <data name="tickets" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tickets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="right-arrow-chocolate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\right-arrow-chocolate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus.511x512(WHITE)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus.511x512(WHITE).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashBoardDesignForPanel_new_limeGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashBoardDesignForPanel_new_limeGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\white_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

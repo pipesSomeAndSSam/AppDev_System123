@@ -101,6 +101,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\EditRouteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRouteForm.Designer.cs">
+      <DependentUpon>EditRouteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddRouteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="UserControls\UserControl_Routes.Designer.cs">
       <DependentUpon>UserControl_Routes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\EditRouteForm.resx">
+      <DependentUpon>EditRouteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddRouteForm.resx">
       <DependentUpon>AddRouteForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dashBoardDesignForPanel_new_limeGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_bar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

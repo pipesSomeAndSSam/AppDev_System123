@@ -35,9 +35,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Routes));
             this.gunaDataGridView2 = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaDataGridView2
@@ -47,6 +49,7 @@
             this.gunaDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.gunaDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
@@ -106,6 +109,7 @@
             this.gunaDataGridView2.ThemeStyle.RowsStyle.Height = 24;
             this.gunaDataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             this.gunaDataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gunaDataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gunaDataGridView2_CellClick);
             // 
             // gunaLabel
             // 
@@ -117,6 +121,16 @@
             this.gunaLabel.Size = new System.Drawing.Size(284, 46);
             this.gunaLabel.TabIndex = 6;
             this.gunaLabel.Text = "Routes Status";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AppDev_System.Properties.Resources.white_bar;
+            this.pictureBox1.Location = new System.Drawing.Point(1418, 158);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // gunaAdvenceButton1
             // 
@@ -184,6 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gunaAdvenceButton1);
             this.Controls.Add(this.gunaDataGridView2);
             this.Controls.Add(this.gunaLabel);
@@ -191,6 +206,7 @@
             this.Name = "UserControl_Routes";
             this.Size = new System.Drawing.Size(1570, 970);
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +217,6 @@
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
         private Guna.UI.WinForms.GunaLabel gunaLabel;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

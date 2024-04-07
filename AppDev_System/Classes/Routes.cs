@@ -39,5 +39,31 @@ namespace AppDev_System
             }
             return res;
         }
+
+        public Boolean editRoute(string barangay, float distance, float regularFareNew, float specialFareNew)
+        {
+            bool res = false;
+
+            this.regularFareOld = this.regularFareNew;
+            this.specialFareOld = this.specialFareNew;
+
+            this.barangayName = barangay;
+            this.distance = distance;
+            this.regularFareNew = regularFareNew;
+            this.specialFareNew = specialFareNew;
+
+            Query q = new Query();
+            try
+            {
+                //edit route query
+
+            }
+            catch (Exception ex)
+            {
+                return res;
+            }
+
+            return res;
+        }
     }
 }
