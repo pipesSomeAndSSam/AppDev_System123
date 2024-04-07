@@ -43,6 +43,7 @@
             this.LOGOUTButt = new Guna.UI.WinForms.GunaAdvenceButton();
             this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
             this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
+            this.userControl_Booking1 = new AppDev_System.UserControls.UserControl_Booking();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +149,7 @@
             this.BookingsButton.Size = new System.Drawing.Size(350, 91);
             this.BookingsButton.TabIndex = 6;
             this.BookingsButton.Text = "Bookings";
+            this.BookingsButton.Click += new System.EventHandler(this.BookingsButton_Click);
             // 
             // RoutesButton
             // 
@@ -330,10 +332,19 @@
             // 
             // userControl_Routes
             // 
+            this.userControl_Routes.BackColor = System.Drawing.Color.White;
             this.userControl_Routes.Location = new System.Drawing.Point(350, 110);
             this.userControl_Routes.Name = "userControl_Routes";
             this.userControl_Routes.Size = new System.Drawing.Size(1570, 970);
             this.userControl_Routes.TabIndex = 5;
+            // 
+            // userControl_Booking1
+            // 
+            this.userControl_Booking1.BackColor = System.Drawing.Color.White;
+            this.userControl_Booking1.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Booking1.Name = "userControl_Booking1";
+            this.userControl_Booking1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Booking1.TabIndex = 6;
             // 
             // Dashboard
             // 
@@ -341,6 +352,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.userControl_Booking1);
             this.Controls.Add(this.userControl_Routes);
             this.Controls.Add(this.userControl1_Dash1);
             this.Controls.Add(this.LOGOUTButt);
@@ -377,5 +389,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private UserControls.UserControl1_Dash userControl1_Dash1;
         private UserControls.UserControl_Routes userControl_Routes;
+        private UserControls.UserControl_Booking userControl_Booking1;
     }
 }

@@ -48,6 +48,7 @@ namespace AppDev_System
 
             try
             {
+
                 string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
                 MySqlConnection conConn = new MySqlConnection(conne);
                 conConn.Open();
@@ -61,16 +62,21 @@ namespace AppDev_System
                 MySqlDataReader reader_users = cmd_users.ExecuteReader();
 
 
+                string emailEx = "";
+                string usernameEx = "";
+                //string no_of_routes = "";
 
                 while (reader_users.Read())
                 {
                     int ctr_users = 0;
-                    string emailEx = (string)reader_users["email"];
-                    string usernameEx = (string)reader_users["user_name"];
+                     emailEx = (string)reader_users["email"];
+                     usernameEx = (string)reader_users["user_name"];
 
-                    userName.Text = usernameEx;
-                    gunaLabel2.Text = emailEx;
                 }
+                userName.Text = usernameEx;
+                gunaLabel2.Text = emailEx;
+                conConn.Close();
+
             }
             catch
             {
@@ -100,6 +106,11 @@ namespace AppDev_System
         {
             userControl1_Dash1.BringToFront();
            // userControl_Routes1.Hide();
+        }
+
+        private void BookingsButton_Click(object sender, EventArgs e)                  //BOOKING BUTTON
+        {
+            userControl_Booking1.BringToFront();
         }
     }
 }

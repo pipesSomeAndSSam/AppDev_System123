@@ -137,6 +137,12 @@
     <Compile Include="UserControls\UserControl1_Dash.Designer.cs">
       <DependentUpon>UserControl1_Dash.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Booking.Designer.cs">
+      <DependentUpon>UserControl_Booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_Routes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UserControl1_Dash.resx">
       <DependentUpon>UserControl1_Dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_Booking.resx">
+      <DependentUpon>UserControl_Booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Routes.resx">
       <DependentUpon>UserControl_Routes.cs</DependentUpon>
@@ -277,6 +286,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\white_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.512x512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
