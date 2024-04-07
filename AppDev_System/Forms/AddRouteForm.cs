@@ -103,8 +103,6 @@ namespace AppDev_System
                     float route_special_fare = float.Parse(gunaTextBox4.Text);
 
                     Routes routes = new Routes(gunaTextBox1.Text, route_distance, route_regular_fare, route_special_fare);
-                    UserControl_Routes userControl_Routes = new UserControl_Routes();
-                    userControl_Routes.addRoutes(routes);
                     routes.createRoute();
                 }
             }

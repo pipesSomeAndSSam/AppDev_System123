@@ -1,8 +1,12 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace AppDev_System
 {
@@ -14,8 +18,6 @@ namespace AppDev_System
 
         public float regularFareNew { get; set; }
         public float specialFareNew { get; set; }
-        public float regularFareOld { get; set; }
-        public float specialFareOld { get; set; }
 
         public Routes(string barangay, float distance, float regularFareNew, float specialFareNew) 
         {
@@ -40,13 +42,33 @@ namespace AppDev_System
             return res;
         }
 
-        public Boolean editRoute(string barangay, float distance, float regularFareNew, float specialFareNew)
+        public Boolean editRoute(string barangay, float distance, float regularFareNew, float specialFareNew, int id)
         {
             bool res = false;
 
-            this.regularFareOld = this.regularFareNew;
-            this.specialFareOld = this.specialFareNew;
+            float regular_fare_old = 0;
+            float special_fare_old = 0;
 
+            try
+            {
+                string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
+                MySqlConnection conConn = new MySqlConnection(conne);
+                conConn.Open();
+                
+                string command_get_oldFare = "SELECT * FROM routes WHERE id='" + id + "'";
+                MySqlCommand cmd_routes = new MySqlCommand(command_get_oldFare, conConn);
+
+                MySqlDataReader reader_routes = cmd_routes.ExecuteReader();
+                while (reader_routes.Read())
+                {
+                    regular_fare_old = (float)reader_routes["regular_fare_new"];
+                }
+                conConn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("error lodi");
+            }
             this.barangayName = barangay;
             this.distance = distance;
             this.regularFareNew = regularFareNew;
@@ -55,8 +77,7 @@ namespace AppDev_System
             Query q = new Query();
             try
             {
-                //edit route query
-
+                q.editRoute(barangay,distance, regularFareNew,specialFareNew,id, regular_fare_old, special_fare_old);
             }
             catch (Exception ex)
             {

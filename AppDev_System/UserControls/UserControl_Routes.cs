@@ -14,7 +14,9 @@ namespace AppDev_System.UserControls
 {
     public partial class UserControl_Routes : UserControl
     {
-        private List<Routes> routes;
+        public DataTable dt_users;
+
+
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
         //private bool addRoute_isOpen = false;
 
@@ -30,7 +32,7 @@ namespace AppDev_System.UserControls
 
             string query = "SELECT * FROM routes";
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, con);
-            DataTable dt_users = new DataTable();
+            dt_users = new DataTable();
             dataAdapter.Fill(dt_users);
             gunaDataGridView2.DataSource = dt_users;
 
@@ -176,10 +178,7 @@ namespace AppDev_System.UserControls
                      */
             con.Close();
         }
-        public void addRoutes(Routes route)
-        {
-            this.routes.Add(route);
-        }
+        
 
         private void gunaAdvenceButton2_Click(object sender, EventArgs e)
         {

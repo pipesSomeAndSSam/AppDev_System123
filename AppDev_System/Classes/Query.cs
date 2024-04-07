@@ -20,6 +20,8 @@ namespace AppDev_System
     {
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
 
+
+
         
         public Boolean insertUser(string user_name, string email, string password, string contact_num)
         {
@@ -50,7 +52,7 @@ namespace AppDev_System
                     res = true;
                 }
             }
-            catch (Exception ex) 
+            catch
             {
                 MessageBox.Show("There was an Error");
             }
@@ -86,7 +88,7 @@ namespace AppDev_System
                     res = true;
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("There was an Error");
             }
@@ -95,16 +97,33 @@ namespace AppDev_System
             return res;
         }
 
-        public Boolean editRoute(string barangay_name, float distance, float regular_fare_new, float special_fare_new, float regular_fare_old, float special_fare_old, int rowNumber)
+        public Boolean editRoute(string barangay_name, float distance, float regular_fare_new, float special_fare_new, int rowNumber, float regular_fare_old, float special_fare_old)
         {
             bool res = false;
+
+         //   float regular_fare_old = 0;
+          //  float special_fare_old = 0;
+
             try
             {
                 con.Open();
 
-                MySqlCommand command = new MySqlCommand("UPDATE routes SET barangay_name = '" + barangay_name + "' ,distance =  '" + distance + "', regular_fare_new = '" + regular_fare_new + "', special_fare_new = '" + special_fare_new + "', regular_fare_old = '" + regular_fare_old + "', special_fare_old = '" + special_fare_old + "' WHERE id = '" + rowNumber + "'" );
+                 
+                var dateString2 = DateTime.Now.ToString("yyyy-MM-dd");
+
+                string updt = "UPDATE routes SET barangay_name = '" + barangay_name +
+                              "', distance =  '" + distance + "', regular_fare_new = '" + regular_fare_new +
+                              "', special_fare_new = '" + special_fare_new + "', regular_fare_old = '" + regular_fare_old +
+                              "', special_fare_old = '" + special_fare_old +
+                              "', date_fare_changed = '" + dateString2 + "' WHERE id = '" + rowNumber + "'";
+
+                MySqlCommand command_update = new MySqlCommand(updt, con);
+
+                command_update.ExecuteNonQuery();
+                MessageBox.Show("Update Successful");
+
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("There was an Error");
             }

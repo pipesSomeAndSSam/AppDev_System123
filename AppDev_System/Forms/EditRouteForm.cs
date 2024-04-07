@@ -96,5 +96,29 @@ namespace AppDev_System
                 Edit_SpecialFee_textBox.ForeColor = Color.FromArgb(64, 64, 64);
             }
         }
+
+        private void SubmitButtonRoute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((Edit_brgy_textBox.Text != "Input Brgy." && Edit_brgy_textBox.Text != "")
+                    && (Edit_Dist_textBox.Text != "Input Distance" && Edit_Dist_textBox.Text != "")
+                    && (Edit_RegularFee_textBox.Text != "Input in Pesos" && Edit_RegularFee_textBox.Text != "")
+                    && (Edit_SpecialFee_textBox.Text != "Input in Pesos" && Edit_SpecialFee_textBox.Text != ""))
+                {
+                    float route_distance = float.Parse(Edit_Dist_textBox.Text);
+                    float route_regular_fare = float.Parse(Edit_RegularFee_textBox.Text);
+                    float route_special_fare = float.Parse(Edit_SpecialFee_textBox.Text);
+
+                    Routes routes = new Routes(Edit_brgy_textBox.Text, route_distance, route_regular_fare, route_special_fare);
+                    routes.editRoute(Edit_brgy_textBox.Text, route_distance, route_regular_fare, route_special_fare,this.rowNumber);
+                    this.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Incorrect Input");
+            }
+        }
     }
 }

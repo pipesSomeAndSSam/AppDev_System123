@@ -200,8 +200,9 @@
             this.SubmitButtonRoute.Radius = 7;
             this.SubmitButtonRoute.Size = new System.Drawing.Size(106, 31);
             this.SubmitButtonRoute.TabIndex = 15;
-            this.SubmitButtonRoute.Text = "Submit";
+            this.SubmitButtonRoute.Text = "Update";
             this.SubmitButtonRoute.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SubmitButtonRoute.Click += new System.EventHandler(this.SubmitButtonRoute_Click);
             // 
             // Row_Num
             // 
