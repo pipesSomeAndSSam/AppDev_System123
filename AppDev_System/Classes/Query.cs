@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppDev_System.Classes;
 using AppDev_System.UserControls;
 using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
@@ -166,31 +167,34 @@ namespace AppDev_System
 
             return res;
         }
-        public Boolean editRoute(string barangay_name, float distance, float regular_fare_new, float special_fare_new, int rowNumber, float regular_fare_old, float special_fare_old)
+        
+        public Boolean insertBooking(Booking bookig)
         {
             bool res = false;
-
-         //   float regular_fare_old = 0;
-          //  float special_fare_old = 0;
-
+            var date_t = DateTime.Now.ToString("yyyy-MM-dd");
             try
             {
                 con.Open();
+                MySqlCommand comToCheck = new MySqlCommand("select * from bookigs where passenger_name =  '" + bookig.passenger_name + "' and amount = '" + bookig.amount + "' and booked_date '" + date_t + "'" , con);
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Passenger already booked");
+                }
+                else
+                {
+                    string query = "insert into bookings(passenger_name,booked_date,amount) value('" + bookig.passenger_name + "','" + date_t + "','" + bookig.amount + "')";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
 
-                 
-                var dateString2 = DateTime.Now.ToString("yyyy-MM-dd");
-
-                string updt = "UPDATE routes SET barangay_name = '" + barangay_name +
-                              "', distance =  '" + distance + "', regular_fare_new = '" + regular_fare_new +
-                              "', special_fare_new = '" + special_fare_new + "', regular_fare_old = '" + regular_fare_old +
-                              "', special_fare_old = '" + special_fare_old +
-                              "', date_fare_changed = '" + dateString2 + "' WHERE id = '" + rowNumber + "'";
-
-                MySqlCommand command_update = new MySqlCommand(updt, con);
-
-                command_update.ExecuteNonQuery();
-                MessageBox.Show("Update Successful");
-
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > -1)
+                    {
+                        MessageBox.Show("Successful input in Database");
+                    }
+                    res = true;
+                }
             }
             catch
             {
@@ -201,14 +205,6 @@ namespace AppDev_System
             return res;
         }
 
-        public Boolean deleteRow()
-        {
-            bool res = false;
-
-            //query shit nasad thiz lez fucking GOOOOOOOOO
-
-            return res;
-        }
 
         public string get_total_numOfRoutes()
         {

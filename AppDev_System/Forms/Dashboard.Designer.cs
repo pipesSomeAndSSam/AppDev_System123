@@ -41,9 +41,9 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.userName = new Guna.UI.WinForms.GunaLabel();
             this.LOGOUTButt = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
-            this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
             this.userControl_Booking1 = new AppDev_System.UserControls.UserControl_Booking();
+            this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
+            this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -102,7 +102,7 @@
             this.SeatsButtons.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.SeatsButtons.CheckedBorderColor = System.Drawing.Color.Black;
             this.SeatsButtons.CheckedForeColor = System.Drawing.Color.Black;
-            this.SeatsButtons.CheckedImage = global::AppDev_System.Properties.Resources.road_with_broken_line;
+            this.SeatsButtons.CheckedImage = global::AppDev_System.Properties.Resources.grids_256x256;
             this.SeatsButtons.CheckedLineColor = System.Drawing.Color.DimGray;
             this.SeatsButtons.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeatsButtons.ForeColor = System.Drawing.Color.White;
@@ -131,7 +131,7 @@
             this.BookingsButton.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.BookingsButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.BookingsButton.CheckedForeColor = System.Drawing.Color.Black;
-            this.BookingsButton.CheckedImage = global::AppDev_System.Properties.Resources.road_with_broken_line;
+            this.BookingsButton.CheckedImage = global::AppDev_System.Properties.Resources.tickets;
             this.BookingsButton.CheckedLineColor = System.Drawing.Color.DimGray;
             this.BookingsButton.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookingsButton.ForeColor = System.Drawing.Color.White;
@@ -178,7 +178,7 @@
             this.RoutesButton.OnPressedColor = System.Drawing.Color.Black;
             this.RoutesButton.Size = new System.Drawing.Size(350, 91);
             this.RoutesButton.TabIndex = 5;
-            this.RoutesButton.Text = "Routes";
+            this.RoutesButton.Text = "Destinations";
             this.RoutesButton.Click += new System.EventHandler(this.RoutesButton_Click);
             // 
             // MulticabsButton
@@ -191,7 +191,7 @@
             this.MulticabsButton.CheckedBaseColor = System.Drawing.SystemColors.Control;
             this.MulticabsButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.MulticabsButton.CheckedForeColor = System.Drawing.Color.Black;
-            this.MulticabsButton.CheckedImage = global::AppDev_System.Properties.Resources.speedometer;
+            this.MulticabsButton.CheckedImage = global::AppDev_System.Properties.Resources.bus_vehicle;
             this.MulticabsButton.CheckedLineColor = System.Drawing.Color.DimGray;
             this.MulticabsButton.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MulticabsButton.ForeColor = System.Drawing.Color.White;
@@ -323,12 +323,13 @@
             this.LOGOUTButt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.LOGOUTButt.Click += new System.EventHandler(this.LOGOUTButt_Click);
             // 
-            // userControl1_Dash1
+            // userControl_Booking1
             // 
-            this.userControl1_Dash1.Location = new System.Drawing.Point(350, 110);
-            this.userControl1_Dash1.Name = "userControl1_Dash1";
-            this.userControl1_Dash1.Size = new System.Drawing.Size(1570, 970);
-            this.userControl1_Dash1.TabIndex = 4;
+            this.userControl_Booking1.BackColor = System.Drawing.Color.White;
+            this.userControl_Booking1.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Booking1.Name = "userControl_Booking1";
+            this.userControl_Booking1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Booking1.TabIndex = 6;
             // 
             // userControl_Routes
             // 
@@ -338,13 +339,12 @@
             this.userControl_Routes.Size = new System.Drawing.Size(1570, 970);
             this.userControl_Routes.TabIndex = 5;
             // 
-            // userControl_Booking1
+            // userControl1_Dash1
             // 
-            this.userControl_Booking1.BackColor = System.Drawing.Color.White;
-            this.userControl_Booking1.Location = new System.Drawing.Point(350, 110);
-            this.userControl_Booking1.Name = "userControl_Booking1";
-            this.userControl_Booking1.Size = new System.Drawing.Size(1570, 970);
-            this.userControl_Booking1.TabIndex = 6;
+            this.userControl1_Dash1.Location = new System.Drawing.Point(350, 110);
+            this.userControl1_Dash1.Name = "userControl1_Dash1";
+            this.userControl1_Dash1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl1_Dash1.TabIndex = 4;
             // 
             // Dashboard
             // 

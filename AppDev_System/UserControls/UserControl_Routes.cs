@@ -29,7 +29,7 @@ namespace AppDev_System.UserControls
             InitializeComponent();
             numOfRts.Text = q.get_total_numOfRoutes();
             customizeDataGridView();
-            pictureBox1.BringToFront();
+           // pictureBox1.BringToFront();
         }
         private void customizeDataGridView()
         {
@@ -215,14 +215,7 @@ namespace AppDev_System.UserControls
                 addroutefrm.Show();
             }
         }
-        private void load_the_gridView()
-        {
-            string sqlstm = "SELECT * FROM routes";
-            MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
-            DataSet DS = new System.Data.DataSet();
-            SDA.Fill(DS, "routes");
-            gunaDataGridView2.DataSource = DS.Tables[0];
-        }
+        
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e) //REFRESHES THE DATA DISPLAYED IN THE GRIDVIEW IN ROUTES USERCONTROL
         {
@@ -235,6 +228,7 @@ namespace AppDev_System.UserControls
             SDA.Fill(DS, "routes");
             gunaDataGridView2.DataSource = DS.Tables[0];
 
+            numOfRts.Text = q.get_total_numOfRoutes();
             /*
             if (gunaDataGridView2.RowCount < 20)
                 gunaVScrollBar1.Hide();

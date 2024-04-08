@@ -49,9 +49,9 @@
             this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel1.Location = new System.Drawing.Point(12, 9);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(106, 19);
+            this.gunaLabel1.Size = new System.Drawing.Size(148, 19);
             this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Add A Route";
+            this.gunaLabel1.Text = "Add A Destination";
             // 
             // gunaLabel2
             // 

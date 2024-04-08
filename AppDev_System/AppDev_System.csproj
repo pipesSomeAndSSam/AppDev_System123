@@ -101,6 +101,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Booking.cs" />
+    <Compile Include="Forms\AddBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBooking.Designer.cs">
+      <DependentUpon>AddBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditRouteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +156,9 @@
     <Compile Include="UserControls\UserControl_Routes.Designer.cs">
       <DependentUpon>UserControl_Routes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddBooking.resx">
+      <DependentUpon>AddBooking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditRouteForm.resx">
       <DependentUpon>EditRouteForm.cs</DependentUpon>
     </EmbeddedResource>
