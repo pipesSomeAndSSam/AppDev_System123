@@ -38,35 +38,30 @@
             this.gunaPictureBox7 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel25 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel6 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel22 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton8 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel23 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox6 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel7 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel24 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.label = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton7 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel20 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox5 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel5 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel21 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton6 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton4 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton5 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
@@ -76,7 +71,6 @@
             this.gunaShadowPanel7 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.totalBookingsNum = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
@@ -221,7 +215,6 @@
             // gunaShadowPanel6
             // 
             this.gunaShadowPanel6.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel6.Controls.Add(this.gunaLabel22);
             this.gunaShadowPanel6.Controls.Add(this.gunaAdvenceButton8);
             this.gunaShadowPanel6.Controls.Add(this.gunaLabel23);
             this.gunaShadowPanel6.Controls.Add(this.gunaPictureBox6);
@@ -236,17 +229,6 @@
             this.gunaShadowPanel6.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel6.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel6.TabIndex = 7;
-            // 
-            // gunaLabel22
-            // 
-            this.gunaLabel22.AutoSize = true;
-            this.gunaLabel22.BackColor = System.Drawing.Color.White;
-            this.gunaLabel22.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel22.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel22.Name = "gunaLabel22";
-            this.gunaLabel22.Size = new System.Drawing.Size(285, 54);
-            this.gunaLabel22.TabIndex = 4;
-            this.gunaLabel22.Text = "i love chaewon";
             // 
             // gunaAdvenceButton8
             // 
@@ -323,7 +305,6 @@
             // gunaShadowPanel4
             // 
             this.gunaShadowPanel4.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel4.Controls.Add(this.label);
             this.gunaShadowPanel4.Controls.Add(this.gunaAdvenceButton7);
             this.gunaShadowPanel4.Controls.Add(this.gunaLabel20);
             this.gunaShadowPanel4.Controls.Add(this.gunaPictureBox5);
@@ -338,17 +319,6 @@
             this.gunaShadowPanel4.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel4.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel4.TabIndex = 6;
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.BackColor = System.Drawing.Color.White;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(17, 115);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(340, 54);
-            this.label.TabIndex = 5;
-            this.label.Text = "Ahn,Yujin my wife";
             // 
             // gunaAdvenceButton7
             // 
@@ -425,7 +395,6 @@
             // gunaShadowPanel3
             // 
             this.gunaShadowPanel3.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel3.Controls.Add(this.gunaLabel11);
             this.gunaShadowPanel3.Controls.Add(this.gunaAdvenceButton6);
             this.gunaShadowPanel3.Controls.Add(this.gunaLabel13);
             this.gunaShadowPanel3.Controls.Add(this.gunaPictureBox4);
@@ -440,17 +409,6 @@
             this.gunaShadowPanel3.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel3.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel3.TabIndex = 8;
-            // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.BackColor = System.Drawing.Color.White;
-            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(128, 54);
-            this.gunaLabel11.TabIndex = 4;
-            this.gunaLabel11.Text = "Lezgo";
             // 
             // gunaAdvenceButton6
             // 
@@ -527,7 +485,6 @@
             // gunaShadowPanel2
             // 
             this.gunaShadowPanel2.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel2.Controls.Add(this.gunaLabel8);
             this.gunaShadowPanel2.Controls.Add(this.gunaAdvenceButton4);
             this.gunaShadowPanel2.Controls.Add(this.gunaLabel9);
             this.gunaShadowPanel2.Controls.Add(this.gunaPictureBox3);
@@ -542,18 +499,6 @@
             this.gunaShadowPanel2.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel2.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel2.TabIndex = 7;
-            // 
-            // gunaLabel8
-            // 
-            this.gunaLabel8.AutoSize = true;
-            this.gunaLabel8.BackColor = System.Drawing.Color.White;
-            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel8.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel8.Margin = new System.Windows.Forms.Padding(0);
-            this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(102, 54);
-            this.gunaLabel8.TabIndex = 4;
-            this.gunaLabel8.Text = "wew";
             // 
             // gunaAdvenceButton4
             // 
@@ -632,7 +577,6 @@
             // gunaShadowPanel1
             // 
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel1.Controls.Add(this.gunaLabel5);
             this.gunaShadowPanel1.Controls.Add(this.gunaAdvenceButton5);
             this.gunaShadowPanel1.Controls.Add(this.gunaLabel6);
             this.gunaShadowPanel1.Controls.Add(this.gunaPictureBox2);
@@ -647,17 +591,6 @@
             this.gunaShadowPanel1.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel1.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel1.TabIndex = 6;
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.BackColor = System.Drawing.Color.White;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(17, 115);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(95, 54);
-            this.gunaLabel5.TabIndex = 4;
-            this.gunaLabel5.Text = "0asf";
             // 
             // gunaAdvenceButton5
             // 
@@ -775,7 +708,6 @@
             // 
             this.gunaShadowPanel5.BackColor = System.Drawing.Color.White;
             this.gunaShadowPanel5.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel5.Controls.Add(this.totalBookingsNum);
             this.gunaShadowPanel5.Controls.Add(this.gunaAdvenceButton3);
             this.gunaShadowPanel5.Controls.Add(this.gunaLabel4);
             this.gunaShadowPanel5.Controls.Add(this.gunaPictureBox1);
@@ -790,17 +722,6 @@
             this.gunaShadowPanel5.ShadowStyle = Guna.UI.WinForms.ShadowMode.ForwardDiagonal;
             this.gunaShadowPanel5.Size = new System.Drawing.Size(366, 257);
             this.gunaShadowPanel5.TabIndex = 5;
-            // 
-            // totalBookingsNum
-            // 
-            this.totalBookingsNum.AutoSize = true;
-            this.totalBookingsNum.BackColor = System.Drawing.Color.White;
-            this.totalBookingsNum.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBookingsNum.Location = new System.Drawing.Point(17, 115);
-            this.totalBookingsNum.Name = "totalBookingsNum";
-            this.totalBookingsNum.Size = new System.Drawing.Size(194, 54);
-            this.totalBookingsNum.TabIndex = 4;
-            this.totalBookingsNum.Text = "Ahn Yujin";
             // 
             // gunaAdvenceButton3
             // 
@@ -839,9 +760,9 @@
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.Location = new System.Drawing.Point(11, 84);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(264, 31);
+            this.gunaLabel4.Size = new System.Drawing.Size(205, 31);
             this.gunaLabel4.TabIndex = 2;
-            this.gunaLabel4.Text = "Total Passengers Booked";
+            this.gunaLabel4.Text = "Total Tickets Today";
             // 
             // gunaPictureBox1
             // 
@@ -871,9 +792,9 @@
             this.gunaLabel12.ForeColor = System.Drawing.Color.White;
             this.gunaLabel12.Location = new System.Drawing.Point(12, 11);
             this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(141, 41);
+            this.gunaLabel12.Size = new System.Drawing.Size(109, 41);
             this.gunaLabel12.TabIndex = 0;
-            this.gunaLabel12.Text = "Bookings";
+            this.gunaLabel12.Text = "Tickets";
             // 
             // UserControl1_Dash
             // 
@@ -969,12 +890,6 @@
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaPanel gunaPanel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
-        private Guna.UI.WinForms.GunaLabel gunaLabel22;
-        private Guna.UI.WinForms.GunaLabel label;
-        private Guna.UI.WinForms.GunaLabel gunaLabel11;
-        private Guna.UI.WinForms.GunaLabel gunaLabel8;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel totalBookingsNum;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox7;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox8;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox12;

@@ -53,9 +53,9 @@
             this.gunaLabel.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel.Location = new System.Drawing.Point(3, 10);
             this.gunaLabel.Name = "gunaLabel";
-            this.gunaLabel.Size = new System.Drawing.Size(308, 46);
+            this.gunaLabel.Size = new System.Drawing.Size(264, 46);
             this.gunaLabel.TabIndex = 7;
-            this.gunaLabel.Text = "Booking Status";
+            this.gunaLabel.Text = "Ticket Status";
             // 
             // BookingsGridView
             // 
@@ -85,7 +85,7 @@
             this.BookingsGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.BookingsGridView.EnableHeadersVisualStyles = false;
             this.BookingsGridView.GridColor = System.Drawing.Color.DarkGray;
-            this.BookingsGridView.Location = new System.Drawing.Point(33, 156);
+            this.BookingsGridView.Location = new System.Drawing.Point(52, 156);
             this.BookingsGridView.Name = "BookingsGridView";
             this.BookingsGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -101,7 +101,7 @@
             this.BookingsGridView.RowTemplate.Height = 24;
             this.BookingsGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.BookingsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BookingsGridView.Size = new System.Drawing.Size(1534, 751);
+            this.BookingsGridView.Size = new System.Drawing.Size(1480, 751);
             this.BookingsGridView.TabIndex = 9;
             this.BookingsGridView.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Blue;
             this.BookingsGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
@@ -143,9 +143,9 @@
             this.addBookings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.addBookings.ImageSize = new System.Drawing.Size(20, 20);
             this.addBookings.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.addBookings.Location = new System.Drawing.Point(33, 100);
+            this.addBookings.Location = new System.Drawing.Point(52, 85);
             this.addBookings.Name = "addBookings";
-            this.addBookings.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.addBookings.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.addBookings.OnHoverBorderColor = System.Drawing.Color.Black;
             this.addBookings.OnHoverForeColor = System.Drawing.Color.White;
             this.addBookings.OnHoverImage = null;
@@ -154,7 +154,7 @@
             this.addBookings.Radius = 6;
             this.addBookings.Size = new System.Drawing.Size(213, 40);
             this.addBookings.TabIndex = 8;
-            this.addBookings.Text = "ADD BOOKINGS";
+            this.addBookings.Text = "ADD TICKET";
             this.addBookings.Click += new System.EventHandler(this.addBookings_Click);
             // 
             // gunaAdvenceButton1
@@ -174,9 +174,9 @@
             this.gunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(35, 35);
             this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(267, 100);
+            this.gunaAdvenceButton1.Location = new System.Drawing.Point(283, 85);
             this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaAdvenceButton1.OnHoverImage = null;
@@ -205,9 +205,9 @@
             this.searchButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.searchButton.ImageSize = new System.Drawing.Size(25, 25);
             this.searchButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.searchButton.Location = new System.Drawing.Point(880, 100);
+            this.searchButton.Location = new System.Drawing.Point(880, 81);
             this.searchButton.Name = "searchButton";
-            this.searchButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.searchButton.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.searchButton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.searchButton.OnHoverForeColor = System.Drawing.Color.White;
             this.searchButton.OnHoverImage = null;
@@ -226,12 +226,12 @@
             this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLineTextBox1.ForeColor = System.Drawing.Color.Silver;
             this.gunaLineTextBox1.LineColor = System.Drawing.SystemColors.AppWorkspace;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(555, 100);
+            this.gunaLineTextBox1.Location = new System.Drawing.Point(555, 81);
             this.gunaLineTextBox1.Name = "gunaLineTextBox1";
             this.gunaLineTextBox1.PasswordChar = '\0';
             this.gunaLineTextBox1.Size = new System.Drawing.Size(302, 40);
             this.gunaLineTextBox1.TabIndex = 18;
-            this.gunaLineTextBox1.Text = "Input Name";
+            this.gunaLineTextBox1.Text = "Input Destination";
             this.gunaLineTextBox1.Enter += new System.EventHandler(this.gunaLineTextBox1_Enter);
             this.gunaLineTextBox1.Leave += new System.EventHandler(this.gunaLineTextBox1_Leave);
             // 
@@ -239,7 +239,7 @@
             // 
             this.sercc.AutoSize = true;
             this.sercc.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sercc.Location = new System.Drawing.Point(458, 109);
+            this.sercc.Location = new System.Drawing.Point(458, 90);
             this.sercc.Name = "sercc";
             this.sercc.Size = new System.Drawing.Size(82, 31);
             this.sercc.TabIndex = 17;
@@ -249,18 +249,18 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(1242, 106);
+            this.gunaLabel1.Location = new System.Drawing.Point(1242, 91);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(271, 30);
+            this.gunaLabel1.Size = new System.Drawing.Size(269, 30);
             this.gunaLabel1.TabIndex = 20;
-            this.gunaLabel1.Text = "No. of Booked Passengers:";
+            this.gunaLabel1.Text = "No. of Ticketed Passenger:";
             // 
             // numOfRts
             // 
             this.numOfRts.AutoSize = true;
             this.numOfRts.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numOfRts.Location = new System.Drawing.Point(1534, 106);
+            this.numOfRts.Location = new System.Drawing.Point(1534, 91);
             this.numOfRts.Margin = new System.Windows.Forms.Padding(0);
             this.numOfRts.Name = "numOfRts";
             this.numOfRts.Size = new System.Drawing.Size(37, 30);
@@ -269,7 +269,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(951, 114);
+            this.dateTimePicker1.Location = new System.Drawing.Point(950, 97);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(270, 22);
             this.dateTimePicker1.TabIndex = 22;

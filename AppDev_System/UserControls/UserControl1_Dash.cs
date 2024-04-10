@@ -16,13 +16,6 @@ namespace AppDev_System.UserControls
         public UserControl1_Dash()
         {
             InitializeComponent();
-
-            Query query = new Query();
-
-
-            gunaLabel8.Text = query.get_total_numOfRoutes();
-            label.Text = query.get_total_numOfUsers();
-
         }
 
     }

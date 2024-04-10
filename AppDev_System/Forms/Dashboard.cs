@@ -19,7 +19,7 @@ namespace AppDev_System
     public partial class Dashboard : Form
     {
         public string forms1Email;
-
+        Query q = new Query();
 
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
 
@@ -30,7 +30,23 @@ namespace AppDev_System
         {
             InitializeComponent();
             userControl1_Dash1.BringToFront();
+            setUpDashBoard_Text();
         }
+
+        private void setUpDashBoard_Text()
+        {
+            totalBookingsNum.Text = q.get_total_numOfTickets_forToday();
+            gunaLabel5.Text = q.get_total_numOfRoutes();
+            gunaLabel7.Text = q.get_total_numOfUsers();
+
+            totalBookingsNum.BringToFront();
+            gunaLabel4.BringToFront();
+            gunaLabel5.BringToFront();
+            gunaLabel6.BringToFront();
+            gunaLabel7.BringToFront();
+            gunaLabel8.BringToFront();
+        }
+
 
         public void setforms1Email(string x)
         {
@@ -44,6 +60,10 @@ namespace AppDev_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            //GET TOTAL NUMBER OF CHU2
+
+            
+
             //GET USERNAME AND EMAIL IN USERS DATABASEL
 
             try
@@ -68,7 +88,6 @@ namespace AppDev_System
 
                 while (reader_users.Read())
                 {
-                    int ctr_users = 0;
                      emailEx = (string)reader_users["email"];
                      usernameEx = (string)reader_users["user_name"];
 
@@ -105,10 +124,13 @@ namespace AppDev_System
         private void DashboardButton_Click(object sender, EventArgs e)                  //DASHBOARD BUTTON
         {
             userControl1_Dash1.BringToFront();
-           // userControl_Routes1.Hide();
+
+            setUpDashBoard_Text();
+
+            // userControl_Routes1.Hide();
         }
 
-        private void BookingsButton_Click(object sender, EventArgs e)                  //BOOKING BUTTON
+        private void BookingsButton_Click(object sender, EventArgs e)                  //TICKETING BUTTON
         {
             userControl_Booking1.BringToFront();
         }

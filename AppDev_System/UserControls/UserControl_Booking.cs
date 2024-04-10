@@ -58,11 +58,12 @@ namespace AppDev_System.UserControls
             BookingsGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White;
 
             BookingsGridView.Columns["id"].Visible = false;
-            BookingsGridView.Columns["route_id"].Visible = false;
             BookingsGridView.Columns[1].HeaderText = "Passenger";
             BookingsGridView.Columns[1].ReadOnly = true;
             BookingsGridView.Columns[2].HeaderText = "Book Date";
             BookingsGridView.Columns[2].ReadOnly = true;
+            BookingsGridView.Columns[3].HeaderText = "Destination";
+            BookingsGridView.Columns[3].ReadOnly = true;
             BookingsGridView.Columns[4].HeaderText = "Amount in ₱";
             BookingsGridView.Columns[4].ReadOnly = true;
 
@@ -73,7 +74,7 @@ namespace AppDev_System.UserControls
             BookingsGridView.DefaultCellStyle.ForeColor = Color.FromArgb(38, 38, 38);
             BookingsGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White;
 
-            BookingsGridView.Columns.Add("Destination_Column", "Destination");
+            //BookingsGridView.Columns.Add("Destination_Column", "Destination");
 
             DataGridViewButtonColumn dataGridViewButtonColumn_edit = new DataGridViewButtonColumn();
             DataGridViewButtonColumn dataGridViewButtonColumn_delete = new DataGridViewButtonColumn();
@@ -93,8 +94,10 @@ namespace AppDev_System.UserControls
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_delete);
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_edit);
 
+            BookingsGridView.Columns[5].Width = 80;
             BookingsGridView.Columns[6].Width = 80;
-            BookingsGridView.Columns[7].Width = 80;
+
+            numOfRts.Text = q.get_total_numOfTickets_forToday();
 
             con.Close();
         }
@@ -120,7 +123,7 @@ namespace AppDev_System.UserControls
 
         private void gunaLineTextBox1_Enter(object sender, EventArgs e)
         {
-            if (gunaLineTextBox1.Text == "Input Name")
+            if (gunaLineTextBox1.Text == "Input Destination")
             {
                 gunaLineTextBox1.Text = "";
                 gunaLineTextBox1.ForeColor = Color.Black;
@@ -131,19 +134,19 @@ namespace AppDev_System.UserControls
         {
             if (gunaLineTextBox1.Text == "")
             {
-                gunaLineTextBox1.Text = "Input Name";
+                gunaLineTextBox1.Text = "Input Destination";
                 gunaLineTextBox1.ForeColor = Color.Silver;
             }
         }
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            if (gunaLineTextBox1.Text != "Input Name")
+            if (gunaLineTextBox1.Text != "Input Destination")
             {
                 MySqlDataAdapter da;
                 DataTable dt;
                 con.Open();
-                da = new MySqlDataAdapter("SELECT * FROM bookings WHERE passenger_name = '" + gunaLineTextBox1.Text + "'", con);
+                da = new MySqlDataAdapter("SELECT * FROM bookings WHERE route_id = '" + gunaLineTextBox1.Text + "'", con);
                 dt = new DataTable();
                 da.Fill(dt);
                 BookingsGridView.DataSource = dt;

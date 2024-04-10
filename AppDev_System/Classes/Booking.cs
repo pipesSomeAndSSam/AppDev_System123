@@ -11,12 +11,14 @@ namespace AppDev_System.Classes
     {
         Query q = new Query();
         public string passenger_name { get; set; }
+        public string destination {  get; set; }
         public float amount { get; set; }
 
-        public Booking( string passenger_name, float amount)
+        public Booking( string passenger_name, float amount, string destination)
         {
             this.passenger_name = passenger_name;
             this.amount = amount;
+            this.destination = destination;
         }
 
         public void createBooking()

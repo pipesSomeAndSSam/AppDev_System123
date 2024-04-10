@@ -41,6 +41,12 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.userName = new Guna.UI.WinForms.GunaLabel();
             this.LOGOUTButt = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.totalBookingsNum = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.userControl_Booking1 = new AppDev_System.UserControls.UserControl_Booking();
             this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
             this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
@@ -148,7 +154,7 @@
             this.BookingsButton.OnPressedColor = System.Drawing.Color.Black;
             this.BookingsButton.Size = new System.Drawing.Size(350, 91);
             this.BookingsButton.TabIndex = 6;
-            this.BookingsButton.Text = "Bookings";
+            this.BookingsButton.Text = "Tickets";
             this.BookingsButton.Click += new System.EventHandler(this.BookingsButton_Click);
             // 
             // RoutesButton
@@ -323,6 +329,72 @@
             this.LOGOUTButt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.LOGOUTButt.Click += new System.EventHandler(this.LOGOUTButt_Click);
             // 
+            // totalBookingsNum
+            // 
+            this.totalBookingsNum.AutoSize = true;
+            this.totalBookingsNum.BackColor = System.Drawing.Color.White;
+            this.totalBookingsNum.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBookingsNum.Location = new System.Drawing.Point(411, 310);
+            this.totalBookingsNum.Name = "totalBookingsNum";
+            this.totalBookingsNum.Size = new System.Drawing.Size(194, 54);
+            this.totalBookingsNum.TabIndex = 7;
+            this.totalBookingsNum.Text = "Ahn Yujin";
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.BackColor = System.Drawing.Color.White;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Location = new System.Drawing.Point(793, 310);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(194, 54);
+            this.gunaLabel4.TabIndex = 8;
+            this.gunaLabel4.Text = "Ahn Yujin";
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.BackColor = System.Drawing.Color.White;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(1175, 310);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(194, 54);
+            this.gunaLabel5.TabIndex = 9;
+            this.gunaLabel5.Text = "Ahn Yujin";
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.BackColor = System.Drawing.Color.White;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.Location = new System.Drawing.Point(1557, 310);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(194, 54);
+            this.gunaLabel6.TabIndex = 10;
+            this.gunaLabel6.Text = "Ahn Yujin";
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.BackColor = System.Drawing.Color.White;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.Location = new System.Drawing.Point(411, 583);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(194, 54);
+            this.gunaLabel7.TabIndex = 11;
+            this.gunaLabel7.Text = "Ahn Yujin";
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.BackColor = System.Drawing.Color.White;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel8.Location = new System.Drawing.Point(793, 583);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(194, 54);
+            this.gunaLabel8.TabIndex = 12;
+            this.gunaLabel8.Text = "Ahn Yujin";
+            // 
             // userControl_Booking1
             // 
             this.userControl_Booking1.BackColor = System.Drawing.Color.White;
@@ -352,6 +424,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.gunaLabel8);
+            this.Controls.Add(this.gunaLabel7);
+            this.Controls.Add(this.gunaLabel6);
+            this.Controls.Add(this.gunaLabel5);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.totalBookingsNum);
             this.Controls.Add(this.userControl_Booking1);
             this.Controls.Add(this.userControl_Routes);
             this.Controls.Add(this.userControl1_Dash1);
@@ -390,5 +468,11 @@
         private UserControls.UserControl1_Dash userControl1_Dash1;
         private UserControls.UserControl_Routes userControl_Routes;
         private UserControls.UserControl_Booking userControl_Booking1;
+        private Guna.UI.WinForms.GunaLabel totalBookingsNum;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
+        private Guna.UI.WinForms.GunaLabel gunaLabel8;
     }
 }

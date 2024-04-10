@@ -175,17 +175,17 @@ namespace AppDev_System
             try
             {
                 con.Open();
-                MySqlCommand comToCheck = new MySqlCommand("select * from bookigs where passenger_name =  '" + bookig.passenger_name + "' and amount = '" + bookig.amount + "' and booked_date '" + date_t + "'" , con);
+                MySqlCommand comToCheck = new MySqlCommand("select * from bookings where passenger_name =  '" + bookig.passenger_name + "' and amount = '" + bookig.amount + "' and route_id = '" + bookig.destination + "' and booked_date = '" + date_t + "'" , con);
                 MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
                 DataTable dt = new DataTable();
                 sd.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Passenger already booked");
+                    MessageBox.Show("Passenger already ticketed");
                 }
                 else
                 {
-                    string query = "insert into bookings(passenger_name,booked_date,amount) value('" + bookig.passenger_name + "','" + date_t + "','" + bookig.amount + "')";
+                    string query = "insert into bookings(passenger_name,booked_date,amount,route_id) value('" + bookig.passenger_name + "','" + date_t + "','" + bookig.amount + "','" + bookig.destination + "')";
                     MySqlCommand cmd = new MySqlCommand(query, con);
 
                     int i = cmd.ExecuteNonQuery();
@@ -205,7 +205,6 @@ namespace AppDev_System
             return res;
         }
 
-
         public string get_total_numOfRoutes()
         {
             string numOfRoutes;
@@ -221,6 +220,23 @@ namespace AppDev_System
 
             numOfRoutes = dt_routs.Rows.Count.ToString();
             return numOfRoutes;
+        }
+
+        public string get_total_numOfTickets_forToday()
+        {
+            string numOfTicketsToday;
+
+            MySqlCommand cmd_routes = new MySqlCommand("select * from bookings ", con);
+
+            MySqlDataAdapter adapter_routes = new MySqlDataAdapter();
+            DataTable dt_routs = new DataTable();
+
+            adapter_routes.SelectCommand = cmd_routes;
+            dt_routs.Clear();
+            adapter_routes.Fill(dt_routs);
+
+            numOfTicketsToday = dt_routs.Rows.Count.ToString();
+            return numOfTicketsToday;
         }
 
         public string get_total_numOfUsers()

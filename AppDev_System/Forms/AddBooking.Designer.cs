@@ -30,6 +30,7 @@
         {
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPanel8 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.personDeets = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
@@ -49,21 +50,20 @@
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
             this.routeComboBox = new System.Windows.Forms.ComboBox();
             this.gunaPanel7 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaPanel8 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
-            this.NAME_LABEL = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPanel9 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.FARE_LABEL = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaPanel11 = new Guna.UI.WinForms.GunaPanel();
+            this.DESTINATION_LABEL = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaPanel10 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPanel10 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
-            this.DESTINATION_LABEL = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPanel11 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
-            this.FARE_LABEL = new Guna.UI.WinForms.GunaLabel();
-            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPanel9 = new Guna.UI.WinForms.GunaPanel();
+            this.NAME_LABEL = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel12 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
@@ -91,6 +91,15 @@
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(198, 63);
             this.gunaPanel2.TabIndex = 2;
+            // 
+            // gunaPanel8
+            // 
+            this.gunaPanel8.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.gunaPanel8.Location = new System.Drawing.Point(56, 48);
+            this.gunaPanel8.Name = "gunaPanel8";
+            this.gunaPanel8.Size = new System.Drawing.Size(92, 3);
+            this.gunaPanel8.TabIndex = 11;
+            this.gunaPanel8.Visible = false;
             // 
             // gunaLabel2
             // 
@@ -330,136 +339,36 @@
             this.gunaPanel7.Size = new System.Drawing.Size(442, 552);
             this.gunaPanel7.TabIndex = 18;
             // 
-            // gunaPanel8
+            // gunaAdvenceButton3
             // 
-            this.gunaPanel8.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.gunaPanel8.Location = new System.Drawing.Point(56, 48);
-            this.gunaPanel8.Name = "gunaPanel8";
-            this.gunaPanel8.Size = new System.Drawing.Size(92, 3);
-            this.gunaPanel8.TabIndex = 11;
-            this.gunaPanel8.Visible = false;
-            // 
-            // gunaLabel9
-            // 
-            this.gunaLabel9.AutoSize = true;
-            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel9.Location = new System.Drawing.Point(3, 10);
-            this.gunaLabel9.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(217, 41);
-            this.gunaLabel9.TabIndex = 19;
-            this.gunaLabel9.Text = "Person Details";
-            // 
-            // gunaLabel10
-            // 
-            this.gunaLabel10.AutoSize = true;
-            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel10.Location = new System.Drawing.Point(14, 54);
-            this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(63, 25);
-            this.gunaLabel10.TabIndex = 19;
-            this.gunaLabel10.Text = "Name:";
-            // 
-            // NAME_LABEL
-            // 
-            this.NAME_LABEL.AutoSize = true;
-            this.NAME_LABEL.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAME_LABEL.Location = new System.Drawing.Point(15, 88);
-            this.NAME_LABEL.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
-            this.NAME_LABEL.Name = "NAME_LABEL";
-            this.NAME_LABEL.Size = new System.Drawing.Size(152, 31);
-            this.NAME_LABEL.TabIndex = 20;
-            this.NAME_LABEL.Text = "NAME_LABEL";
-            // 
-            // gunaPanel9
-            // 
-            this.gunaPanel9.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaPanel9.Location = new System.Drawing.Point(21, 130);
-            this.gunaPanel9.Name = "gunaPanel9";
-            this.gunaPanel9.Size = new System.Drawing.Size(380, 3);
-            this.gunaPanel9.TabIndex = 21;
-            // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.Location = new System.Drawing.Point(10, 187);
-            this.gunaLabel11.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(126, 25);
-            this.gunaLabel11.TabIndex = 23;
-            this.gunaLabel11.Text = "123/1251/125";
-            // 
-            // gunaLabel12
-            // 
-            this.gunaLabel12.AutoSize = true;
-            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel12.Location = new System.Drawing.Point(3, 139);
-            this.gunaLabel12.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(199, 41);
-            this.gunaLabel12.TabIndex = 22;
-            this.gunaLabel12.Text = "Date Booked";
-            // 
-            // gunaPanel10
-            // 
-            this.gunaPanel10.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaPanel10.Location = new System.Drawing.Point(19, 225);
-            this.gunaPanel10.Name = "gunaPanel10";
-            this.gunaPanel10.Size = new System.Drawing.Size(380, 3);
-            this.gunaPanel10.TabIndex = 22;
-            // 
-            // gunaLabel13
-            // 
-            this.gunaLabel13.AutoSize = true;
-            this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel13.Location = new System.Drawing.Point(3, 245);
-            this.gunaLabel13.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.gunaLabel13.Name = "gunaLabel13";
-            this.gunaLabel13.Size = new System.Drawing.Size(309, 41);
-            this.gunaLabel13.TabIndex = 19;
-            this.gunaLabel13.Text = "Choosen Destination";
-            // 
-            // DESTINATION_LABEL
-            // 
-            this.DESTINATION_LABEL.AutoSize = true;
-            this.DESTINATION_LABEL.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DESTINATION_LABEL.Location = new System.Drawing.Point(15, 295);
-            this.DESTINATION_LABEL.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
-            this.DESTINATION_LABEL.Name = "DESTINATION_LABEL";
-            this.DESTINATION_LABEL.Size = new System.Drawing.Size(227, 31);
-            this.DESTINATION_LABEL.TabIndex = 24;
-            this.DESTINATION_LABEL.Text = "DESTINATION_LABEL";
-            // 
-            // gunaPanel11
-            // 
-            this.gunaPanel11.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaPanel11.Location = new System.Drawing.Point(19, 339);
-            this.gunaPanel11.Name = "gunaPanel11";
-            this.gunaPanel11.Size = new System.Drawing.Size(380, 3);
-            this.gunaPanel11.TabIndex = 23;
-            // 
-            // gunaLabel14
-            // 
-            this.gunaLabel14.AutoSize = true;
-            this.gunaLabel14.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel14.Location = new System.Drawing.Point(3, 359);
-            this.gunaLabel14.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.gunaLabel14.Name = "gunaLabel14";
-            this.gunaLabel14.Size = new System.Drawing.Size(197, 41);
-            this.gunaLabel14.TabIndex = 19;
-            this.gunaLabel14.Text = "Fare in Pesos";
-            // 
-            // FARE_LABEL
-            // 
-            this.FARE_LABEL.AutoSize = true;
-            this.FARE_LABEL.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FARE_LABEL.Location = new System.Drawing.Point(15, 409);
-            this.FARE_LABEL.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
-            this.FARE_LABEL.Name = "FARE_LABEL";
-            this.FARE_LABEL.Size = new System.Drawing.Size(55, 31);
-            this.FARE_LABEL.TabIndex = 25;
-            this.FARE_LABEL.Text = "0.00";
+            this.gunaAdvenceButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton3.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton3.BaseColor = System.Drawing.SystemColors.HotTrack;
+            this.gunaAdvenceButton3.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton3.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(193)))));
+            this.gunaAdvenceButton3.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton3.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton3.CheckedImage = null;
+            this.gunaAdvenceButton3.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton3.ForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton3.Image = null;
+            this.gunaAdvenceButton3.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton3.Location = new System.Drawing.Point(222, 495);
+            this.gunaAdvenceButton3.Name = "gunaAdvenceButton3";
+            this.gunaAdvenceButton3.OnHoverBaseColor = System.Drawing.SystemColors.HotTrack;
+            this.gunaAdvenceButton3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton3.OnHoverImage = null;
+            this.gunaAdvenceButton3.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton3.Radius = 5;
+            this.gunaAdvenceButton3.Size = new System.Drawing.Size(168, 42);
+            this.gunaAdvenceButton3.TabIndex = 26;
+            this.gunaAdvenceButton3.Text = "Back";
+            this.gunaAdvenceButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaAdvenceButton3.Click += new System.EventHandler(this.gunaAdvenceButton3_Click);
             // 
             // gunaAdvenceButton2
             // 
@@ -492,36 +401,127 @@
             this.gunaAdvenceButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaAdvenceButton2.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
             // 
-            // gunaAdvenceButton3
+            // FARE_LABEL
             // 
-            this.gunaAdvenceButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton3.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton3.BaseColor = System.Drawing.SystemColors.HotTrack;
-            this.gunaAdvenceButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton3.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(193)))));
-            this.gunaAdvenceButton3.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton3.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton3.CheckedImage = null;
-            this.gunaAdvenceButton3.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton3.Image = null;
-            this.gunaAdvenceButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton3.Location = new System.Drawing.Point(222, 495);
-            this.gunaAdvenceButton3.Name = "gunaAdvenceButton3";
-            this.gunaAdvenceButton3.OnHoverBaseColor = System.Drawing.SystemColors.HotTrack;
-            this.gunaAdvenceButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton3.OnHoverImage = null;
-            this.gunaAdvenceButton3.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton3.Radius = 5;
-            this.gunaAdvenceButton3.Size = new System.Drawing.Size(168, 42);
-            this.gunaAdvenceButton3.TabIndex = 26;
-            this.gunaAdvenceButton3.Text = "Back";
-            this.gunaAdvenceButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaAdvenceButton3.Click += new System.EventHandler(this.gunaAdvenceButton3_Click);
+            this.FARE_LABEL.AutoSize = true;
+            this.FARE_LABEL.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FARE_LABEL.Location = new System.Drawing.Point(15, 409);
+            this.FARE_LABEL.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
+            this.FARE_LABEL.Name = "FARE_LABEL";
+            this.FARE_LABEL.Size = new System.Drawing.Size(55, 31);
+            this.FARE_LABEL.TabIndex = 25;
+            this.FARE_LABEL.Text = "0.00";
+            // 
+            // gunaLabel14
+            // 
+            this.gunaLabel14.AutoSize = true;
+            this.gunaLabel14.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel14.Location = new System.Drawing.Point(3, 359);
+            this.gunaLabel14.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.gunaLabel14.Name = "gunaLabel14";
+            this.gunaLabel14.Size = new System.Drawing.Size(197, 41);
+            this.gunaLabel14.TabIndex = 19;
+            this.gunaLabel14.Text = "Fare in Pesos";
+            // 
+            // gunaPanel11
+            // 
+            this.gunaPanel11.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaPanel11.Location = new System.Drawing.Point(19, 339);
+            this.gunaPanel11.Name = "gunaPanel11";
+            this.gunaPanel11.Size = new System.Drawing.Size(380, 3);
+            this.gunaPanel11.TabIndex = 23;
+            // 
+            // DESTINATION_LABEL
+            // 
+            this.DESTINATION_LABEL.AutoSize = true;
+            this.DESTINATION_LABEL.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DESTINATION_LABEL.Location = new System.Drawing.Point(15, 295);
+            this.DESTINATION_LABEL.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
+            this.DESTINATION_LABEL.Name = "DESTINATION_LABEL";
+            this.DESTINATION_LABEL.Size = new System.Drawing.Size(227, 31);
+            this.DESTINATION_LABEL.TabIndex = 24;
+            this.DESTINATION_LABEL.Text = "DESTINATION_LABEL";
+            // 
+            // gunaLabel13
+            // 
+            this.gunaLabel13.AutoSize = true;
+            this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel13.Location = new System.Drawing.Point(3, 245);
+            this.gunaLabel13.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.gunaLabel13.Name = "gunaLabel13";
+            this.gunaLabel13.Size = new System.Drawing.Size(309, 41);
+            this.gunaLabel13.TabIndex = 19;
+            this.gunaLabel13.Text = "Choosen Destination";
+            // 
+            // gunaPanel10
+            // 
+            this.gunaPanel10.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaPanel10.Location = new System.Drawing.Point(19, 225);
+            this.gunaPanel10.Name = "gunaPanel10";
+            this.gunaPanel10.Size = new System.Drawing.Size(380, 3);
+            this.gunaPanel10.TabIndex = 22;
+            // 
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.Location = new System.Drawing.Point(10, 187);
+            this.gunaLabel11.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(126, 25);
+            this.gunaLabel11.TabIndex = 23;
+            this.gunaLabel11.Text = "123/1251/125";
+            // 
+            // gunaLabel12
+            // 
+            this.gunaLabel12.AutoSize = true;
+            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel12.Location = new System.Drawing.Point(3, 139);
+            this.gunaLabel12.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.gunaLabel12.Name = "gunaLabel12";
+            this.gunaLabel12.Size = new System.Drawing.Size(199, 41);
+            this.gunaLabel12.TabIndex = 22;
+            this.gunaLabel12.Text = "Date Booked";
+            // 
+            // gunaPanel9
+            // 
+            this.gunaPanel9.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaPanel9.Location = new System.Drawing.Point(21, 130);
+            this.gunaPanel9.Name = "gunaPanel9";
+            this.gunaPanel9.Size = new System.Drawing.Size(380, 3);
+            this.gunaPanel9.TabIndex = 21;
+            // 
+            // NAME_LABEL
+            // 
+            this.NAME_LABEL.AutoSize = true;
+            this.NAME_LABEL.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NAME_LABEL.Location = new System.Drawing.Point(15, 88);
+            this.NAME_LABEL.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
+            this.NAME_LABEL.Name = "NAME_LABEL";
+            this.NAME_LABEL.Size = new System.Drawing.Size(152, 31);
+            this.NAME_LABEL.TabIndex = 20;
+            this.NAME_LABEL.Text = "NAME_LABEL";
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.AutoSize = true;
+            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel10.Location = new System.Drawing.Point(14, 54);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(63, 25);
+            this.gunaLabel10.TabIndex = 19;
+            this.gunaLabel10.Text = "Name:";
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.Location = new System.Drawing.Point(3, 10);
+            this.gunaLabel9.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(217, 41);
+            this.gunaLabel9.TabIndex = 19;
+            this.gunaLabel9.Text = "Person Details";
             // 
             // gunaPanel12
             // 

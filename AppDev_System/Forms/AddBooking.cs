@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 using Guna.UI.WinForms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using AppDev_System.Classes;
+using System.Globalization;
 
 namespace AppDev_System.Forms
 {
@@ -169,7 +170,22 @@ namespace AppDev_System.Forms
         {
             if (gunaTextBox1.Text == "" || gunaTextBox1.Text == "Input Name")
             {
-                MessageBox.Show("Please Input Name");
+                gunaTextBox1.Text = "NULL";
+
+                gunaPanel12.Hide();
+                gunaPanel7.Show();
+                gunaPanel8.Visible = true;
+                gunaPanel4.Visible = false;
+                gunaLabel1.ForeColor = Color.Black;
+                gunaLabel1.Font = new Font("Segoe UI", 15, FontStyle.Regular);
+                gunaLabel2.ForeColor = Color.FromArgb(0, 102, 204);
+                gunaLabel2.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+
+                if (gunaTextBox1.Text != "" && gunaTextBox1.Text != "Input Name")
+                {
+                    this.traveler_name = gunaTextBox1.Text;
+                    NAME_LABEL.Text = this.traveler_name;
+                }
             }
             else
             {
@@ -208,6 +224,10 @@ namespace AppDev_System.Forms
 
         private void gunaAdvenceButton3_Click(object sender, EventArgs e)
         {
+            gunaTextBox1.Text = "Input Name";
+            gunaTextBox1.ForeColor = Color.Silver;
+            this.ActiveControl = null;
+
             gunaPanel12.Show();
             gunaPanel7.Hide();
 
@@ -223,6 +243,11 @@ namespace AppDev_System.Forms
         {/*
             Booking booking = new Booking(gunaTextBox1.Text, route_distance, route_regular_fare, route_special_fare);
             routes.createRoute();*/
+
+            float fare = float.Parse(FARE_LABEL.Text, CultureInfo.InvariantCulture.NumberFormat);
+            Booking booking = new Booking(NAME_LABEL.Text, fare, DESTINATION_LABEL.Text);
+            booking.createBooking();
+
             this.Close();
         }
     }
