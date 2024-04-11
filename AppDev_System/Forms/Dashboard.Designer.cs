@@ -44,9 +44,9 @@
             this.totalBookingsNum = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
+            this.userControl_Multicabs1 = new AppDev_System.UserControls.UserControl_Multicabs();
             this.userControl_Booking1 = new AppDev_System.UserControls.UserControl_Booking();
             this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
             this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
@@ -362,23 +362,12 @@
             this.gunaLabel5.TabIndex = 9;
             this.gunaLabel5.Text = "Ahn Yujin";
             // 
-            // gunaLabel6
-            // 
-            this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.BackColor = System.Drawing.Color.White;
-            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.Location = new System.Drawing.Point(1557, 310);
-            this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(194, 54);
-            this.gunaLabel6.TabIndex = 10;
-            this.gunaLabel6.Text = "Ahn Yujin";
-            // 
             // gunaLabel7
             // 
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.BackColor = System.Drawing.Color.White;
             this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.Location = new System.Drawing.Point(411, 583);
+            this.gunaLabel7.Location = new System.Drawing.Point(1557, 310);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(194, 54);
             this.gunaLabel7.TabIndex = 11;
@@ -389,11 +378,19 @@
             this.gunaLabel8.AutoSize = true;
             this.gunaLabel8.BackColor = System.Drawing.Color.White;
             this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel8.Location = new System.Drawing.Point(793, 583);
+            this.gunaLabel8.Location = new System.Drawing.Point(411, 583);
             this.gunaLabel8.Name = "gunaLabel8";
             this.gunaLabel8.Size = new System.Drawing.Size(194, 54);
             this.gunaLabel8.TabIndex = 12;
             this.gunaLabel8.Text = "Ahn Yujin";
+            // 
+            // userControl_Multicabs1
+            // 
+            this.userControl_Multicabs1.BackColor = System.Drawing.Color.White;
+            this.userControl_Multicabs1.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Multicabs1.Name = "userControl_Multicabs1";
+            this.userControl_Multicabs1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Multicabs1.TabIndex = 13;
             // 
             // userControl_Booking1
             // 
@@ -424,9 +421,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.userControl_Multicabs1);
             this.Controls.Add(this.gunaLabel8);
             this.Controls.Add(this.gunaLabel7);
-            this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.totalBookingsNum);
@@ -471,8 +468,8 @@
         private Guna.UI.WinForms.GunaLabel totalBookingsNum;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
+        private UserControls.UserControl_Multicabs userControl_Multicabs1;
     }
 }

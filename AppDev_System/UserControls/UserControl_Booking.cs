@@ -23,6 +23,7 @@ namespace AppDev_System.UserControls
         {
             InitializeComponent();
             customizeGridView();
+            showGridDataBasedOnDateTime();
         }
 
         private void customizeGridView()
@@ -88,7 +89,7 @@ namespace AppDev_System.UserControls
             dataGridViewButtonColumn_delete.FlatStyle = FlatStyle.Popup;
             dataGridViewButtonColumn_edit.FlatStyle = FlatStyle.Popup;
             dataGridViewButtonColumn_delete.Text = "  DELETE";
-            dataGridViewButtonColumn_edit.Text = "    EDIT";
+            dataGridViewButtonColumn_edit.Text = "   EDIT";
 
             dataGridViewButtonColumn_delete.UseColumnTextForButtonValue = true;
             dataGridViewButtonColumn_edit.UseColumnTextForButtonValue = true;
@@ -136,16 +137,19 @@ namespace AppDev_System.UserControls
         {
             if (gunaLineTextBox1.Text == "")
             {
+
                 gunaLineTextBox1.Text = "Input Destination";
                 gunaLineTextBox1.ForeColor = Color.Silver;
 
-                dateTimePicker1.Value = DateTime.Now;
+                //dateTimePicker1.Value = DateTime.Now;
 
                 string sqlstm = "SELECT * FROM bookings";
                 MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
                 DataSet DS = new System.Data.DataSet();
                 SDA.Fill(DS, "bookings");
                 BookingsGridView.DataSource = DS.Tables[0];
+
+                showGridDataBasedOnDateTime();
             }
         }
 
@@ -177,6 +181,7 @@ namespace AppDev_System.UserControls
             BookingsGridView.DataSource = DS.Tables[0];
 
             numOfRts.Text = q.get_total_numOfTickets_forToday();
+            showGridDataBasedOnDateTime();
         }
 
         private void BookingsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -234,6 +239,12 @@ namespace AppDev_System.UserControls
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            showGridDataBasedOnDateTime();
+            this.ActiveControl = null;
+        }
+
+        private void showGridDataBasedOnDateTime()
         {
             DateTime theDate = dateTimePicker1.Value;
             numOfRts.Text = q.get_total_numOfTickets_forToday(theDate.ToString("yyyy-MM-dd"));

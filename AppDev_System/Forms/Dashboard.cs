@@ -29,7 +29,6 @@ namespace AppDev_System
         public Dashboard()
         {
             InitializeComponent();
-            gunaLabel8.Text = "₱ ";
             userControl1_Dash1.BringToFront();
             setUpDashBoard_Text();
         }
@@ -37,6 +36,7 @@ namespace AppDev_System
         private void setUpDashBoard_Text()
         {
             totalBookingsNum.Text = q.get_total_numOfTickets_forToday();
+            gunaLabel4.Text = q.get_total_multicabsToday();
             gunaLabel5.Text = q.get_total_numOfRoutes();
             gunaLabel7.Text = q.get_total_numOfUsers();
             gunaLabel8.Text = "₱ ";
@@ -45,7 +45,7 @@ namespace AppDev_System
             totalBookingsNum.BringToFront();
             gunaLabel4.BringToFront();
             gunaLabel5.BringToFront();
-            gunaLabel6.BringToFront();
+            //gunaLabel6.BringToFront();
             gunaLabel7.BringToFront();
             gunaLabel8.BringToFront();
         }
@@ -115,7 +115,7 @@ namespace AppDev_System
 
         private void MulticabsButton_Click(object sender, EventArgs e)                  //MUTICAB BUTTON
         {
-           
+            userControl_Multicabs1.BringToFront();
         }
 
         private void RoutesButton_Click(object sender, EventArgs e)                  //ROUTES BUTTON

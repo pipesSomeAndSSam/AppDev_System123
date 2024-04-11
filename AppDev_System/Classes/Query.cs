@@ -247,7 +247,6 @@ namespace AppDev_System
             {
                 MessageBox.Show("mali ka duy");
             }
-           // MessageBox.Show("eraafffGGGi");
             con.Close();
 
             return res;
@@ -333,7 +332,7 @@ namespace AppDev_System
             float sum = 0;
             string numOfEarnings_today;
 
-            MySqlCommand cmd_routes = new MySqlCommand("select * from bookings", con);
+            MySqlCommand cmd_routes = new MySqlCommand("select * from bookings where date = '" + DateTime.Now.ToString("yyyy-MM-dd") + "'", con);
 
             MySqlDataAdapter adapter_tickts = new MySqlDataAdapter();
             DataTable dt_tcks = new DataTable();
@@ -352,5 +351,21 @@ namespace AppDev_System
             return numOfEarnings_today;
         }
 
+        public string get_total_multicabsToday()
+        {
+            string numOfUsers;
+
+            MySqlCommand cmd_routes = new MySqlCommand("select * from multicabs_table where date_day = '" + DateTime.Now.ToString("yyyy-MM-dd") + "'", con);
+
+            MySqlDataAdapter adapter_users = new MySqlDataAdapter();
+            DataTable dt_users = new DataTable();
+
+            adapter_users.SelectCommand = cmd_routes;
+            //dt_users.Clear();
+            adapter_users.Fill(dt_users);
+
+            numOfUsers = dt_users.Rows.Count.ToString();
+            return numOfUsers;
+        }
     }
 }

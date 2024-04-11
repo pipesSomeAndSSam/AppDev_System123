@@ -156,6 +156,12 @@
     <Compile Include="UserControls\UserControl_Booking.Designer.cs">
       <DependentUpon>UserControl_Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_Multicabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Multicabs.Designer.cs">
+      <DependentUpon>UserControl_Multicabs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_Routes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Booking.resx">
       <DependentUpon>UserControl_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_Multicabs.resx">
+      <DependentUpon>UserControl_Multicabs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Routes.resx">
       <DependentUpon>UserControl_Routes.cs</DependentUpon>
