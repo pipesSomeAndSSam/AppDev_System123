@@ -355,7 +355,7 @@
             this.gunaAdvenceButton3.Image = null;
             this.gunaAdvenceButton3.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaAdvenceButton3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton3.Location = new System.Drawing.Point(222, 495);
+            this.gunaAdvenceButton3.Location = new System.Drawing.Point(19, 495);
             this.gunaAdvenceButton3.Name = "gunaAdvenceButton3";
             this.gunaAdvenceButton3.OnHoverBaseColor = System.Drawing.SystemColors.HotTrack;
             this.gunaAdvenceButton3.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -386,7 +386,7 @@
             this.gunaAdvenceButton2.Image = null;
             this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.Location = new System.Drawing.Point(19, 495);
+            this.gunaAdvenceButton2.Location = new System.Drawing.Point(222, 495);
             this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
             this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.ForestGreen;
             this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.Black;

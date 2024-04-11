@@ -34,6 +34,7 @@ namespace AppDev_System.UserControls
             dataAdapter.Fill(dt_users);
             BookingsGridView.DataSource = dt_users;
 
+            //BookingsGridView.ColumnHeadersHeight.DisableResizing
             BookingsGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
             BookingsGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             BookingsGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
@@ -58,13 +59,14 @@ namespace AppDev_System.UserControls
             BookingsGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White;
 
             BookingsGridView.Columns["id"].Visible = false;
+            BookingsGridView.Columns["date"].Visible = false;
             BookingsGridView.Columns[1].HeaderText = "Passenger";
             BookingsGridView.Columns[1].ReadOnly = true;
-            BookingsGridView.Columns[2].HeaderText = "Book Date";
+            BookingsGridView.Columns[2].HeaderText = "Destination";
             BookingsGridView.Columns[2].ReadOnly = true;
-            BookingsGridView.Columns[3].HeaderText = "Destination";
+            BookingsGridView.Columns[3].HeaderText = "Amount in ₱";
             BookingsGridView.Columns[3].ReadOnly = true;
-            BookingsGridView.Columns[4].HeaderText = "Amount in ₱";
+            BookingsGridView.Columns[4].HeaderText = "Ticket Date and Time";
             BookingsGridView.Columns[4].ReadOnly = true;
 
             BookingsGridView.CellBorderStyle = DataGridViewCellBorderStyle.Single;
@@ -94,8 +96,8 @@ namespace AppDev_System.UserControls
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_delete);
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_edit);
 
-            BookingsGridView.Columns[5].Width = 80;
             BookingsGridView.Columns[6].Width = 80;
+            BookingsGridView.Columns[7].Width = 80;
 
             numOfRts.Text = q.get_total_numOfTickets_forToday();
 
@@ -136,6 +138,14 @@ namespace AppDev_System.UserControls
             {
                 gunaLineTextBox1.Text = "Input Destination";
                 gunaLineTextBox1.ForeColor = Color.Silver;
+
+                dateTimePicker1.Value = DateTime.Now;
+
+                string sqlstm = "SELECT * FROM bookings";
+                MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+                DataSet DS = new System.Data.DataSet();
+                SDA.Fill(DS, "bookings");
+                BookingsGridView.DataSource = DS.Tables[0];
             }
         }
 
@@ -153,18 +163,86 @@ namespace AppDev_System.UserControls
                 con.Close();
 
                 gjh1 = true;
-            }
+            }           
         }
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = DateTime.Now;
+
             string sqlstm = "SELECT * FROM bookings";
             MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
             DataSet DS = new System.Data.DataSet();
             SDA.Fill(DS, "bookings");
             BookingsGridView.DataSource = DS.Tables[0];
 
-            numOfRts.Text = q.get_total_numOfRoutes();
+            numOfRts.Text = q.get_total_numOfTickets_forToday();
+        }
+
+        private void BookingsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == BookingsGridView.Columns["Del_button"].Index) //DELETE
+                {
+                    DataGridViewRow row_to_DELETE = BookingsGridView.Rows[e.RowIndex];
+                    if (MessageBox.Show(string.Format("Do you want to Delete row " + (e.RowIndex + 1) + " ?", row_to_DELETE.Cells["id"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        using (MySqlConnection con1 = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem"))
+                        {
+                            using (MySqlCommand cmd1 = new MySqlCommand("DELETE from bookings WHERE id=@id", con1))
+                            {
+                                cmd1.Parameters.AddWithValue("id", row_to_DELETE.Cells["id"].Value);
+                                con1.Open();
+                                cmd1.ExecuteNonQuery();
+                                con1.Close();
+                            }
+                        }
+
+                    }
+                }
+                else if (e.ColumnIndex == BookingsGridView.Columns["Edit_button"].Index) //EDIT
+                {
+                    bool isOpen_Edit = false;
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Text == "EditRouteForm")
+                        {
+                            isOpen_Edit = true;
+                            f.BringToFront();
+                            break;
+                        }
+                    }
+                    if (isOpen_Edit == false)
+                    {
+                        EditTicket1 edit_Ticketfrm = new EditTicket1();
+                        DataGridViewRow row_to_edit = BookingsGridView.Rows[e.RowIndex];
+
+                        string id = row_to_edit.Cells[2].Value.ToString(); //MAO NI ID
+                        string iname = row_to_edit.Cells[3].Value.ToString(); //MAO NI PASSENGER NAME
+
+                        edit_Ticketfrm.rowId = Int32.Parse(id);
+                        edit_Ticketfrm.name = iname;
+                        edit_Ticketfrm.Show();
+                    }
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("eguls mali imo code bro");
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime theDate = dateTimePicker1.Value;
+            numOfRts.Text = q.get_total_numOfTickets_forToday(theDate.ToString("yyyy-MM-dd"));
+
+            string sqlstm = "SELECT * FROM bookings WHERE date = '" + theDate.ToString("yyyy-MM-dd") + "'";
+            MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "bookings");
+            BookingsGridView.DataSource = DS.Tables[0];
         }
     }
 }

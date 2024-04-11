@@ -29,6 +29,7 @@ namespace AppDev_System
         public Dashboard()
         {
             InitializeComponent();
+            gunaLabel8.Text = "₱ ";
             userControl1_Dash1.BringToFront();
             setUpDashBoard_Text();
         }
@@ -38,6 +39,8 @@ namespace AppDev_System
             totalBookingsNum.Text = q.get_total_numOfTickets_forToday();
             gunaLabel5.Text = q.get_total_numOfRoutes();
             gunaLabel7.Text = q.get_total_numOfUsers();
+            gunaLabel8.Text = "₱ ";
+            gunaLabel8.Text += q.get_total_numOfEarnings_forToday();
 
             totalBookingsNum.BringToFront();
             gunaLabel4.BringToFront();

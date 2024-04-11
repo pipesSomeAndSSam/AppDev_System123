@@ -27,7 +27,7 @@ namespace AppDev_System.Forms
         public AddBooking()
         {
             InitializeComponent();
-            gunaPanel7.Hide();
+            gunaPanel12.BringToFront();
         }
 
         private void getDataToComboBox_Route()
@@ -82,9 +82,9 @@ namespace AppDev_System.Forms
         private void AddBooking_Load(object sender, EventArgs e)
         {
             getDataToComboBox_Route();
-            setDateLabel.Text = gunaLabel11.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            setDateLabel.Text = gunaLabel11.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
 
-            
+
             /*
             try
             {
@@ -168,29 +168,29 @@ namespace AppDev_System.Forms
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
-            if (gunaTextBox1.Text == "" || gunaTextBox1.Text == "Input Name")
+            if (gunaTextBox1.Text == "" || gunaTextBox1.Text == "Input Name" || string.IsNullOrWhiteSpace(gunaTextBox1.Text))
             {
-                gunaTextBox1.Text = "NULL";
 
-                gunaPanel12.Hide();
-                gunaPanel7.Show();
+                NAME_LABEL.Text = gunaTextBox1.Text = "NULL";
+
+                gunaPanel7.BringToFront();
                 gunaPanel8.Visible = true;
                 gunaPanel4.Visible = false;
                 gunaLabel1.ForeColor = Color.Black;
                 gunaLabel1.Font = new Font("Segoe UI", 15, FontStyle.Regular);
                 gunaLabel2.ForeColor = Color.FromArgb(0, 102, 204);
                 gunaLabel2.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-
+                /*
                 if (gunaTextBox1.Text != "" && gunaTextBox1.Text != "Input Name")
                 {
                     this.traveler_name = gunaTextBox1.Text;
                     NAME_LABEL.Text = this.traveler_name;
-                }
+                }*/
             }
             else
             {
-                gunaPanel12.Hide();
-                gunaPanel7.Show();
+                gunaPanel7.BringToFront();
+
                 gunaPanel8.Visible = true;
                 gunaPanel4.Visible = false;
                 gunaLabel1.ForeColor = Color.Black;
@@ -198,11 +198,13 @@ namespace AppDev_System.Forms
                 gunaLabel2.ForeColor = Color.FromArgb(0, 102, 204);
                 gunaLabel2.Font = new Font("Segoe UI", 14, FontStyle.Bold);
 
+                NAME_LABEL.Text = gunaTextBox1.Text;
+                /*
                 if (gunaTextBox1.Text != "" && gunaTextBox1.Text != "Input Name")
                 {
                     this.traveler_name = gunaTextBox1.Text;
                     NAME_LABEL.Text = this.traveler_name;
-                }
+                }*/
             }
         }
            // this.FARE_LABEL.Text = fare_in_pesos_regular_fare_new;
@@ -224,12 +226,14 @@ namespace AppDev_System.Forms
 
         private void gunaAdvenceButton3_Click(object sender, EventArgs e)
         {
-            gunaTextBox1.Text = "Input Name";
-            gunaTextBox1.ForeColor = Color.Silver;
+            if (gunaTextBox1.Text == "NULL")
+            {
+                gunaTextBox1.Text = "Input Name";
+                gunaTextBox1.ForeColor = Color.Silver;
+            }
             this.ActiveControl = null;
 
-            gunaPanel12.Show();
-            gunaPanel7.Hide();
+            gunaPanel12.BringToFront();
 
             gunaPanel8.Visible = false;
             gunaPanel4.Visible = true;
@@ -245,10 +249,31 @@ namespace AppDev_System.Forms
             routes.createRoute();*/
 
             float fare = float.Parse(FARE_LABEL.Text, CultureInfo.InvariantCulture.NumberFormat);
-            Booking booking = new Booking(NAME_LABEL.Text, fare, DESTINATION_LABEL.Text);
+            string des;
+
+            if (DESTINATION_LABEL.Text != "DESTINATION_LABEL")
+                des = DESTINATION_LABEL.Text;
+            else
+                des = "NULL";
+
+            Booking booking = new Booking(NAME_LABEL.Text, fare, des);
             booking.createBooking();
 
-            this.Close();
+            gunaPanel12.BringToFront();
+
+            if (gunaTextBox1.Text == "NULL")
+            {
+                gunaTextBox1.Text = "Input Name";
+                gunaTextBox1.ForeColor = Color.Silver;
+            }
+            this.ActiveControl = null;
+
+            gunaPanel8.Visible = false;
+            gunaPanel4.Visible = true;
+            gunaLabel1.ForeColor = Color.FromArgb(0, 102, 204);
+            gunaLabel1.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+            gunaLabel2.ForeColor = Color.Black;
+            gunaLabel2.Font = new Font("Segoe UI", 15, FontStyle.Regular);
         }
     }
 }

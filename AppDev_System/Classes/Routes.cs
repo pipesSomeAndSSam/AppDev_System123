@@ -19,6 +19,7 @@ namespace AppDev_System
         public float regularFareNew { get; set; }
         public float specialFareNew { get; set; }
 
+
         public Routes(string barangay, float distance, float regularFareNew, float specialFareNew) 
         {
             this.barangayName = barangay;

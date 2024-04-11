@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,10 +21,11 @@ namespace AppDev_System
     public class Query
     {
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
+        private DateTime time_ticketed;
+        private DateTime date;
 
+        //INSERT
 
-
-        
         public Boolean insertUser(string user_name, string email, string password, string contact_num)
         {
             bool res = false;
@@ -94,6 +96,89 @@ namespace AppDev_System
                 MessageBox.Show("There was an Error");
             }
             con.Close();
+
+            return res;
+        }
+
+        public Boolean insertBooking(Booking bookig)
+        {
+            bool res = false;
+
+            try
+            {
+                con.Open();
+                string query = "insert into bookings(passenger_name,time_ticketed,amount,route_id,date) value('" + bookig.passenger_name + "','" + bookig.date_time.ToString("yyyy-MM-dd H:mm:ss") + "','" + bookig.amount + "','" + bookig.destination + "','" + bookig.date.ToString("yyyy-MM-dd") + "')";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+
+                int i = cmd.ExecuteNonQuery();
+                if (i > -1)
+                {
+                    MessageBox.Show("Successful input in Database");
+                }
+                res = true;
+            }
+            catch
+            {
+                MessageBox.Show("There was an Error");
+            }
+            con.Close();
+
+            return res;
+        }
+
+
+
+        //EDIT
+
+        public Boolean editTicket(Booking ticket, int rowId)
+        {
+            bool res = false;
+
+            try
+            {
+                con.Open();
+
+                MySqlCommand comToCheck = new MySqlCommand("SELECT passenger_name, route_id, amount, time_ticketed, date FROM bookings WHERE id = '" + rowId + "'", con);
+
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                string passenger_name = "";
+                string route_id = "";
+                float amount = 0;
+                
+                foreach (DataRow row in dt.Rows)
+                {
+                    passenger_name = row["passenger_name"].ToString();
+                    route_id = row["route_id"].ToString();
+                    amount = (float)row["amount"];
+                    time_ticketed = Convert.ToDateTime(row["time_ticketed"]);       //get dateTime from database in dataGridView row
+                    date = Convert.ToDateTime(row["date"]);
+                }
+
+                if (dt.Rows.Count > 0)
+                {
+                    string updt = "UPDATE bookings SET passenger_name = '" + ticket.passenger_name +
+                             "', route_id =  '" + ticket.destination + "', amount = '" + ticket.amount +
+                             "', time_ticketed = '" + DateTime.Now.ToString("yyyy-MM-dd H:mm:ss") + "', date = '" + DateTime.Now.ToString("yyyy-MM-dd") +
+                             "' WHERE id = '" + rowId + "'";
+
+                    MySqlCommand command_update = new MySqlCommand(updt, con);
+
+                    command_update.ExecuteNonQuery();
+                    MessageBox.Show("Update Successful");
+
+                    res = true;
+                }
+                else
+                {
+                    MessageBox.Show("IT DOES NOT EXIST EXISTS");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("mali ka duy");
+            }
 
             return res;
         }
@@ -168,42 +253,12 @@ namespace AppDev_System
             return res;
         }
         
-        public Boolean insertBooking(Booking bookig)
-        {
-            bool res = false;
-            var date_t = DateTime.Now.ToString("yyyy-MM-dd");
-            try
-            {
-                con.Open();
-                MySqlCommand comToCheck = new MySqlCommand("select * from bookings where passenger_name =  '" + bookig.passenger_name + "' and amount = '" + bookig.amount + "' and route_id = '" + bookig.destination + "' and booked_date = '" + date_t + "'" , con);
-                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
-                DataTable dt = new DataTable();
-                sd.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    MessageBox.Show("Passenger already ticketed");
-                }
-                else
-                {
-                    string query = "insert into bookings(passenger_name,booked_date,amount,route_id) value('" + bookig.passenger_name + "','" + date_t + "','" + bookig.amount + "','" + bookig.destination + "')";
-                    MySqlCommand cmd = new MySqlCommand(query, con);
+       
 
-                    int i = cmd.ExecuteNonQuery();
-                    if (i > -1)
-                    {
-                        MessageBox.Show("Successful input in Database");
-                    }
-                    res = true;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("There was an Error");
-            }
-            con.Close();
 
-            return res;
-        }
+
+
+        //GET TOTAL NUMBER
 
         public string get_total_numOfRoutes()
         {
@@ -226,16 +281,33 @@ namespace AppDev_System
         {
             string numOfTicketsToday;
 
-            MySqlCommand cmd_routes = new MySqlCommand("select * from bookings ", con);
+            MySqlCommand cmd_routes = new MySqlCommand("select * from bookings where date = '" + DateTime.Now.ToString("yyyy-MM-dd") + "'", con);
 
-            MySqlDataAdapter adapter_routes = new MySqlDataAdapter();
-            DataTable dt_routs = new DataTable();
+            MySqlDataAdapter adapter_tickts = new MySqlDataAdapter();
+            DataTable dt_tcks = new DataTable();
 
-            adapter_routes.SelectCommand = cmd_routes;
-            dt_routs.Clear();
-            adapter_routes.Fill(dt_routs);
+            adapter_tickts.SelectCommand = cmd_routes;
+            //dt_tcks.Clear();
+            adapter_tickts.Fill(dt_tcks);
 
-            numOfTicketsToday = dt_routs.Rows.Count.ToString();
+            numOfTicketsToday = dt_tcks.Rows.Count.ToString();
+            return numOfTicketsToday;
+        }
+
+        public string get_total_numOfTickets_forToday(string date)
+        {
+            string numOfTicketsToday;
+
+            MySqlCommand cmd_routes = new MySqlCommand("select * from bookings where date = '" + date + "'", con);
+
+            MySqlDataAdapter adapter_tickts = new MySqlDataAdapter();
+            DataTable dt_tcks = new DataTable();
+
+            adapter_tickts.SelectCommand = cmd_routes;
+            //dt_tcks.Clear();
+            adapter_tickts.Fill(dt_tcks);
+
+            numOfTicketsToday = dt_tcks.Rows.Count.ToString();
             return numOfTicketsToday;
         }
 
@@ -256,7 +328,29 @@ namespace AppDev_System
             return numOfUsers;
         }
 
-        
+        public string get_total_numOfEarnings_forToday()
+        {
+            float sum = 0;
+            string numOfEarnings_today;
+
+            MySqlCommand cmd_routes = new MySqlCommand("select * from bookings", con);
+
+            MySqlDataAdapter adapter_tickts = new MySqlDataAdapter();
+            DataTable dt_tcks = new DataTable();
+
+            adapter_tickts.SelectCommand = cmd_routes;
+            //dt_tcks.Clear();
+            adapter_tickts.Fill(dt_tcks);
+
+            foreach (DataRow row in dt_tcks.Rows)
+            {
+                sum += float.Parse(row["amount"].ToString());
+            }
+
+            numOfEarnings_today = sum.ToString();
+
+            return numOfEarnings_today;
+        }
 
     }
 }
