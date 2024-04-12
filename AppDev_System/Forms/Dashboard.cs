@@ -137,5 +137,15 @@ namespace AppDev_System
         {
             userControl_Booking1.BringToFront();
         }
+
+        private void gunaPictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(1);
+        }
+
+        private void gunaPictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

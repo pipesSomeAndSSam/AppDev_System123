@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppDev_System.Classes;
+using AppDev_System.Forms;
 using MySql.Data.MySqlClient;
 
 namespace AppDev_System
@@ -40,6 +41,23 @@ namespace AppDev_System
             this.arrival_time = arrival_time;
             this.earnings = earnings;
             this.tickets = new List<Booking>();
+        }
+
+        public Boolean addPassenger(Booking ticket)
+        {
+            bool res = false;
+
+            if (this.seatsAvailable > 0)
+            { 
+                this.tickets.Add(ticket);
+                this.seatsAvailable--;
+            }
+            else
+            {
+                MessageBox.Show("No More Available Seats");
+            }
+
+            return res;
         }
 
         public void removeAllTickets()

@@ -54,6 +54,7 @@
             // 
             // gunaPanel12
             // 
+            this.gunaPanel12.BackColor = System.Drawing.Color.White;
             this.gunaPanel12.Controls.Add(this.gunaLabel5);
             this.gunaPanel12.Controls.Add(this.gunaTextBox1);
             this.gunaPanel12.Controls.Add(this.routeComboBox1);

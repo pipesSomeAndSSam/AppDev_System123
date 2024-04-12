@@ -233,6 +233,7 @@
             this.BookingsGridView.ThemeStyle.RowsStyle.Height = 24;
             this.BookingsGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             this.BookingsGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.BookingsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookingsGridView_CellClick);
             // 
             // addMulticab
             // 

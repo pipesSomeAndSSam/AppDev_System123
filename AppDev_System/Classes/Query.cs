@@ -47,8 +47,8 @@ namespace AppDev_System
                 }
                 else
                 {
-                    string query1 = "insert into multicabs_table(dateTime_of_arrival) value('" + multicab.arrival_time.ToString("hh:mm:ss") + "')";
-                    string query = "insert into multicabs_table(multicab_plate,name_of_driver,dateTime_of_arrival,seats,date_day,earnings,seats_available) value('" + multicab.plateNumber_id + "','" + multicab.nameOfDriver + "','" + multicab.arrival_time.ToString("hh:mm:ss") + "','" + multicab.seatsTotal + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + multicab.earnings + "','" + multicab.seatsAvailable + "')";
+                    //string query1 = "insert into multicabs_table(dateTime_of_arrival) value('" + multicab.arrival_time.ToString("h:mm:ss") + "')";
+                    string query = "insert into multicabs_table(multicab_plate,name_of_driver,dateTime_of_arrival,seats,date_day,earnings,seats_available) value('" + multicab.plateNumber_id + "','" + multicab.nameOfDriver + "','" + multicab.arrival_time.ToString("h:mm:ss") + "','" + multicab.seatsTotal + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + multicab.earnings + "','" + multicab.seatsAvailable + "')";
                     MySqlCommand cmd = new MySqlCommand(query, con);
 
                     //MessageBox.Show("multicab_plate : " + multicab.plateNumber_id + "\nname_of_driver : " + multicab.nameOfDriver + "\ndateTime_of_arrival : " + multicab.arrival_time.ToString("hh:mm:ss") + "\nseats : " + multicab.seatsTotal + "\ndate_day : " + DateTime.Now.ToString("yyyy-MM-dd"));
@@ -166,6 +166,9 @@ namespace AppDev_System
 
             return res;
         }
+
+
+
 
 
 

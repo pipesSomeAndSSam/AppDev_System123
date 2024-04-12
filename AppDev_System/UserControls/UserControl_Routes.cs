@@ -240,62 +240,70 @@ namespace AppDev_System.UserControls
 
         private void gunaDataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) //FOR EDIT AND DELETE BUTTON COLUMN
         {
-            if(e.ColumnIndex == gunaDataGridView2.Columns["Del_button"].Index) //DELETE
+            try
             {
-                DataGridViewRow row_to_DELETE = gunaDataGridView2.Rows[e.RowIndex];
-                if(MessageBox.Show(string.Format("Do you want to Delete row " + (e.RowIndex + 1) + " ?", row_to_DELETE.Cells["id"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (e.ColumnIndex == gunaDataGridView2.Columns["Del_button"].Index) //DELETE
                 {
-                    using (MySqlConnection con1 = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem"))
+                    DataGridViewRow row_to_DELETE = gunaDataGridView2.Rows[e.RowIndex];
+                    if (MessageBox.Show(string.Format("Do you want to Delete row " + (e.RowIndex + 1) + " ?", row_to_DELETE.Cells["id"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        using(MySqlCommand cmd1 = new MySqlCommand("DELETE from routes WHERE id=@id", con1))
+                        using (MySqlConnection con1 = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem"))
                         {
-                            cmd1.Parameters.AddWithValue("id", row_to_DELETE.Cells["id"].Value);
-                            con1.Open();
-                            cmd1.ExecuteNonQuery();
-                            con1.Close();
+                            using (MySqlCommand cmd1 = new MySqlCommand("DELETE from routes WHERE id=@id", con1))
+                            {
+                                cmd1.Parameters.AddWithValue("id", row_to_DELETE.Cells["id"].Value);
+                                con1.Open();
+                                cmd1.ExecuteNonQuery();
+                                con1.Close();
+                            }
+                        }
+
+                    }
+                }
+                else if (e.ColumnIndex == gunaDataGridView2.Columns["Edit_button"].Index) //EDIT
+                {
+                    bool isOpen_Edit = false;
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Text == "EditRouteForm")
+                        {
+                            isOpen_Edit = true;
+                            f.BringToFront();
+                            break;
                         }
                     }
-                    
-                }
-            }
-            else if (e.ColumnIndex == gunaDataGridView2.Columns["Edit_button"].Index) //EDIT
-            {
-                bool isOpen_Edit = false;
-                foreach (Form f in Application.OpenForms)
-                {
-                    if (f.Text == "EditRouteForm")
+                    if (isOpen_Edit == false)
                     {
-                        isOpen_Edit = true;
-                        f.BringToFront();
-                        break;
+                        EditRouteForm edit_routefrm = new EditRouteForm();
+                        //  MessageBox.Show((e.RowIndex + 1).ToString());
+                        DataGridViewRow row_to_edit = gunaDataGridView2.Rows[e.RowIndex];
+
+
+                        // MessageBox.Show(row_to_edit.Cells[3].Value.ToString() + ", " + row_to_edit.Cells[4].Value.ToString() + ", " + row_to_edit.Cells[5].Value.ToString() + ", " + row_to_edit.Cells[6].Value.ToString());
+
+                        string idye = row_to_edit.Cells[2].Value.ToString(); //MAO NI ID
+                        string value_distance = row_to_edit.Cells[4].Value.ToString(); //distance
+                        string value_regFare = row_to_edit.Cells[5].Value.ToString(); //reg_new
+                        string value_specFre = row_to_edit.Cells[6].Value.ToString(); //spec_new
+
+
+                        //MessageBox.Show(value_regFare);
+
+                        //   Routes rts_to_ed = new Routes(row_to_edit.Cells[3].Value.ToString(), float.Parse(value_distance, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_regFare, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_specFre, CultureInfo.InvariantCulture.NumberFormat));
+                        //edit_routefrm.edit_set_row(row_to_edit);
+                        edit_routefrm.routeID = Int32.Parse(idye);
+                        edit_routefrm.setrowNumber((e.RowIndex));
+                        //   edit_routefrm.edit_set_routes(rts_to_ed);
+                        edit_routefrm.Show();
                     }
+                    //load_the_gridView();
                 }
-                if (isOpen_Edit == false)
-                {
-                    EditRouteForm edit_routefrm = new EditRouteForm();
-                    //  MessageBox.Show((e.RowIndex + 1).ToString());
-                    DataGridViewRow row_to_edit = gunaDataGridView2.Rows[e.RowIndex];
-
-                    
-                   // MessageBox.Show(row_to_edit.Cells[3].Value.ToString() + ", " + row_to_edit.Cells[4].Value.ToString() + ", " + row_to_edit.Cells[5].Value.ToString() + ", " + row_to_edit.Cells[6].Value.ToString());
-
-                    string idye = row_to_edit.Cells[2].Value.ToString(); //MAO NI ID
-                    string value_distance = row_to_edit.Cells[4].Value.ToString(); //distance
-                    string value_regFare = row_to_edit.Cells[5].Value.ToString(); //reg_new
-                    string value_specFre = row_to_edit.Cells[6].Value.ToString(); //spec_new
-
-
-                    //MessageBox.Show(value_regFare);
-
-                 //   Routes rts_to_ed = new Routes(row_to_edit.Cells[3].Value.ToString(), float.Parse(value_distance, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_regFare, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_specFre, CultureInfo.InvariantCulture.NumberFormat));
-                    //edit_routefrm.edit_set_row(row_to_edit);
-                    edit_routefrm.routeID = Int32.Parse(idye);
-                    edit_routefrm.setrowNumber((e.RowIndex));
-                 //   edit_routefrm.edit_set_routes(rts_to_ed);
-                    edit_routefrm.Show();
-                }
-                //load_the_gridView();
             }
+            catch
+            {
+                int x55 = 0;
+            }
+
         }
 
         private void gunaLineTextBox1_Enter(object sender, EventArgs e)

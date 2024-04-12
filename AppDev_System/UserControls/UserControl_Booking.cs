@@ -237,7 +237,7 @@ namespace AppDev_System.UserControls
             }
             catch 
             {
-                MessageBox.Show("eguls mali imo code bro");
+                int x55 = 0;
             }
         }
 

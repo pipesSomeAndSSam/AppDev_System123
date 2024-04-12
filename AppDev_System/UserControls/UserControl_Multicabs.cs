@@ -91,26 +91,18 @@ namespace AppDev_System.UserControls
 
             //BookingsGridView.Columns.Add("Destination_Column", "Destination");
 
-            DataGridViewButtonColumn dataGridViewButtonColumn_edit = new DataGridViewButtonColumn();
             DataGridViewButtonColumn dataGridViewButtonColumn_delete = new DataGridViewButtonColumn();
-            dataGridViewButtonColumn_delete.Name = "Del_button";
-            dataGridViewButtonColumn_delete.HeaderText = "Action";
-            dataGridViewButtonColumn_edit.Name = "Edit_button";
-            dataGridViewButtonColumn_edit.HeaderText = "";
+            dataGridViewButtonColumn_delete.Name = "Action_Button";
+            dataGridViewButtonColumn_delete.HeaderText = "Select Row";
 
             dataGridViewButtonColumn_delete.FlatStyle = FlatStyle.Popup;
-            dataGridViewButtonColumn_edit.FlatStyle = FlatStyle.Popup;
-            dataGridViewButtonColumn_delete.Text = "  DELETE";
-            dataGridViewButtonColumn_edit.Text = "    EDIT";
+            dataGridViewButtonColumn_delete.Text = "      ACTION";
 
             dataGridViewButtonColumn_delete.UseColumnTextForButtonValue = true;
-            dataGridViewButtonColumn_edit.UseColumnTextForButtonValue = true;
 
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_delete);
-            BookingsGridView.Columns.Add(dataGridViewButtonColumn_edit);
 
-            BookingsGridView.Columns[9].Width = 80;
-            BookingsGridView.Columns[10].Width = 80;
+            BookingsGridView.Columns[9].Width = 130;
 
             numOfMulticabs.Text = q.get_total_multicabsToday();
 
@@ -209,6 +201,18 @@ namespace AppDev_System.UserControls
                 con.Close();
 
                 gjh2 = true;
+            }
+        }
+
+        private void BookingsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
             }
         }
     }
