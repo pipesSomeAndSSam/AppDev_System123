@@ -24,7 +24,48 @@ namespace AppDev_System
         private DateTime time_ticketed;
         private DateTime date;
 
+
+
+
+
+
+
         //INSERT
+        public Boolean insertMulticab(Multicab multicab)
+        {
+            bool res = false;
+            try
+            {
+                con.Open();
+                MySqlCommand comToCheck = new MySqlCommand("SELECT * FROM multicabs_table WHERE multicab_plate ='" + multicab.plateNumber_id + "'", con);
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Multicab already exists");
+                }
+                else
+                {
+                    string query1 = "insert into multicabs_table(dateTime_of_arrival) value('" + multicab.arrival_time.ToString("hh:mm:ss") + "')";
+                    string query = "insert into multicabs_table(multicab_plate,name_of_driver,dateTime_of_arrival,seats,date_day,earnings,seats_available) value('" + multicab.plateNumber_id + "','" + multicab.nameOfDriver + "','" + multicab.arrival_time.ToString("hh:mm:ss") + "','" + multicab.seatsTotal + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + multicab.earnings + "','" + multicab.seatsAvailable + "')";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+
+                    //MessageBox.Show("multicab_plate : " + multicab.plateNumber_id + "\nname_of_driver : " + multicab.nameOfDriver + "\ndateTime_of_arrival : " + multicab.arrival_time.ToString("hh:mm:ss") + "\nseats : " + multicab.seatsTotal + "\ndate_day : " + DateTime.Now.ToString("yyyy-MM-dd"));
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > -1)
+                    {
+                        MessageBox.Show("Successful input in DataBase");
+                        res = true;
+                    }
+                }
+            }
+            catch
+            { 
+                MessageBox.Show("There was an Error");
+            }
+            return res;
+        }
 
         public Boolean insertUser(string user_name, string email, string password, string contact_num)
         {
@@ -107,7 +148,7 @@ namespace AppDev_System
             try
             {
                 con.Open();
-                string query = "insert into bookings(passenger_name,time_ticketed,amount,route_id,date) value('" + bookig.passenger_name + "','" + bookig.date_time.ToString("yyyy-MM-dd H:mm:ss") + "','" + bookig.amount + "','" + bookig.destination + "','" + bookig.date.ToString("yyyy-MM-dd") + "')";
+                string query = "insert into bookings(passenger_name,time_ticketed,amount,route_id,date,if_seated) value('" + bookig.passenger_name + "','" + bookig.date_time.ToString("yyyy-MM-dd H:mm:ss") + "','" + bookig.amount + "','" + bookig.destination + "','" + bookig.date.ToString("yyyy-MM-dd") + "','" + 0 + "')";
                 MySqlCommand cmd = new MySqlCommand(query, con);
 
                 int i = cmd.ExecuteNonQuery();
@@ -125,6 +166,12 @@ namespace AppDev_System
 
             return res;
         }
+
+
+
+
+
+
 
 
 
@@ -252,6 +299,8 @@ namespace AppDev_System
             return res;
         }
         
+
+
        
 
 
@@ -351,6 +400,23 @@ namespace AppDev_System
             return numOfEarnings_today;
         }
 
+        public string get_total_multicabsToday(string date)
+        {
+            string numOfUsers;
+
+            MySqlCommand cmd_routes = new MySqlCommand("select * from multicabs_table where date_day = '" + date + "'", con);
+
+            MySqlDataAdapter adapter_users = new MySqlDataAdapter();
+            DataTable dt_users = new DataTable();
+
+            adapter_users.SelectCommand = cmd_routes;
+            //dt_users.Clear();
+            adapter_users.Fill(dt_users);
+
+            numOfUsers = dt_users.Rows.Count.ToString();
+            return numOfUsers;
+        }
+
         public string get_total_multicabsToday()
         {
             string numOfUsers;
@@ -367,5 +433,6 @@ namespace AppDev_System
             numOfUsers = dt_users.Rows.Count.ToString();
             return numOfUsers;
         }
+
     }
 }

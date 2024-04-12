@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppDev_System.Forms;
+using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
 
 namespace AppDev_System.UserControls
 {
     public partial class UserControl_Multicabs : UserControl
     {
+        private bool gjh2 = false;
         private Query q = new Query();
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
+
+        public List<Multicab> multicabs = new List<Multicab>();
+
         public UserControl_Multicabs()
         {
             InitializeComponent();
@@ -42,7 +48,7 @@ namespace AppDev_System.UserControls
             BookingsGridView.AllowUserToResizeRows = false;
             BookingsGridView.AllowUserToResizeColumns = false;
             BookingsGridView.AllowUserToAddRows = false;
-            BookingsGridView.ColumnHeadersHeight = 40;
+            BookingsGridView.ColumnHeadersHeight = 50;
             BookingsGridView.RowTemplate.Height = 30;
             BookingsGridView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             BookingsGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -59,14 +65,22 @@ namespace AppDev_System.UserControls
             BookingsGridView.Columns[1].ReadOnly = true;
             BookingsGridView.Columns[2].HeaderText = "Arrival Time";
             BookingsGridView.Columns[2].ReadOnly = true;
+            BookingsGridView.Columns[2].Width = 70;
             BookingsGridView.Columns[3].HeaderText = "Departure Time";
             BookingsGridView.Columns[3].ReadOnly = true;
+            BookingsGridView.Columns[3].Width = 70;
             BookingsGridView.Columns[4].HeaderText = "Number of Seats";
             BookingsGridView.Columns[4].ReadOnly = true;
+            BookingsGridView.Columns[4].Width = 70;
             BookingsGridView.Columns[5].HeaderText = "Available Seats";
             BookingsGridView.Columns[5].ReadOnly = true;
-            BookingsGridView.Columns[6].HeaderText = "Earnings Today";
+            BookingsGridView.Columns[5].Width = 70;
+            BookingsGridView.Columns[6].HeaderText = "Earnings Today in ₱";
             BookingsGridView.Columns[6].ReadOnly = true;
+            BookingsGridView.Columns[6].Width = 70;
+            BookingsGridView.Columns[8].HeaderText = "Multicab ID";
+            BookingsGridView.Columns[8].ReadOnly = true;
+            BookingsGridView.Columns[8].Width = 190;
 
             BookingsGridView.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             BookingsGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
@@ -95,12 +109,107 @@ namespace AppDev_System.UserControls
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_delete);
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_edit);
 
-            BookingsGridView.Columns[8].Width = 80;
             BookingsGridView.Columns[9].Width = 80;
+            BookingsGridView.Columns[10].Width = 80;
 
             numOfMulticabs.Text = q.get_total_multicabsToday();
 
             con.Close();
+        }
+
+        private void addMulticab_Click(object sender, EventArgs e)
+        {
+            bool isOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "AddMulticab")
+                {
+                    isOpen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (isOpen == false)
+            {
+                AddMulticab addmult = new AddMulticab();
+                addmult.Show();
+            }
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            DateTime theDate = dateTimePickerMult.Value;
+            numOfMulticabs.Text = q.get_total_multicabsToday(theDate.ToString("yyyy-MM-dd"));
+
+            string sqlstm = "SELECT * FROM multicabs_table WHERE date_day = '" + theDate.ToString("yyyy-MM-dd") + "'";
+            MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "multicabs_table");
+            BookingsGridView.DataSource = DS.Tables[0];
+        }
+
+        private void dateTimePickerMult_ValueChanged(object sender, EventArgs e)
+        {
+            showGridDataBasedOnDateTime_Multicab();
+            this.ActiveControl = null;
+        }
+
+        private void searchDriverName_Enter(object sender, EventArgs e)
+        {
+            if (searchDriverName.Text == "Input Driver Name")
+            {
+                searchDriverName.Text = "";
+                searchDriverName.ForeColor = Color.Black;
+            }
+        }
+
+        private void searchDriverName_Leave(object sender, EventArgs e)
+        {
+            if (searchDriverName.Text == "")
+            {
+
+                searchDriverName.Text = "Input Driver Name";
+                searchDriverName.ForeColor = Color.Silver;
+
+                string sqlstm = "SELECT * FROM multicabs_table";
+                MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+                DataSet DS = new System.Data.DataSet();
+                SDA.Fill(DS, "multicabs_table");
+                BookingsGridView.DataSource = DS.Tables[0];
+
+                showGridDataBasedOnDateTime_Multicab();
+            }
+        }
+
+        private void showGridDataBasedOnDateTime_Multicab()
+        {
+            DateTime theDate = dateTimePickerMult.Value;
+            numOfMulticabs.Text = q.get_total_multicabsToday(theDate.ToString("yyyy-MM-dd"));
+
+            string sqlstm = "SELECT * FROM multicabs_table WHERE date_day = '" + theDate.ToString("yyyy-MM-dd") + "'";
+            MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "multicabs_table");
+            BookingsGridView.DataSource = DS.Tables[0];
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (dateTimePickerMult.Text != "Input Driver Name")
+            {
+                DateTime theDate = dateTimePickerMult.Value;
+
+                MySqlDataAdapter da;
+                DataTable dt;
+                con.Open();
+                da = new MySqlDataAdapter("SELECT * FROM multicabs_table WHERE name_of_driver = '" + searchDriverName.Text + "' and date_day = '" + theDate.ToString("yyyy-MM-dd") + "'", con);
+                dt = new DataTable();
+                da.Fill(dt);
+                BookingsGridView.DataSource = dt;
+                con.Close();
+
+                gjh2 = true;
+            }
         }
     }
 }

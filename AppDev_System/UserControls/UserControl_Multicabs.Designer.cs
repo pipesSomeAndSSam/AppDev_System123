@@ -52,6 +52,7 @@
             this.dateTimePickerMult.Name = "dateTimePickerMult";
             this.dateTimePickerMult.Size = new System.Drawing.Size(270, 22);
             this.dateTimePickerMult.TabIndex = 32;
+            this.dateTimePickerMult.ValueChanged += new System.EventHandler(this.dateTimePickerMult_ValueChanged);
             // 
             // numOfMulticabs
             // 
@@ -103,6 +104,7 @@
             this.searchButton.Radius = 6;
             this.searchButton.Size = new System.Drawing.Size(40, 40);
             this.searchButton.TabIndex = 29;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // searchDriverName
             // 
@@ -118,6 +120,8 @@
             this.searchDriverName.Size = new System.Drawing.Size(302, 40);
             this.searchDriverName.TabIndex = 28;
             this.searchDriverName.Text = "Input Driver Name";
+            this.searchDriverName.Enter += new System.EventHandler(this.searchDriverName_Enter);
+            this.searchDriverName.Leave += new System.EventHandler(this.searchDriverName_Leave);
             // 
             // sercc
             // 
@@ -158,6 +162,7 @@
             this.refreshButton.Size = new System.Drawing.Size(169, 40);
             this.refreshButton.TabIndex = 26;
             this.refreshButton.Text = "REFRESH";
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // BookingsGridView
             // 
@@ -258,6 +263,7 @@
             this.addMulticab.Size = new System.Drawing.Size(232, 40);
             this.addMulticab.TabIndex = 24;
             this.addMulticab.Text = "ADD MULTICAB";
+            this.addMulticab.Click += new System.EventHandler(this.addMulticab_Click);
             // 
             // gunaLabel
             // 

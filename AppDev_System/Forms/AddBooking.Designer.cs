@@ -189,9 +189,9 @@
             this.gunaLabel6.Location = new System.Drawing.Point(3, 161);
             this.gunaLabel6.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(199, 41);
+            this.gunaLabel6.Size = new System.Drawing.Size(213, 41);
             this.gunaLabel6.TabIndex = 7;
-            this.gunaLabel6.Text = "Date Booked";
+            this.gunaLabel6.Text = "Date Ticketed";
             // 
             // setDateLabel
             // 
@@ -479,9 +479,9 @@
             this.gunaLabel12.Location = new System.Drawing.Point(3, 139);
             this.gunaLabel12.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(199, 41);
+            this.gunaLabel12.Size = new System.Drawing.Size(213, 41);
             this.gunaLabel12.TabIndex = 22;
-            this.gunaLabel12.Text = "Date Booked";
+            this.gunaLabel12.Text = "Date Ticketed";
             // 
             // gunaPanel9
             // 

@@ -140,9 +140,9 @@
             this.gunaLabel6.Location = new System.Drawing.Point(3, 161);
             this.gunaLabel6.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(199, 41);
+            this.gunaLabel6.Size = new System.Drawing.Size(213, 41);
             this.gunaLabel6.TabIndex = 7;
-            this.gunaLabel6.Text = "Date Booked";
+            this.gunaLabel6.Text = "Date Ticketed";
             // 
             // gunaAdvenceButton1
             // 
@@ -295,6 +295,7 @@
             this.ClientSize = new System.Drawing.Size(424, 613);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaPanel12);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EditTicket1";
             this.Text = "EditTicket1";
             this.Load += new System.EventHandler(this.EditTicket1_Load);

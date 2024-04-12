@@ -203,9 +203,29 @@ namespace AppDev_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plus_511x512 {
+            get {
+                object obj = ResourceManager.GetObject("plus.511x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus_511x512_WHITE_ {
             get {
                 object obj = ResourceManager.GetObject("plus.511x512(WHITE)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus1 {
+            get {
+                object obj = ResourceManager.GetObject("plus1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

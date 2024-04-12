@@ -61,6 +61,7 @@ namespace AppDev_System.UserControls
 
             BookingsGridView.Columns["id"].Visible = false;
             BookingsGridView.Columns["date"].Visible = false;
+            BookingsGridView.Columns["if_seated"].Visible = false;
             BookingsGridView.Columns[1].HeaderText = "Passenger";
             BookingsGridView.Columns[1].ReadOnly = true;
             BookingsGridView.Columns[2].HeaderText = "Destination";
@@ -97,8 +98,8 @@ namespace AppDev_System.UserControls
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_delete);
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_edit);
 
-            BookingsGridView.Columns[6].Width = 80;
             BookingsGridView.Columns[7].Width = 80;
+            BookingsGridView.Columns[8].Width = 80;
 
             numOfRts.Text = q.get_total_numOfTickets_forToday();
 
@@ -157,10 +158,12 @@ namespace AppDev_System.UserControls
         {
             if (gunaLineTextBox1.Text != "Input Destination")
             {
+                DateTime theDate = dateTimePicker1.Value;
+
                 MySqlDataAdapter da;
                 DataTable dt;
                 con.Open();
-                da = new MySqlDataAdapter("SELECT * FROM bookings WHERE route_id = '" + gunaLineTextBox1.Text + "'", con);
+                da = new MySqlDataAdapter("SELECT * FROM bookings WHERE route_id = '" + gunaLineTextBox1.Text + "' and date = '" + theDate.ToString("yyyy-MM-dd") + "'", con);
                 dt = new DataTable();
                 da.Fill(dt);
                 BookingsGridView.DataSource = dt;
@@ -172,16 +175,14 @@ namespace AppDev_System.UserControls
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Now;
+            DateTime theDate = dateTimePicker1.Value;
+            numOfRts.Text = q.get_total_numOfTickets_forToday(theDate.ToString("yyyy-MM-dd"));
 
-            string sqlstm = "SELECT * FROM bookings";
+            string sqlstm = "SELECT * FROM bookings WHERE date = '" + theDate.ToString("yyyy-MM-dd") + "'";
             MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
             DataSet DS = new System.Data.DataSet();
             SDA.Fill(DS, "bookings");
-            BookingsGridView.DataSource = DS.Tables[0];
-
-            numOfRts.Text = q.get_total_numOfTickets_forToday();
-            showGridDataBasedOnDateTime();
+            BookingsGridView.DataSource = DS.Tables[0];          
         }
 
         private void BookingsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -225,9 +226,11 @@ namespace AppDev_System.UserControls
 
                         string id = row_to_edit.Cells[2].Value.ToString(); //MAO NI ID
                         string iname = row_to_edit.Cells[3].Value.ToString(); //MAO NI PASSENGER NAME
+                        string destin = row_to_edit.Cells[4].Value.ToString(); //MAO NI DESTINATION NAME
 
                         edit_Ticketfrm.rowId = Int32.Parse(id);
                         edit_Ticketfrm.name = iname;
+                        edit_Ticketfrm.destination = destin;
                         edit_Ticketfrm.Show();
                     }
                 }

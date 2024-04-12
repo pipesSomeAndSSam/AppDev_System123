@@ -131,6 +131,8 @@ namespace AppDev_System
                 gunaPasswordTextBox2.Text = "Please Set Password Again";
                 gunaPasswordTextBox2.ForeColor = Color.FromArgb(64, 64, 64);
                 gunaPasswordTextBox2.BorderColor = Color.Red;
+                gunaPasswordTextBox2.UseSystemPasswordChar = false;
+                INPUT_PASSS_AGAIN.UseSystemPasswordChar = false;
             }
         }
 
@@ -302,24 +304,38 @@ namespace AppDev_System
 
         private void gunaCheckBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if ((gunaCheckBox2.Checked == false && gunaPasswordTextBox2.Text != "Set Password") && INPUT_PASSS_AGAIN.Text == "Input Password Again")
+            if (((gunaCheckBox2.Checked == false && gunaPasswordTextBox2.Text != "Set Password") && (gunaCheckBox2.Checked == false && gunaPasswordTextBox2.Text != "Please Set Password Again")) && INPUT_PASSS_AGAIN.Text == "Input Password Again")
             {
+                
                 gunaPasswordTextBox2.UseSystemPasswordChar = true;
+                //MessageBox.Show("1");
+            }
+            else if (((gunaCheckBox2.Checked == false && gunaPasswordTextBox2.Text == "Please Set Password Again") && (gunaCheckBox2.Checked == false && gunaPasswordTextBox2.Text == "Set Password")) && INPUT_PASSS_AGAIN.Text == "Input Password Again")
+            {
+                
+                gunaPasswordTextBox2.UseSystemPasswordChar = false;
+                //MessageBox.Show("2");
             }
             else if ((gunaCheckBox2.Checked == false && gunaPasswordTextBox2.Text != "Set Password") && INPUT_PASSS_AGAIN.Text != "Input Password Again")
             {
-                gunaPasswordTextBox2.UseSystemPasswordChar = true;
+                
+                gunaPasswordTextBox2.UseSystemPasswordChar = true; 
                 INPUT_PASSS_AGAIN.UseSystemPasswordChar = true;
+                //MessageBox.Show("3");
             }
             else if ((gunaCheckBox2.Checked == false && gunaPasswordTextBox2.Text == "Set Password") && INPUT_PASSS_AGAIN.Text != "Input Password Again")
             {
-                gunaPasswordTextBox2.UseSystemPasswordChar = false;
+                
+                gunaPasswordTextBox2.UseSystemPasswordChar = false; 
                 INPUT_PASSS_AGAIN.UseSystemPasswordChar = true;
+                //MessageBox.Show("4");
             }
             else if (gunaCheckBox2.Checked == true || gunaPasswordTextBox2.Text == "Set Password")
             {
-                gunaPasswordTextBox2.UseSystemPasswordChar = false;
+                
+                gunaPasswordTextBox2.UseSystemPasswordChar = false; 
                 INPUT_PASSS_AGAIN.UseSystemPasswordChar = false;
+                //MessageBox.Show("5");
             }
         }
     }

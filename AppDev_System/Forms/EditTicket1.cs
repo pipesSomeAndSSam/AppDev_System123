@@ -20,6 +20,7 @@ namespace AppDev_System.Forms
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
         public int rowId { get; set; }
         public string name { get; set; }
+        public string destination { get; set; }
 
         private string barangay_name;
         private float fare_in_pesos_regular_fare_new;
@@ -102,9 +103,7 @@ namespace AppDev_System.Forms
                 {
                     gunaLabel82.Text = Convert.ToString(this.fare_in_pesos_regular_fare_new);
                 }
-
                 conConn.Close();
-
             }
             catch
             {
@@ -129,12 +128,22 @@ namespace AppDev_System.Forms
         {
             try
             {
+                string x = "";
+                if(gunaTextBox1.Text == "" || string.IsNullOrWhiteSpace(gunaTextBox1.Text))
+                {
+                    x = "NULL";
+                }
+                else
+                {
+                    x = gunaTextBox1.Text;
+                }
+
                 DateTime date_t = DateTime.Now;
                 DateTime date = DateTime.Now;
                 float amount = float.Parse(gunaLabel82.Text);
                 string destination = routeComboBox1.Text;
 
-                Booking b = new Booking(gunaTextBox1.Text, amount, destination, date_t, date);
+                Booking b = new Booking(x, amount, destination, date_t, date);
                 b.editTicket(this.rowId);
                 this.Close();
             }

@@ -267,9 +267,9 @@
             // 
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox1.Image = global::AppDev_System.Properties.Resources.user2;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(42, 79);
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(34, 79);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(248, 239);
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(263, 239);
             this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaCirclePictureBox1.TabIndex = 0;
             this.gunaCirclePictureBox1.TabStop = false;
@@ -278,6 +278,7 @@
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gunaLabel1.Location = new System.Drawing.Point(365, 27);
@@ -289,9 +290,10 @@
             // userName
             // 
             this.userName.AutoSize = true;
+            this.userName.BackColor = System.Drawing.Color.Transparent;
             this.userName.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.userName.Location = new System.Drawing.Point(522, 27);
+            this.userName.Location = new System.Drawing.Point(515, 27);
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(83, 35);
             this.userName.TabIndex = 2;
