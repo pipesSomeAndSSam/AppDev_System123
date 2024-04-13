@@ -67,6 +67,8 @@ namespace AppDev_System
             { 
                 MessageBox.Show("There was an Error");
             }
+            con.Close();
+
             return res;
         }
 
@@ -502,5 +504,40 @@ namespace AppDev_System
             return numOfUsers;
         }
 
+
+
+
+
+
+
+
+
+
+
+        //OTHERS
+        public Boolean if_multicabExists(string plateNumber_id)
+        {
+            bool res = false;
+            try
+            {
+                con.Open();
+                MySqlCommand comToCheck = new MySqlCommand("SELECT * FROM multicabs_table WHERE multicab_plate ='" + plateNumber_id + "'", con);
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    res = true;
+                }
+                return res;
+            }
+            catch
+            {
+                MessageBox.Show("There was an Error");
+            }
+            con.Close();
+
+            return res;
+        }
     }
 }

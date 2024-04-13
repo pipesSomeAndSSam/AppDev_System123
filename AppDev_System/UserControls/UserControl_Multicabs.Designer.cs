@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Multicabs));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Multicabs));
             this.dateTimePickerMult = new System.Windows.Forms.DateTimePicker();
             this.numOfMulticabs = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.searchButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.searchDriverName = new Guna.UI.WinForms.GunaLineTextBox();
             this.sercc = new Guna.UI.WinForms.GunaLabel();
-            this.refreshButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.MulticabGridView = new Guna.UI.WinForms.GunaDataGridView();
-            this.addMulticab = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
+            this.searchButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.refreshButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.addMulticab = new Guna.UI.WinForms.GunaAdvenceButton();
             ((System.ComponentModel.ISupportInitialize)(this.MulticabGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,36 +76,6 @@
             this.gunaLabel1.TabIndex = 30;
             this.gunaLabel1.Text = "Multicabs in this Date:";
             // 
-            // searchButton
-            // 
-            this.searchButton.AnimationHoverSpeed = 0.07F;
-            this.searchButton.AnimationSpeed = 0.03F;
-            this.searchButton.BaseColor = System.Drawing.Color.Black;
-            this.searchButton.BorderColor = System.Drawing.Color.Black;
-            this.searchButton.CheckedBaseColor = System.Drawing.Color.DimGray;
-            this.searchButton.CheckedBorderColor = System.Drawing.Color.Black;
-            this.searchButton.CheckedForeColor = System.Drawing.Color.White;
-            this.searchButton.CheckedImage = ((System.Drawing.Image)(resources.GetObject("searchButton.CheckedImage")));
-            this.searchButton.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Image = global::AppDev_System.Properties.Resources.search_512x512;
-            this.searchButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.searchButton.ImageSize = new System.Drawing.Size(25, 25);
-            this.searchButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.searchButton.Location = new System.Drawing.Point(902, 81);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
-            this.searchButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.searchButton.OnHoverForeColor = System.Drawing.Color.White;
-            this.searchButton.OnHoverImage = null;
-            this.searchButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.searchButton.OnPressedColor = System.Drawing.Color.Black;
-            this.searchButton.Radius = 6;
-            this.searchButton.Size = new System.Drawing.Size(40, 40);
-            this.searchButton.TabIndex = 29;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
             // searchDriverName
             // 
             this.searchDriverName.BackColor = System.Drawing.Color.White;
@@ -132,37 +102,6 @@
             this.sercc.Size = new System.Drawing.Size(82, 31);
             this.sercc.TabIndex = 27;
             this.sercc.Text = "Search";
-            // 
-            // refreshButton
-            // 
-            this.refreshButton.AnimationHoverSpeed = 0.07F;
-            this.refreshButton.AnimationSpeed = 0.03F;
-            this.refreshButton.BaseColor = System.Drawing.Color.Black;
-            this.refreshButton.BorderColor = System.Drawing.Color.Black;
-            this.refreshButton.CheckedBaseColor = System.Drawing.Color.DimGray;
-            this.refreshButton.CheckedBorderColor = System.Drawing.Color.Black;
-            this.refreshButton.CheckedForeColor = System.Drawing.Color.White;
-            this.refreshButton.CheckedImage = ((System.Drawing.Image)(resources.GetObject("refreshButton.CheckedImage")));
-            this.refreshButton.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.refreshButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshButton.ForeColor = System.Drawing.Color.White;
-            this.refreshButton.Image = global::AppDev_System.Properties.Resources.refresh_left_square3_512x512;
-            this.refreshButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.refreshButton.ImageSize = new System.Drawing.Size(35, 35);
-            this.refreshButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.refreshButton.Location = new System.Drawing.Point(305, 85);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
-            this.refreshButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.refreshButton.OnHoverForeColor = System.Drawing.Color.White;
-            this.refreshButton.OnHoverImage = null;
-            this.refreshButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.refreshButton.OnPressedColor = System.Drawing.Color.Black;
-            this.refreshButton.Radius = 6;
-            this.refreshButton.Size = new System.Drawing.Size(169, 40);
-            this.refreshButton.TabIndex = 26;
-            this.refreshButton.Text = "REFRESH";
-            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // MulticabGridView
             // 
@@ -235,6 +174,78 @@
             this.MulticabGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.MulticabGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookingsGridView_CellClick);
             // 
+            // gunaLabel
+            // 
+            this.gunaLabel.AutoSize = true;
+            this.gunaLabel.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel.Location = new System.Drawing.Point(3, 10);
+            this.gunaLabel.Name = "gunaLabel";
+            this.gunaLabel.Size = new System.Drawing.Size(310, 46);
+            this.gunaLabel.TabIndex = 23;
+            this.gunaLabel.Text = "Multicab Status";
+            // 
+            // searchButton
+            // 
+            this.searchButton.AnimationHoverSpeed = 0.07F;
+            this.searchButton.AnimationSpeed = 0.03F;
+            this.searchButton.BaseColor = System.Drawing.Color.Black;
+            this.searchButton.BorderColor = System.Drawing.Color.Black;
+            this.searchButton.CheckedBaseColor = System.Drawing.Color.DimGray;
+            this.searchButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.searchButton.CheckedForeColor = System.Drawing.Color.White;
+            this.searchButton.CheckedImage = ((System.Drawing.Image)(resources.GetObject("searchButton.CheckedImage")));
+            this.searchButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.Color.White;
+            this.searchButton.Image = global::AppDev_System.Properties.Resources.search_512x512;
+            this.searchButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.searchButton.ImageSize = new System.Drawing.Size(25, 25);
+            this.searchButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.searchButton.Location = new System.Drawing.Point(902, 81);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
+            this.searchButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.searchButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.searchButton.OnHoverImage = null;
+            this.searchButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.searchButton.OnPressedColor = System.Drawing.Color.Black;
+            this.searchButton.Radius = 6;
+            this.searchButton.Size = new System.Drawing.Size(40, 40);
+            this.searchButton.TabIndex = 29;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.AnimationHoverSpeed = 0.07F;
+            this.refreshButton.AnimationSpeed = 0.03F;
+            this.refreshButton.BaseColor = System.Drawing.Color.Black;
+            this.refreshButton.BorderColor = System.Drawing.Color.Black;
+            this.refreshButton.CheckedBaseColor = System.Drawing.Color.DimGray;
+            this.refreshButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.refreshButton.CheckedForeColor = System.Drawing.Color.White;
+            this.refreshButton.CheckedImage = ((System.Drawing.Image)(resources.GetObject("refreshButton.CheckedImage")));
+            this.refreshButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.refreshButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshButton.ForeColor = System.Drawing.Color.White;
+            this.refreshButton.Image = global::AppDev_System.Properties.Resources.refresh_left_square3_512x512;
+            this.refreshButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.refreshButton.ImageSize = new System.Drawing.Size(35, 35);
+            this.refreshButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.refreshButton.Location = new System.Drawing.Point(305, 85);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
+            this.refreshButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.refreshButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.refreshButton.OnHoverImage = null;
+            this.refreshButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.refreshButton.OnPressedColor = System.Drawing.Color.Black;
+            this.refreshButton.Radius = 6;
+            this.refreshButton.Size = new System.Drawing.Size(169, 40);
+            this.refreshButton.TabIndex = 26;
+            this.refreshButton.Text = "REFRESH";
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
             // addMulticab
             // 
             this.addMulticab.AnimationHoverSpeed = 0.07F;
@@ -265,17 +276,6 @@
             this.addMulticab.TabIndex = 24;
             this.addMulticab.Text = "ADD MULTICAB";
             this.addMulticab.Click += new System.EventHandler(this.addMulticab_Click);
-            // 
-            // gunaLabel
-            // 
-            this.gunaLabel.AutoSize = true;
-            this.gunaLabel.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel.Location = new System.Drawing.Point(3, 10);
-            this.gunaLabel.Name = "gunaLabel";
-            this.gunaLabel.Size = new System.Drawing.Size(442, 46);
-            this.gunaLabel.TabIndex = 23;
-            this.gunaLabel.Text = "Multicab Queue Status";
             // 
             // UserControl_Multicabs
             // 

@@ -39,6 +39,10 @@ namespace AppDev_System
             this.isIn = true;
             this.date_day = DateTime.Now;
         }
+        public void dataBaseId_(int earnings)
+        {
+            this.dataBaseId = earnings;
+        }
 
         public Multicab(string plateNumb_id, string nameOfDriver, DateTime arrival_time, DateTime departure_time, int seatsTotal, float earnings) //WITH DEPAPRTURE
         {
@@ -100,6 +104,20 @@ namespace AppDev_System
             query.editMulticab(this);
 
             return res;
+        }
+
+        public override string ToString()
+        {
+            return ("multicab_id = " + this.dataBaseId +
+                          "\nname_of_driver = " + this.nameOfDriver +
+                          "\ndateTime_of_arrival = " + this.arrival_time +
+                          "\ndateTime_of_departure = " + this.departure_time+
+                          "\nseats = " + this.seatsTotal+
+                          "\nseats_available = " + this.seatsAvailable +
+                          "\nearnings = " + this.earnings +
+                          "\ndate_day = " + this.date_day +
+                          "\nmulticab_plate = " + this.plateNumber_id+
+                          "\nisIn = " + this.isIn);
         }
     }
 }

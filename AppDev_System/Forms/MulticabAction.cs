@@ -182,6 +182,7 @@ namespace AppDev_System.Forms
             {
                 MessageBox.Show("mali bro");
             }
+            this.Close();
         }
     }
 }

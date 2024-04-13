@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppDev_System.Classes;
+using AppDev_System.UserControls;
 using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
 
@@ -16,6 +17,11 @@ namespace AppDev_System.Forms
 {
     public partial class AddMulticab : Form
     {
+        private int dataBaseId;
+        private int seatsAvailable_forClass;
+        private float earnings;
+        private DateTime date_day;
+        private bool isIn;
         public string driver_plate_existing { get; set; }
         public string driver_name_existing { get; set; }
         public int driver_seats_existing { get; set; }
@@ -196,6 +202,8 @@ namespace AppDev_System.Forms
                 {
                     this.driver_name_existing = (string)reader_users["name_of_driver"];
                     this.driver_seats_existing = reader_users.GetInt32(reader_users.GetOrdinal("seats_available"));
+                    this.dataBaseId = reader_users.GetInt32(reader_users.GetOrdinal("multicab_id"));
+                    this.earnings = reader_users.GetFloat(reader_users.GetOrdinal("earnings"));
                 }
                 Driver_name_comboBox.Text = this.driver_name_existing;
                 seatsAvailable.Text = this.driver_seats_existing.ToString();
@@ -236,9 +244,11 @@ namespace AppDev_System.Forms
             getDataToComboBox_Multicab();
         }
 
-        private void gunaAdvenceButton6_Click(object sender, EventArgs e)
+        private void gunaAdvenceButton6_Click(object sender, EventArgs e) //ADD TO QUEUE EXISTING
         {
-            //this.driver_plate_existing;
+            Multicab multicabAddToQueue = new Multicab(this.driver_plate_existing, this.driver_name_existing, DateTime.Now, this.driver_seats_existing, this.earnings);
+            multicabAddToQueue.dataBaseId_(this.dataBaseId);
+           // MessageBox.Show(multicabAddToQueue.ToString());
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
-            this.ADD_PERSON = new Guna.UI.WinForms.GunaAdvenceButton();
             this.REMOVE_QUEUE = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.DELETE_CAB = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -61,7 +60,6 @@
             // gunaPanel6
             // 
             this.gunaPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(68)))), ((int)(((byte)(122)))));
-            this.gunaPanel6.Controls.Add(this.ADD_PERSON);
             this.gunaPanel6.Controls.Add(this.REMOVE_QUEUE);
             this.gunaPanel6.Controls.Add(this.gunaLabel7);
             this.gunaPanel6.Controls.Add(this.DELETE_CAB);
@@ -72,35 +70,6 @@
             this.gunaPanel6.Name = "gunaPanel6";
             this.gunaPanel6.Size = new System.Drawing.Size(232, 621);
             this.gunaPanel6.TabIndex = 24;
-            // 
-            // ADD_PERSON
-            // 
-            this.ADD_PERSON.AnimationHoverSpeed = 0.07F;
-            this.ADD_PERSON.AnimationSpeed = 0.03F;
-            this.ADD_PERSON.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(68)))), ((int)(((byte)(122)))));
-            this.ADD_PERSON.BorderColor = System.Drawing.Color.Black;
-            this.ADD_PERSON.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.ADD_PERSON.CheckedBaseColor = System.Drawing.SystemColors.Control;
-            this.ADD_PERSON.CheckedBorderColor = System.Drawing.Color.Black;
-            this.ADD_PERSON.CheckedForeColor = System.Drawing.Color.Black;
-            this.ADD_PERSON.CheckedImage = global::AppDev_System.Properties.Resources.addPerson;
-            this.ADD_PERSON.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.ADD_PERSON.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ADD_PERSON.ForeColor = System.Drawing.Color.White;
-            this.ADD_PERSON.Image = global::AppDev_System.Properties.Resources.addPerson_white;
-            this.ADD_PERSON.ImageSize = new System.Drawing.Size(35, 33);
-            this.ADD_PERSON.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.ADD_PERSON.Location = new System.Drawing.Point(1, 313);
-            this.ADD_PERSON.Name = "ADD_PERSON";
-            this.ADD_PERSON.OnHoverBaseColor = System.Drawing.Color.White;
-            this.ADD_PERSON.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.ADD_PERSON.OnHoverForeColor = System.Drawing.Color.Black;
-            this.ADD_PERSON.OnHoverImage = global::AppDev_System.Properties.Resources.addPerson;
-            this.ADD_PERSON.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.ADD_PERSON.OnPressedColor = System.Drawing.Color.Black;
-            this.ADD_PERSON.Size = new System.Drawing.Size(232, 75);
-            this.ADD_PERSON.TabIndex = 13;
-            this.ADD_PERSON.Text = "ADD PERSON";
             // 
             // REMOVE_QUEUE
             // 
@@ -518,7 +487,6 @@
         private Guna.UI.WinForms.GunaTextBox Edit_ID;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaAdvenceButton ADD_PERSON;
         private Guna.UI.WinForms.GunaPanel deletePanel;
         private Guna.UI.WinForms.GunaAdvenceButton deleteButton;
         private Guna.UI.WinForms.GunaPanel gunaPanel4;

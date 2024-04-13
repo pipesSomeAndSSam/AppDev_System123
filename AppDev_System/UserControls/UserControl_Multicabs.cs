@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AppDev_System.Forms;
 using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppDev_System.UserControls
 {
@@ -18,8 +19,6 @@ namespace AppDev_System.UserControls
         private bool gjh2 = false;
         private Query q = new Query();
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
-
-        public List<Multicab> multicabs = new List<Multicab>();
 
         public UserControl_Multicabs()
         {
