@@ -19,6 +19,7 @@ namespace AppDev_System.Forms
         public string driver_plate_existing { get; set; }
         public string driver_name_existing { get; set; }
         public int driver_seats_existing { get; set; }
+        public string timestamp {  get; set; }
 
         private int where = 0;
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
@@ -233,6 +234,11 @@ namespace AppDev_System.Forms
         private void AddMulticab_Load(object sender, EventArgs e)
         {
             getDataToComboBox_Multicab();
+        }
+
+        private void gunaAdvenceButton6_Click(object sender, EventArgs e)
+        {
+            //this.driver_plate_existing;
         }
     }
 }

@@ -108,9 +108,21 @@ namespace AppDev_System
 
         private void LOGOUTButt_Click(object sender, EventArgs e)
         {
+            List<Form> openForms = new List<Form>();
+
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+
+            foreach (Form f in openForms)
+            {
+                if (f.Name != "Dashboard")
+                    f.Close();
+            }
+
             Form1 frm1 = new Form1();
             frm1.Show();
-            Visible = false;
+
+            this.Visible = false;
         }
 
         private void MulticabsButton_Click(object sender, EventArgs e)                  //MUTICAB BUTTON
@@ -138,12 +150,21 @@ namespace AppDev_System
             userControl_Booking1.BringToFront();
         }
 
-        private void gunaPictureBox1_Click(object sender, EventArgs e)
+        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(1);
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                // Console app
+                System.Environment.Exit(1);
+            }
         }
 
-        private void gunaPictureBox2_Click(object sender, EventArgs e)
+        private void minimize_button_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }

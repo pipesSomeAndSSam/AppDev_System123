@@ -41,6 +41,7 @@
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel12 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
@@ -48,7 +49,6 @@
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel5 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.personDeets.SuspendLayout();
             this.gunaPanel12.SuspendLayout();
@@ -149,9 +149,9 @@
             // 
             this.SubmitButtonRoute.AnimationHoverSpeed = 0.07F;
             this.SubmitButtonRoute.AnimationSpeed = 0.03F;
-            this.SubmitButtonRoute.BaseColor = System.Drawing.Color.Green;
+            this.SubmitButtonRoute.BaseColor = System.Drawing.SystemColors.HotTrack;
             this.SubmitButtonRoute.BorderColor = System.Drawing.Color.Black;
-            this.SubmitButtonRoute.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.SubmitButtonRoute.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(193)))));
             this.SubmitButtonRoute.CheckedBorderColor = System.Drawing.Color.Black;
             this.SubmitButtonRoute.CheckedForeColor = System.Drawing.Color.White;
             this.SubmitButtonRoute.CheckedImage = ((System.Drawing.Image)(resources.GetObject("SubmitButtonRoute.CheckedImage")));
@@ -163,7 +163,7 @@
             this.SubmitButtonRoute.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.SubmitButtonRoute.Location = new System.Drawing.Point(19, 581);
             this.SubmitButtonRoute.Name = "SubmitButtonRoute";
-            this.SubmitButtonRoute.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.SubmitButtonRoute.OnHoverBaseColor = System.Drawing.SystemColors.HotTrack;
             this.SubmitButtonRoute.OnHoverBorderColor = System.Drawing.Color.Black;
             this.SubmitButtonRoute.OnHoverForeColor = System.Drawing.Color.White;
             this.SubmitButtonRoute.OnHoverImage = null;
@@ -247,6 +247,17 @@
             this.gunaPanel12.Size = new System.Drawing.Size(407, 643);
             this.gunaPanel12.TabIndex = 23;
             // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.Location = new System.Drawing.Point(3, 446);
+            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(308, 41);
+            this.gunaLabel7.TabIndex = 20;
+            this.gunaLabel7.Text = "Edit Discounted Fare";
+            // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
@@ -313,17 +324,6 @@
             this.gunaLabel4.Size = new System.Drawing.Size(258, 41);
             this.gunaLabel4.TabIndex = 12;
             this.gunaLabel4.Text = "Edit Regular Fare";
-            // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.Location = new System.Drawing.Point(3, 446);
-            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(308, 41);
-            this.gunaLabel7.TabIndex = 20;
-            this.gunaLabel7.Text = "Edit Discounted Fare";
             // 
             // EditRouteForm
             // 

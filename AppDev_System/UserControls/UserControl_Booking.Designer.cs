@@ -53,9 +53,9 @@
             this.gunaLabel.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel.Location = new System.Drawing.Point(3, 10);
             this.gunaLabel.Name = "gunaLabel";
-            this.gunaLabel.Size = new System.Drawing.Size(264, 46);
+            this.gunaLabel.Size = new System.Drawing.Size(396, 46);
             this.gunaLabel.TabIndex = 7;
-            this.gunaLabel.Text = "Ticket Status";
+            this.gunaLabel.Text = "Ticket Queue Status";
             // 
             // BookingsGridView
             // 

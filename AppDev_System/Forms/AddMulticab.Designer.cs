@@ -216,9 +216,9 @@
             this.gunaLabel6.Location = new System.Drawing.Point(3, 255);
             this.gunaLabel6.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(201, 41);
+            this.gunaLabel6.Size = new System.Drawing.Size(336, 41);
             this.gunaLabel6.TabIndex = 7;
-            this.gunaLabel6.Text = "Time Arrived";
+            this.gunaLabel6.Text = "Date and Time Arrived";
             // 
             // gunaAdvenceButton1
             // 
@@ -485,9 +485,9 @@
             this.gunaLabel16.Location = new System.Drawing.Point(3, 245);
             this.gunaLabel16.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.gunaLabel16.Name = "gunaLabel16";
-            this.gunaLabel16.Size = new System.Drawing.Size(201, 41);
+            this.gunaLabel16.Size = new System.Drawing.Size(336, 41);
             this.gunaLabel16.TabIndex = 19;
-            this.gunaLabel16.Text = "Time Arrived";
+            this.gunaLabel16.Text = "Date and Time Arrived";
             // 
             // gunaPanel14
             // 
@@ -577,7 +577,7 @@
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel7.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel7.Location = new System.Drawing.Point(12, 15);
+            this.gunaLabel7.Location = new System.Drawing.Point(5, 15);
             this.gunaLabel7.Margin = new System.Windows.Forms.Padding(15, 7, 15, 7);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(205, 31);
@@ -706,6 +706,7 @@
             this.gunaAdvenceButton6.TabIndex = 19;
             this.gunaAdvenceButton6.Text = "Add";
             this.gunaAdvenceButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaAdvenceButton6.Click += new System.EventHandler(this.gunaAdvenceButton6_Click);
             // 
             // seatsAvailable
             // 
@@ -755,9 +756,9 @@
             this.gunaLabel12.Location = new System.Drawing.Point(3, 258);
             this.gunaLabel12.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(201, 41);
+            this.gunaLabel12.Size = new System.Drawing.Size(336, 41);
             this.gunaLabel12.TabIndex = 19;
-            this.gunaLabel12.Text = "Time Arrived";
+            this.gunaLabel12.Text = "Date and Time Arrived";
             // 
             // gunaPanel11
             // 

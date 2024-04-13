@@ -20,7 +20,6 @@ namespace AppDev_System
         public Form1()
         {
             InitializeComponent();
-
         }
         bool IsValidEmail(string eMail)
         {

@@ -30,6 +30,9 @@ namespace AppDev_System
 
 
 
+
+
+
         //INSERT
         public Boolean insertMulticab(Multicab multicab)
         {
@@ -179,6 +182,61 @@ namespace AppDev_System
 
 
         //EDIT
+        public Boolean editMulticab(Multicab multicab)
+        {
+            bool res = false;
+
+            try
+            {
+                con.Open();
+
+                MySqlCommand comToCheck = new MySqlCommand("SELECT name_of_driver, multicab_plate, seats, date_day FROM multicabs_table WHERE multicab_id = '" + multicab.dataBaseId + "'", con);
+
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                /*
+                string name_of_driver = "";
+                string multicab_plate = "";
+                DateTime dateTime_of_arrival;
+                DateTime date_day;
+                int seats = 0;
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    name_of_driver = row["name_of_driver"].ToString();
+                    multicab_plate = row["multicab_plate"].ToString();
+                    seats = (int)row["seats"];
+                    dateTime_of_arrival = Convert.ToDateTime(row["dateTime_of_arrival"]);       //get dateTime from database in dataGridView row
+                    date_day = Convert.ToDateTime(row["date_day"]);
+                }
+                */
+                if (dt.Rows.Count > 0)
+                {
+                    string updt = "UPDATE multicabs_table SET name_of_driver = '" + multicab.nameOfDriver +
+                             "', multicab_plate =  '" + multicab.plateNumber_id + 
+                             "', seats = '" + multicab.seatsTotal + "', earnings = '" + multicab.earnings +
+                             "' WHERE multicab_id = '" + multicab.dataBaseId + "'";
+
+                    MySqlCommand command_update = new MySqlCommand(updt, con);
+
+                    command_update.ExecuteNonQuery();
+                    MessageBox.Show("Update Successful");
+
+                    res = true;
+                }
+                else
+                {
+                    MessageBox.Show("IT DOES NOT EXIST EXISTS");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("mali ka duy");
+            }
+
+            return res;
+        }
 
         public Boolean editTicket(Booking ticket, int rowId)
         {
@@ -305,6 +363,13 @@ namespace AppDev_System
 
 
        
+
+
+
+
+
+
+
 
 
 

@@ -12,15 +12,20 @@ namespace AppDev_System
 {
     public class Multicab
     {
-        public string plateNumber_id { get; set; }
-        public string nameOfDriver {  get; set; }
+        public int dataBaseId { get; set; }
+        public string nameOfDriver { get; set; }
         public DateTime arrival_time { get; set; }
         public DateTime departure_time { get; set; }
-
         public int seatsTotal { get; set; }
         public int seatsAvailable { get; set; }
         public float earnings { get; set; }
+        public DateTime date_day { get; set; }
+        public string plateNumber_id { get; set; }
 
+
+
+
+        public bool isIn {  get; set; }
         public List<Booking> tickets { get; set; }
 
         public Multicab(string plateNumb_id, string nameOfDriver, DateTime arrival_time, int seatsTotal, float earnings) //WITHOUT DEPAPRTURE
@@ -31,6 +36,8 @@ namespace AppDev_System
             this.arrival_time = arrival_time;
             this.earnings = earnings;
             this.tickets = new List<Booking>();
+            this.isIn = true;
+            this.date_day = DateTime.Now;
         }
 
         public Multicab(string plateNumb_id, string nameOfDriver, DateTime arrival_time, DateTime departure_time, int seatsTotal, float earnings) //WITH DEPAPRTURE
@@ -41,7 +48,10 @@ namespace AppDev_System
             this.arrival_time = arrival_time;
             this.earnings = earnings;
             this.tickets = new List<Booking>();
+            this.isIn = true;
+            this.date_day = DateTime.Now;
         }
+
 
         public Boolean addPassenger(Booking ticket)
         {
@@ -78,6 +88,16 @@ namespace AppDev_System
             {
                 return res;
             }
+
+            return res;
+        }
+
+        public Boolean editMulticab()
+        {
+            bool res = false;
+
+            Query query = new Query();
+            query.editMulticab(this);
 
             return res;
         }

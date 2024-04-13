@@ -39,6 +39,8 @@
             this.gunaPadlockPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaUserCirclePictureBox = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaREGISTERPanel = new Guna.UI.WinForms.GunaPanel();
+            this.gunaCheckBox2 = new Guna.UI.WinForms.GunaCheckBox();
+            this.INPUT_PASSS_AGAIN = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLOGINButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaPhonePictureBox = new Guna.UI.WinForms.GunaPictureBox();
@@ -50,8 +52,6 @@
             this.gunaPasswordTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaUsernameTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPasswordPictureBox = new Guna.UI.WinForms.GunaPictureBox();
-            this.INPUT_PASSS_AGAIN = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaCheckBox2 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaLOGINPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPadlockPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaUserCirclePictureBox)).BeginInit();
@@ -244,6 +244,39 @@
             this.gunaREGISTERPanel.TabIndex = 9;
             this.gunaREGISTERPanel.Visible = false;
             // 
+            // gunaCheckBox2
+            // 
+            this.gunaCheckBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaCheckBox2.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaCheckBox2.CheckedOnColor = System.Drawing.SystemColors.Highlight;
+            this.gunaCheckBox2.FillColor = System.Drawing.Color.White;
+            this.gunaCheckBox2.Location = new System.Drawing.Point(219, 294);
+            this.gunaCheckBox2.Name = "gunaCheckBox2";
+            this.gunaCheckBox2.Size = new System.Drawing.Size(126, 20);
+            this.gunaCheckBox2.TabIndex = 13;
+            this.gunaCheckBox2.Text = "Show Password";
+            this.gunaCheckBox2.CheckedChanged += new System.EventHandler(this.gunaCheckBox2_CheckedChanged);
+            // 
+            // INPUT_PASSS_AGAIN
+            // 
+            this.INPUT_PASSS_AGAIN.BaseColor = System.Drawing.Color.LightGray;
+            this.INPUT_PASSS_AGAIN.BorderColor = System.Drawing.Color.LightGray;
+            this.INPUT_PASSS_AGAIN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.INPUT_PASSS_AGAIN.FocusedBaseColor = System.Drawing.Color.White;
+            this.INPUT_PASSS_AGAIN.FocusedBorderColor = System.Drawing.Color.Gray;
+            this.INPUT_PASSS_AGAIN.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.INPUT_PASSS_AGAIN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.INPUT_PASSS_AGAIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.INPUT_PASSS_AGAIN.Location = new System.Drawing.Point(68, 237);
+            this.INPUT_PASSS_AGAIN.Name = "INPUT_PASSS_AGAIN";
+            this.INPUT_PASSS_AGAIN.PasswordChar = '\0';
+            this.INPUT_PASSS_AGAIN.Radius = 6;
+            this.INPUT_PASSS_AGAIN.Size = new System.Drawing.Size(277, 42);
+            this.INPUT_PASSS_AGAIN.TabIndex = 12;
+            this.INPUT_PASSS_AGAIN.Text = "Input Password Again";
+            this.INPUT_PASSS_AGAIN.Enter += new System.EventHandler(this.INPUT_PASSS_AGAIN_Enter);
+            this.INPUT_PASSS_AGAIN.Leave += new System.EventHandler(this.INPUT_PASSS_AGAIN_Leave);
+            // 
             // gunaTextBox2
             // 
             this.gunaTextBox2.BaseColor = System.Drawing.Color.LightGray;
@@ -434,39 +467,6 @@
             this.gunaPasswordPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPasswordPictureBox.TabIndex = 0;
             this.gunaPasswordPictureBox.TabStop = false;
-            // 
-            // INPUT_PASSS_AGAIN
-            // 
-            this.INPUT_PASSS_AGAIN.BaseColor = System.Drawing.Color.LightGray;
-            this.INPUT_PASSS_AGAIN.BorderColor = System.Drawing.Color.LightGray;
-            this.INPUT_PASSS_AGAIN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.INPUT_PASSS_AGAIN.FocusedBaseColor = System.Drawing.Color.White;
-            this.INPUT_PASSS_AGAIN.FocusedBorderColor = System.Drawing.Color.Gray;
-            this.INPUT_PASSS_AGAIN.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.INPUT_PASSS_AGAIN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.INPUT_PASSS_AGAIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.INPUT_PASSS_AGAIN.Location = new System.Drawing.Point(68, 237);
-            this.INPUT_PASSS_AGAIN.Name = "INPUT_PASSS_AGAIN";
-            this.INPUT_PASSS_AGAIN.PasswordChar = '\0';
-            this.INPUT_PASSS_AGAIN.Radius = 6;
-            this.INPUT_PASSS_AGAIN.Size = new System.Drawing.Size(277, 42);
-            this.INPUT_PASSS_AGAIN.TabIndex = 12;
-            this.INPUT_PASSS_AGAIN.Text = "Input Password Again";
-            this.INPUT_PASSS_AGAIN.Enter += new System.EventHandler(this.INPUT_PASSS_AGAIN_Enter);
-            this.INPUT_PASSS_AGAIN.Leave += new System.EventHandler(this.INPUT_PASSS_AGAIN_Leave);
-            // 
-            // gunaCheckBox2
-            // 
-            this.gunaCheckBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox2.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox2.CheckedOnColor = System.Drawing.SystemColors.Highlight;
-            this.gunaCheckBox2.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox2.Location = new System.Drawing.Point(219, 294);
-            this.gunaCheckBox2.Name = "gunaCheckBox2";
-            this.gunaCheckBox2.Size = new System.Drawing.Size(126, 20);
-            this.gunaCheckBox2.TabIndex = 13;
-            this.gunaCheckBox2.Text = "Show Password";
-            this.gunaCheckBox2.CheckedChanged += new System.EventHandler(this.gunaCheckBox2_CheckedChanged);
             // 
             // Form1
             // 

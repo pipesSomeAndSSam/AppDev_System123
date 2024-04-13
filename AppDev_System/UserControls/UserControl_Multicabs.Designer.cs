@@ -40,10 +40,10 @@
             this.searchDriverName = new Guna.UI.WinForms.GunaLineTextBox();
             this.sercc = new Guna.UI.WinForms.GunaLabel();
             this.refreshButton = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.BookingsGridView = new Guna.UI.WinForms.GunaDataGridView();
+            this.MulticabGridView = new Guna.UI.WinForms.GunaDataGridView();
             this.addMulticab = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.BookingsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MulticabGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePickerMult
@@ -164,15 +164,15 @@
             this.refreshButton.Text = "REFRESH";
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
-            // BookingsGridView
+            // MulticabGridView
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.BookingsGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.BookingsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.BookingsGridView.BackgroundColor = System.Drawing.Color.White;
-            this.BookingsGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BookingsGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.BookingsGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.MulticabGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.MulticabGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.MulticabGridView.BackgroundColor = System.Drawing.Color.White;
+            this.MulticabGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MulticabGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.MulticabGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,9 +180,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BookingsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.BookingsGridView.ColumnHeadersHeight = 4;
-            this.BookingsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.MulticabGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.MulticabGridView.ColumnHeadersHeight = 4;
+            this.MulticabGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,12 +190,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BookingsGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.BookingsGridView.EnableHeadersVisualStyles = false;
-            this.BookingsGridView.GridColor = System.Drawing.Color.DarkGray;
-            this.BookingsGridView.Location = new System.Drawing.Point(52, 156);
-            this.BookingsGridView.Name = "BookingsGridView";
-            this.BookingsGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.MulticabGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MulticabGridView.EnableHeadersVisualStyles = false;
+            this.MulticabGridView.GridColor = System.Drawing.Color.DarkGray;
+            this.MulticabGridView.Location = new System.Drawing.Point(52, 156);
+            this.MulticabGridView.Name = "MulticabGridView";
+            this.MulticabGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,37 +203,37 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BookingsGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.BookingsGridView.RowHeadersVisible = false;
-            this.BookingsGridView.RowHeadersWidth = 51;
-            this.BookingsGridView.RowTemplate.Height = 24;
-            this.BookingsGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.BookingsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BookingsGridView.Size = new System.Drawing.Size(1480, 751);
-            this.BookingsGridView.TabIndex = 25;
-            this.BookingsGridView.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Blue;
-            this.BookingsGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.BookingsGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.BookingsGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.BookingsGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.BookingsGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.BookingsGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.BookingsGridView.ThemeStyle.GridColor = System.Drawing.Color.DarkGray;
-            this.BookingsGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            this.BookingsGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.BookingsGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookingsGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.BookingsGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.BookingsGridView.ThemeStyle.HeaderStyle.Height = 4;
-            this.BookingsGridView.ThemeStyle.ReadOnly = false;
-            this.BookingsGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.BookingsGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.BookingsGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookingsGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.BookingsGridView.ThemeStyle.RowsStyle.Height = 24;
-            this.BookingsGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            this.BookingsGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.BookingsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookingsGridView_CellClick);
+            this.MulticabGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.MulticabGridView.RowHeadersVisible = false;
+            this.MulticabGridView.RowHeadersWidth = 51;
+            this.MulticabGridView.RowTemplate.Height = 24;
+            this.MulticabGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.MulticabGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.MulticabGridView.Size = new System.Drawing.Size(1480, 751);
+            this.MulticabGridView.TabIndex = 25;
+            this.MulticabGridView.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Blue;
+            this.MulticabGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.MulticabGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.MulticabGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.MulticabGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.MulticabGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.MulticabGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.MulticabGridView.ThemeStyle.GridColor = System.Drawing.Color.DarkGray;
+            this.MulticabGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            this.MulticabGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.MulticabGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MulticabGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.MulticabGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.MulticabGridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.MulticabGridView.ThemeStyle.ReadOnly = false;
+            this.MulticabGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            this.MulticabGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.MulticabGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MulticabGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.MulticabGridView.ThemeStyle.RowsStyle.Height = 24;
+            this.MulticabGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            this.MulticabGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.MulticabGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookingsGridView_CellClick);
             // 
             // addMulticab
             // 
@@ -273,9 +273,9 @@
             this.gunaLabel.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel.Location = new System.Drawing.Point(3, 10);
             this.gunaLabel.Name = "gunaLabel";
-            this.gunaLabel.Size = new System.Drawing.Size(310, 46);
+            this.gunaLabel.Size = new System.Drawing.Size(442, 46);
             this.gunaLabel.TabIndex = 23;
-            this.gunaLabel.Text = "Multicab Status";
+            this.gunaLabel.Text = "Multicab Queue Status";
             // 
             // UserControl_Multicabs
             // 
@@ -289,12 +289,12 @@
             this.Controls.Add(this.searchDriverName);
             this.Controls.Add(this.sercc);
             this.Controls.Add(this.refreshButton);
-            this.Controls.Add(this.BookingsGridView);
+            this.Controls.Add(this.MulticabGridView);
             this.Controls.Add(this.addMulticab);
             this.Controls.Add(this.gunaLabel);
             this.Name = "UserControl_Multicabs";
             this.Size = new System.Drawing.Size(1570, 970);
-            ((System.ComponentModel.ISupportInitialize)(this.BookingsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MulticabGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +309,7 @@
         private Guna.UI.WinForms.GunaLineTextBox searchDriverName;
         private Guna.UI.WinForms.GunaLabel sercc;
         private Guna.UI.WinForms.GunaAdvenceButton refreshButton;
-        private Guna.UI.WinForms.GunaDataGridView BookingsGridView;
+        private Guna.UI.WinForms.GunaDataGridView MulticabGridView;
         private Guna.UI.WinForms.GunaAdvenceButton addMulticab;
         private Guna.UI.WinForms.GunaLabel gunaLabel;
     }
