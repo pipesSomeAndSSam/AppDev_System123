@@ -20,6 +20,7 @@ namespace AppDev_System
         public EditRouteForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public void setrowNumber(int ev_passed)

@@ -61,6 +61,8 @@ namespace AppDev_System.UserControls
 
             BookingsGridView.Columns["id"].Visible = false;
             BookingsGridView.Columns["date"].Visible = false;
+            BookingsGridView.Columns["yearly_earnings"].Visible = false;
+            BookingsGridView.Columns["monthlyEarnings"].Visible = false;
             BookingsGridView.Columns["if_seated"].Visible = false;
             BookingsGridView.Columns[1].HeaderText = "Passenger";
             BookingsGridView.Columns[1].ReadOnly = true;
@@ -70,6 +72,7 @@ namespace AppDev_System.UserControls
             BookingsGridView.Columns[3].ReadOnly = true;
             BookingsGridView.Columns[4].HeaderText = "Ticket Date and Time";
             BookingsGridView.Columns[4].ReadOnly = true;
+
 
             BookingsGridView.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             BookingsGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
@@ -98,8 +101,8 @@ namespace AppDev_System.UserControls
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_delete);
             BookingsGridView.Columns.Add(dataGridViewButtonColumn_edit);
 
-            BookingsGridView.Columns[7].Width = 80;
-            BookingsGridView.Columns[8].Width = 80;
+            BookingsGridView.Columns[9].Width = 80;
+            BookingsGridView.Columns[10].Width = 80;
 
             numOfRts.Text = q.get_total_numOfTickets_forToday();
 

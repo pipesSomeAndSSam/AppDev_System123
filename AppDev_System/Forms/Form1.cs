@@ -10,16 +10,18 @@ using System.Windows.Forms;
 using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AppDev_System
 {
     public partial class Form1 : Form
     {
 
-
+        private const string PhilippineMobilePattern = @"^(09|\+639)\d{9}$";
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         bool IsValidEmail(string eMail)
         {
@@ -44,13 +46,53 @@ namespace AppDev_System
             MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
             MySqlDataAdapter adapter;
             DataTable table = new DataTable();
+            int id = 0;
+
+            try
+            {
+
+                string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
+                MySqlConnection conConn = new MySqlConnection(conne);
+                conConn.Open();
+
+                string sql_users = "SELECT * FROM managementsystem.users WHERE email='" + gunaUsernameTextBox.Text + "';";
+
+
+                MySqlCommand cmd_users = new MySqlCommand(sql_users, conConn);
+
+
+                MySqlDataReader reader_users = cmd_users.ExecuteReader();
+
+
+                //int id = 0;
+               // string usernameEx = "";
+                //string no_of_routes = "";
+
+               // byte[] imageData = null;
+
+                while (reader_users.Read())
+                {
+                    id = reader_users.GetInt32(reader_users.GetOrdinal("id"));
+                }
+
+                
+                conConn.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
 
             adapter = new MySqlDataAdapter("Select * From users where email = '" + gunaUsernameTextBox.Text + "' and password = '" + gunaPasswordTextBox.Text + "'", con);
             adapter.Fill(table);
             if (table.Rows.Count > 0)
             {
+                Query q = new Query();
+                q.editUser_login(gunaUsernameTextBox.Text);
                 Dashboard dashboard = new Dashboard();
                 dashboard.setforms1Email(gunaUsernameTextBox.Text);
+                dashboard.setformsID(id);
                 dashboard.Show();
                 Visible = false;
             }

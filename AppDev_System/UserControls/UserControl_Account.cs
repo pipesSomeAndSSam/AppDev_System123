@@ -10,14 +10,11 @@ using System.Windows.Forms;
 
 namespace AppDev_System.UserControls
 {
-    public partial class UserControl1_Dash : UserControl
+    public partial class UserControl_Account : UserControl
     {
-
-        public UserControl1_Dash()
+        public UserControl_Account()
         {
             InitializeComponent();
         }
-        
-
     }
 }

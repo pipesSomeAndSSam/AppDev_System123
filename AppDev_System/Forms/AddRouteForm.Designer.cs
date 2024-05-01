@@ -37,6 +37,9 @@
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPanel12 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
@@ -64,9 +67,6 @@
             this.personDeets = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel20 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel12.SuspendLayout();
             this.gunaPanel7.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -226,6 +226,39 @@
             this.gunaPanel12.Name = "gunaPanel12";
             this.gunaPanel12.Size = new System.Drawing.Size(424, 537);
             this.gunaPanel12.TabIndex = 22;
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.AutoSize = true;
+            this.gunaLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel10.Location = new System.Drawing.Point(14, 358);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(139, 25);
+            this.gunaLabel10.TabIndex = 20;
+            this.gunaLabel10.Text = "Discounted Fare";
+            // 
+            // gunaLabel12
+            // 
+            this.gunaLabel12.AutoSize = true;
+            this.gunaLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel12.Location = new System.Drawing.Point(14, 258);
+            this.gunaLabel12.Name = "gunaLabel12";
+            this.gunaLabel12.Size = new System.Drawing.Size(108, 25);
+            this.gunaLabel12.TabIndex = 19;
+            this.gunaLabel12.Text = "Regular Fare";
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.Location = new System.Drawing.Point(14, 156);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(127, 25);
+            this.gunaLabel9.TabIndex = 18;
+            this.gunaLabel9.Text = "Distance (kms)";
             // 
             // gunaLabel7
             // 
@@ -546,39 +579,6 @@
             this.gunaLabel20.Size = new System.Drawing.Size(142, 31);
             this.gunaLabel20.TabIndex = 1;
             this.gunaLabel20.Text = "Input Detail";
-            // 
-            // gunaLabel9
-            // 
-            this.gunaLabel9.AutoSize = true;
-            this.gunaLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel9.Location = new System.Drawing.Point(14, 156);
-            this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(127, 25);
-            this.gunaLabel9.TabIndex = 18;
-            this.gunaLabel9.Text = "Distance (kms)";
-            // 
-            // gunaLabel12
-            // 
-            this.gunaLabel12.AutoSize = true;
-            this.gunaLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel12.Location = new System.Drawing.Point(14, 258);
-            this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(108, 25);
-            this.gunaLabel12.TabIndex = 19;
-            this.gunaLabel12.Text = "Regular Fare";
-            // 
-            // gunaLabel10
-            // 
-            this.gunaLabel10.AutoSize = true;
-            this.gunaLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel10.Location = new System.Drawing.Point(14, 358);
-            this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(139, 25);
-            this.gunaLabel10.TabIndex = 20;
-            this.gunaLabel10.Text = "Discounted Fare";
             // 
             // AddRouteForm
             // 

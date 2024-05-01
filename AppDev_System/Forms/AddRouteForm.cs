@@ -17,6 +17,7 @@ namespace AppDev_System
         public AddRouteForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void gunaTextBox1_Enter(object sender, EventArgs e)

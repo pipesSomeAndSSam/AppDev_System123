@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Booking.cs" />
+    <Compile Include="Classes\Queue_Implementation.cs" />
     <Compile Include="Forms\AddBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +114,24 @@
     </Compile>
     <Compile Include="Forms\AddMulticab.Designer.cs">
       <DependentUpon>AddMulticab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddMulticab_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMulticab_2.Designer.cs">
+      <DependentUpon>AddMulticab_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditAccountForm.Designer.cs">
+      <DependentUpon>EditAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditMulticab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditMulticab.Designer.cs">
+      <DependentUpon>EditMulticab.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditRouteForm.cs">
       <SubType>Form</SubType>
@@ -138,6 +157,12 @@
     <Compile Include="Forms\EditTicket1.Designer.cs">
       <DependentUpon>EditTicket1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Filter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,17 +181,41 @@
     <Compile Include="Classes\Query.cs" />
     <Compile Include="Classes\Routes.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="UserControls\greyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\greyPanel.Designer.cs">
+      <DependentUpon>greyPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl1_Dash.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl1_Dash.Designer.cs">
       <DependentUpon>UserControl1_Dash.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Account.Designer.cs">
+      <DependentUpon>UserControl_Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_Booking.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl_Booking.Designer.cs">
       <DependentUpon>UserControl_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_editAcc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_editAcc.Designer.cs">
+      <DependentUpon>UserControl_editAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_MultData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_MultData.Designer.cs">
+      <DependentUpon>UserControl_MultData.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_Multicabs.cs">
       <SubType>UserControl</SubType>
@@ -186,6 +235,15 @@
     <EmbeddedResource Include="Forms\AddMulticab.resx">
       <DependentUpon>AddMulticab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddMulticab_2.resx">
+      <DependentUpon>AddMulticab_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditAccountForm.resx">
+      <DependentUpon>EditAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditMulticab.resx">
+      <DependentUpon>EditMulticab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditRouteForm.resx">
       <DependentUpon>EditRouteForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditTicket1.resx">
       <DependentUpon>EditTicket1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -214,11 +275,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\greyPanel.resx">
+      <DependentUpon>greyPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl1_Dash.resx">
       <DependentUpon>UserControl1_Dash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_Account.resx">
+      <DependentUpon>UserControl_Account.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Booking.resx">
       <DependentUpon>UserControl_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_editAcc.resx">
+      <DependentUpon>UserControl_editAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_MultData.resx">
+      <DependentUpon>UserControl_MultData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Multicabs.resx">
       <DependentUpon>UserControl_Multicabs.cs</DependentUpon>
@@ -383,6 +456,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\VSU_LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forms1_pic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forms1_pic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-left-square2.512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-park.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-park1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-left-square%28blue%292.512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-left-square%28dark blue%292.512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new_putple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-left-square%28light blue%292.512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cab_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cab_logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cab_logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_lightBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashBoardDesignForPanel_new_black1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_is_online.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

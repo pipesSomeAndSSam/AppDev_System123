@@ -113,6 +113,7 @@
             // 
             // gunaLOGINPanel
             // 
+            this.gunaLOGINPanel.BackColor = System.Drawing.Color.White;
             this.gunaLOGINPanel.Controls.Add(this.gunaCheckBox1);
             this.gunaLOGINPanel.Controls.Add(this.gunaUserLoginLabel);
             this.gunaLOGINPanel.Controls.Add(this.gunaCreateAccountAdvenceButton);
@@ -226,6 +227,7 @@
             // 
             // gunaREGISTERPanel
             // 
+            this.gunaREGISTERPanel.BackColor = System.Drawing.Color.White;
             this.gunaREGISTERPanel.Controls.Add(this.gunaCheckBox2);
             this.gunaREGISTERPanel.Controls.Add(this.INPUT_PASSS_AGAIN);
             this.gunaREGISTERPanel.Controls.Add(this.gunaTextBox2);
@@ -345,7 +347,7 @@
             this.gunaTextBox1.Name = "gunaTextBox1";
             this.gunaTextBox1.PasswordChar = '\0';
             this.gunaTextBox1.Radius = 6;
-            this.gunaTextBox1.Size = new System.Drawing.Size(112, 42);
+            this.gunaTextBox1.Size = new System.Drawing.Size(115, 42);
             this.gunaTextBox1.TabIndex = 8;
             this.gunaTextBox1.Text = "Number";
             this.gunaTextBox1.Enter += new System.EventHandler(this.gunaTextBox1_Enter);
@@ -458,9 +460,10 @@
             // 
             // gunaPasswordPictureBox
             // 
+            this.gunaPasswordPictureBox.BackColor = System.Drawing.Color.White;
             this.gunaPasswordPictureBox.BaseColor = System.Drawing.Color.White;
             this.gunaPasswordPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaPasswordPictureBox.Image = global::AppDev_System.Properties.Resources.main;
+            this.gunaPasswordPictureBox.Image = global::AppDev_System.Properties.Resources.forms1_pic2;
             this.gunaPasswordPictureBox.Location = new System.Drawing.Point(0, 0);
             this.gunaPasswordPictureBox.Name = "gunaPasswordPictureBox";
             this.gunaPasswordPictureBox.Size = new System.Drawing.Size(878, 635);

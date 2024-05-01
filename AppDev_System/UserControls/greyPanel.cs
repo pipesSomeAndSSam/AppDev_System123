@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace AppDev_System.UserControls
 {
-    public partial class UserControl1_Dash : UserControl
+    public partial class greyPanel : UserControl
     {
-
-        public UserControl1_Dash()
+        public greyPanel()
         {
             InitializeComponent();
-        }
-        
+            base.CreateParams.ExStyle |= 0x20;
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
 
+            BackColor = Color.FromArgb(0x80, 0xFF, 0xCC, 0x33);
+        }
     }
 }

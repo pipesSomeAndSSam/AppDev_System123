@@ -245,7 +245,7 @@ namespace AppDev_System.UserControls
                 if (e.ColumnIndex == gunaDataGridView2.Columns["Del_button"].Index) //DELETE
                 {
                     DataGridViewRow row_to_DELETE = gunaDataGridView2.Rows[e.RowIndex];
-                    if (MessageBox.Show(string.Format("Do you want to Delete row " + (e.RowIndex + 1) + " ?", row_to_DELETE.Cells["id"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format("Do you want to delete Destination: " + (gunaDataGridView2[3, e.RowIndex].Value).ToString() + " ?", row_to_DELETE.Cells["id"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         using (MySqlConnection con1 = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem"))
                         {

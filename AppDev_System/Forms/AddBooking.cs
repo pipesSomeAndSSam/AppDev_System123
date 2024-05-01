@@ -16,6 +16,7 @@ using System.Globalization;
 
 namespace AppDev_System.Forms
 {
+
     public partial class AddBooking : Form
     {
         private string traveler_name;
@@ -28,6 +29,7 @@ namespace AppDev_System.Forms
         {
             InitializeComponent();
             gunaPanel12.BringToFront();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void getDataToComboBox_Route()
@@ -243,7 +245,7 @@ namespace AppDev_System.Forms
             gunaLabel2.Font =  new Font("Segoe UI", 15, FontStyle.Regular);
         }
 
-        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
+        private void gunaAdvenceButton2_Click(object sender, EventArgs e) //SUBMIT
         {/*
             Booking booking = new Booking(gunaTextBox1.Text, route_distance, route_regular_fare, route_special_fare);
             routes.createRoute();*/
@@ -267,6 +269,8 @@ namespace AppDev_System.Forms
                 gunaTextBox1.ForeColor = Color.Silver;
             }
             this.ActiveControl = null;
+
+
 
             gunaPanel8.Visible = false;
             gunaPanel4.Visible = true;

@@ -93,6 +93,66 @@ namespace AppDev_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cab_logo {
+            get {
+                object obj = ResourceManager.GetObject("cab_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cab_logo2 {
+            get {
+                object obj = ResourceManager.GetObject("cab_logo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cab_logo3 {
+            get {
+                object obj = ResourceManager.GetObject("cab_logo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car_park {
+            get {
+                object obj = ResourceManager.GetObject("car-park", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car_park1 {
+            get {
+                object obj = ResourceManager.GetObject("car-park1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clear_white {
+            get {
+                object obj = ResourceManager.GetObject("clear_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -103,9 +163,29 @@ namespace AppDev_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_white {
+            get {
+                object obj = ResourceManager.GetObject("close_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashBoardDesignForPanel {
             get {
                 object obj = ResourceManager.GetObject("dashBoardDesignForPanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_lightBlue {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_lightBlue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +206,16 @@ namespace AppDev_System.Properties {
         internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_black {
             get {
                 object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_black1 {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_black1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +256,16 @@ namespace AppDev_System.Properties {
         internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_limeGreen {
             get {
                 object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_limeGreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashBoardDesignForPanel_new_putple {
+            get {
+                object obj = ResourceManager.GetObject("dashBoardDesignForPanel_new_putple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +316,26 @@ namespace AppDev_System.Properties {
         internal static System.Drawing.Bitmap edit_white11 {
             get {
                 object obj = ResourceManager.GetObject("edit_white11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forms1_pic1 {
+            get {
+                object obj = ResourceManager.GetObject("forms1_pic1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forms1_pic2 {
+            get {
+                object obj = ResourceManager.GetObject("forms1_pic2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,6 +493,46 @@ namespace AppDev_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap refresh_left_square_blue_2_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-left-square(blue)2.512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_left_square_dark_blue_2_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-left-square(dark blue)2.512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_left_square_light_blue_2_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-left-square(light blue)2.512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_left_square2_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-left-square2.512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap refresh_left_square3_512x512 {
             get {
                 object obj = ResourceManager.GetObject("refresh-left-square3.512x512", resourceCulture);
@@ -506,6 +666,16 @@ namespace AppDev_System.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_is_online {
+            get {
+                object obj = ResourceManager.GetObject("user_is_online", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

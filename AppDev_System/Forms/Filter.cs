@@ -1,23 +1,24 @@
-﻿using System;
+﻿using AppDev_System.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppDev_System.UserControls
+namespace AppDev_System.Forms
 {
-    public partial class UserControl1_Dash : UserControl
+    public partial class Filter : Form
     {
-
-        public UserControl1_Dash()
+        
+        public Filter(Dashboard dashboard)
         {
             InitializeComponent();
         }
-        
-
     }
 }

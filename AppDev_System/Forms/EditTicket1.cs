@@ -28,6 +28,7 @@ namespace AppDev_System.Forms
         public EditTicket1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void getDataToComboBox_Route()
