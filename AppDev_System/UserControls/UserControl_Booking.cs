@@ -201,6 +201,7 @@ namespace AppDev_System.UserControls
                         {
                             using (MySqlCommand cmd1 = new MySqlCommand("DELETE from bookings WHERE id=@id", con1))
                             {
+                                q.editEarningsUser(float.Parse((BookingsGridView.Rows[e.RowIndex].Cells["amount"].Value).ToString()));
                                 cmd1.Parameters.AddWithValue("id", row_to_DELETE.Cells["id"].Value);
                                 con1.Open();
                                 cmd1.ExecuteNonQuery();
@@ -209,6 +210,15 @@ namespace AppDev_System.UserControls
                         }
 
                     }
+
+                    DateTime theDate = dateTimePicker1.Value;
+                    numOfRts.Text = q.get_total_numOfTickets_forToday(theDate.ToString("yyyy-MM-dd"));
+
+                    string sqlstm = "SELECT * FROM bookings WHERE date = '" + theDate.ToString("yyyy-MM-dd") + "'";
+                    MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+                    DataSet DS = new System.Data.DataSet();
+                    SDA.Fill(DS, "bookings");
+                    BookingsGridView.DataSource = DS.Tables[0];
                 }
                 else if (e.ColumnIndex == BookingsGridView.Columns["Edit_button"].Index) //EDIT
                 {
@@ -238,7 +248,7 @@ namespace AppDev_System.UserControls
                     }
                 }
             }
-            catch 
+            catch (Exception ex)
             {
                 int x55 = 0;
             }

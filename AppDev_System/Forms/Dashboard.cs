@@ -45,6 +45,8 @@ namespace AppDev_System
         {
             this.formsId = x;
         }
+
+        /*
         public void SetImageFromByteArray(GunaCirclePictureBox Image_cont, byte[] byteArray)
         {
             if (byteArray == null || byteArray.Length == 0)
@@ -67,6 +69,38 @@ namespace AppDev_System
                 // Handle the case of invalid image format
                MessageBox.Show("Error setting image: Invalid image format - " + ex.Message);
             }
+        }*/
+
+        private string get_onlineEarnings()
+        {
+            string y = "";
+            try
+            {
+                string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
+                MySqlConnection conConn = new MySqlConnection(conne);
+                conConn.Open();
+
+                string sql_users = "SELECT * FROM managementsystem.users WHERE loggedIn ='" + 1 + "';";
+
+                MySqlCommand cmd_users = new MySqlCommand(sql_users, conConn);
+                MySqlDataReader reader_mult = cmd_users.ExecuteReader();
+
+                while (reader_mult.Read())
+                {
+                    if (!reader_mult.IsDBNull(5))
+                    {
+                        y = reader_mult.GetFloat(reader_mult.GetOrdinal("earnings_while_loggedIn")).ToString();
+                    }
+                    else
+                    {
+                        y = "0";
+                    }
+                }
+                conConn.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+            return y;
         }
 
         private void setUpDashBoard_Text()
@@ -80,7 +114,30 @@ namespace AppDev_System
             total_num_multicabs.Text = q.get_total_numOfMulticabs();
             monthlyEarnigs.Text = "₱ ";
             monthlyEarnigs.Text += q.getMonthlyEarnings();
+            monthlyTicket.Text += q.getMonthlytickets();
 
+            if (monthlyTicket.Text == "0")
+            {
+                monthlyTicket.Text = "0";
+            }
+            else
+            {
+                monthlyTicket.Text = "Ticketed Passengers this Month: ";
+                monthlyTicket.Text += q.getMonthlytickets();
+            }
+
+
+            if (get_onlineEarnings() == "0")
+            {
+                onlineEarnings.Text += get_onlineEarnings();
+            }
+            else
+            {
+                onlineEarnings.Text = "Monthly Earnings while online: ₱ ";
+                onlineEarnings.Text += get_onlineEarnings();
+            }
+
+            monthlyTicket.BringToFront();
             totalBookingsNum.BringToFront();
             gunaLabel4.BringToFront();
             gunaLabel5.BringToFront();
@@ -89,6 +146,8 @@ namespace AppDev_System
             gunaLabel8.BringToFront();
             total_num_multicabs.BringToFront();
             monthlyEarnigs.BringToFront();
+            onlineEarnings.BringToFront();
+            edit.BringToFront();
         }
 
 
@@ -229,25 +288,7 @@ namespace AppDev_System
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void gunaCirclePictureBox1_Click_1(object sender, EventArgs e)
-        {
-            bool isOpen = false;
-            foreach (Form f in System.Windows.Forms.Application.OpenForms)
-            {
-                if (f.Text == "EditAccountForm")
-                {
-                    isOpen = true;
-                    f.BringToFront();
-                    break;
-                }
-            }
-            if (isOpen == false)
-            {
-                EditAccountForm editAcc = new EditAccountForm();
-                editAcc.setEmail(gunaLabel2.Text);
-                editAcc.Show();
-            }
-        }
+
 
         private void refresh_Click(object sender, EventArgs e)
         {
@@ -330,7 +371,28 @@ namespace AppDev_System
         }
 
 
-        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            bool isOpen = false;
+            foreach (Form f in System.Windows.Forms.Application.OpenForms)
+            {
+                if (f.Text == "EditAccountForm")
+                {
+                    isOpen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (isOpen == false)
+            {
+                EditAccountForm editAcc = new EditAccountForm();
+                editAcc.setEmail(gunaLabel2.Text);
+                editAcc.Show();
+            }
+        }
+
+        private void gunaAdvenceButton2_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -403,10 +465,10 @@ namespace AppDev_System
                 }*/
 
                 userName.Text = usernameEx;
-                
+
                 gunaLabel2.Text = emailEx;
                 conConn.Close();
-              //  MessageBox.Show("wa");
+                //  MessageBox.Show("wa");
             }
             catch
             {

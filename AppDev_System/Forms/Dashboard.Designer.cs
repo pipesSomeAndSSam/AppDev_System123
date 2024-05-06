@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -41,16 +42,13 @@
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
-            this.userControl_MultData1 = new AppDev_System.UserControls.UserControl_MultData();
-            this.userControl_Multicabs1 = new AppDev_System.UserControls.UserControl_Multicabs();
-            this.userControl_Booking1 = new AppDev_System.UserControls.UserControl_Booking();
-            this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
-            this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
             this.total_num_multicabs = new Guna.UI.WinForms.GunaLabel();
-            this.refresh = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.monthlyEarnigs = new Guna.UI.WinForms.GunaLabel();
+            this.onlineEarnings = new Guna.UI.WinForms.GunaLabel();
+            this.monthlyTicket = new Guna.UI.WinForms.GunaLabel();
+            this.edit = new Guna.UI.WinForms.GunaAdvenceButton();
             this.minimize_button = new Guna.UI.WinForms.GunaAdvenceButton();
             this.esc_button = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.BookingsButton = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -58,10 +56,14 @@
             this.MulticabsButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.DashboardButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.LOGOUTButt = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.monthlyEarnigs = new Guna.UI.WinForms.GunaLabel();
+            this.userControl_MultData1 = new AppDev_System.UserControls.UserControl_MultData();
+            this.userControl_Multicabs1 = new AppDev_System.UserControls.UserControl_Multicabs();
+            this.userControl_Booking1 = new AppDev_System.UserControls.UserControl_Booking();
+            this.userControl_Routes = new AppDev_System.UserControls.UserControl_Routes();
+            this.userControl1_Dash1 = new AppDev_System.UserControls.UserControl1_Dash();
+            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,56 +218,16 @@
             // gunaPanel2
             // 
             this.gunaPanel2.BackColor = System.Drawing.Color.White;
-            this.gunaPanel2.Controls.Add(this.refresh);
+            this.gunaPanel2.Controls.Add(this.gunaAdvenceButton2);
             this.gunaPanel2.Controls.Add(this.minimize_button);
             this.gunaPanel2.Controls.Add(this.esc_button);
             this.gunaPanel2.Controls.Add(this.gunaLabel1);
             this.gunaPanel2.Controls.Add(this.userName);
-            this.gunaPanel2.Controls.Add(this.gunaCirclePictureBox1);
             this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel2.Location = new System.Drawing.Point(350, 0);
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(1570, 82);
             this.gunaPanel2.TabIndex = 14;
-            // 
-            // userControl_MultData1
-            // 
-            this.userControl_MultData1.BackColor = System.Drawing.Color.White;
-            this.userControl_MultData1.Location = new System.Drawing.Point(350, 110);
-            this.userControl_MultData1.Name = "userControl_MultData1";
-            this.userControl_MultData1.Size = new System.Drawing.Size(1570, 970);
-            this.userControl_MultData1.TabIndex = 15;
-            // 
-            // userControl_Multicabs1
-            // 
-            this.userControl_Multicabs1.BackColor = System.Drawing.Color.White;
-            this.userControl_Multicabs1.Location = new System.Drawing.Point(350, 110);
-            this.userControl_Multicabs1.Name = "userControl_Multicabs1";
-            this.userControl_Multicabs1.Size = new System.Drawing.Size(1570, 970);
-            this.userControl_Multicabs1.TabIndex = 13;
-            // 
-            // userControl_Booking1
-            // 
-            this.userControl_Booking1.BackColor = System.Drawing.Color.White;
-            this.userControl_Booking1.Location = new System.Drawing.Point(350, 110);
-            this.userControl_Booking1.Name = "userControl_Booking1";
-            this.userControl_Booking1.Size = new System.Drawing.Size(1570, 970);
-            this.userControl_Booking1.TabIndex = 6;
-            // 
-            // userControl_Routes
-            // 
-            this.userControl_Routes.BackColor = System.Drawing.Color.White;
-            this.userControl_Routes.Location = new System.Drawing.Point(350, 110);
-            this.userControl_Routes.Name = "userControl_Routes";
-            this.userControl_Routes.Size = new System.Drawing.Size(1570, 970);
-            this.userControl_Routes.TabIndex = 5;
-            // 
-            // userControl1_Dash1
-            // 
-            this.userControl1_Dash1.Location = new System.Drawing.Point(350, 110);
-            this.userControl1_Dash1.Name = "userControl1_Dash1";
-            this.userControl1_Dash1.Size = new System.Drawing.Size(1570, 970);
-            this.userControl1_Dash1.TabIndex = 4;
             // 
             // total_num_multicabs
             // 
@@ -278,35 +240,69 @@
             this.total_num_multicabs.TabIndex = 16;
             this.total_num_multicabs.Text = "Ahn Yujin";
             // 
-            // refresh
+            // monthlyEarnigs
             // 
-            this.refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.refresh.AnimationHoverSpeed = 0.07F;
-            this.refresh.AnimationSpeed = 0.03F;
-            this.refresh.BackColor = System.Drawing.Color.White;
-            this.refresh.BaseColor = System.Drawing.Color.Transparent;
-            this.refresh.BorderColor = System.Drawing.Color.Black;
-            this.refresh.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.refresh.CheckedBorderColor = System.Drawing.Color.Black;
-            this.refresh.CheckedForeColor = System.Drawing.Color.White;
-            this.refresh.CheckedImage = global::AppDev_System.Properties.Resources.refresh_left_square2_512x512;
-            this.refresh.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.refresh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.refresh.ForeColor = System.Drawing.Color.White;
-            this.refresh.Image = global::AppDev_System.Properties.Resources.refresh_left_square2_512x512;
-            this.refresh.ImageSize = new System.Drawing.Size(30, 26);
-            this.refresh.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.refresh.Location = new System.Drawing.Point(1190, 13);
-            this.refresh.Name = "refresh";
-            this.refresh.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.refresh.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.refresh.OnHoverForeColor = System.Drawing.Color.White;
-            this.refresh.OnHoverImage = global::AppDev_System.Properties.Resources.refresh_left_square_light_blue_2_512x512;
-            this.refresh.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.refresh.OnPressedColor = System.Drawing.Color.Black;
-            this.refresh.Size = new System.Drawing.Size(67, 39);
-            this.refresh.TabIndex = 16;
-            this.refresh.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
+            this.monthlyEarnigs.AutoSize = true;
+            this.monthlyEarnigs.BackColor = System.Drawing.Color.White;
+            this.monthlyEarnigs.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthlyEarnigs.Location = new System.Drawing.Point(793, 583);
+            this.monthlyEarnigs.Name = "monthlyEarnigs";
+            this.monthlyEarnigs.Size = new System.Drawing.Size(194, 54);
+            this.monthlyEarnigs.TabIndex = 17;
+            this.monthlyEarnigs.Text = "Ahn Yujin";
+            // 
+            // onlineEarnings
+            // 
+            this.onlineEarnings.AutoSize = true;
+            this.onlineEarnings.BackColor = System.Drawing.Color.White;
+            this.onlineEarnings.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.onlineEarnings.Location = new System.Drawing.Point(593, 916);
+            this.onlineEarnings.Name = "onlineEarnings";
+            this.onlineEarnings.Size = new System.Drawing.Size(353, 31);
+            this.onlineEarnings.TabIndex = 18;
+            this.onlineEarnings.Text = "Monthly Earnings while online: ₱ ";
+            // 
+            // monthlyTicket
+            // 
+            this.monthlyTicket.AutoSize = true;
+            this.monthlyTicket.BackColor = System.Drawing.Color.White;
+            this.monthlyTicket.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.monthlyTicket.Location = new System.Drawing.Point(1110, 855);
+            this.monthlyTicket.Name = "monthlyTicket";
+            this.monthlyTicket.Size = new System.Drawing.Size(347, 31);
+            this.monthlyTicket.TabIndex = 19;
+            this.monthlyTicket.Text = "Ticketed Passengers this Month: ";
+            // 
+            // edit
+            // 
+            this.edit.AnimationHoverSpeed = 0.07F;
+            this.edit.AnimationSpeed = 0.03F;
+            this.edit.BaseColor = System.Drawing.Color.Black;
+            this.edit.BorderColor = System.Drawing.Color.Black;
+            this.edit.CheckedBaseColor = System.Drawing.Color.DimGray;
+            this.edit.CheckedBorderColor = System.Drawing.Color.Black;
+            this.edit.CheckedForeColor = System.Drawing.Color.White;
+            this.edit.CheckedImage = ((System.Drawing.Image)(resources.GetObject("edit.CheckedImage")));
+            this.edit.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.edit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.ForeColor = System.Drawing.Color.White;
+            this.edit.Image = global::AppDev_System.Properties.Resources.edit_white11;
+            this.edit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.edit.ImageSize = new System.Drawing.Size(20, 20);
+            this.edit.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.edit.Location = new System.Drawing.Point(429, 967);
+            this.edit.Name = "edit";
+            this.edit.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
+            this.edit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.edit.OnHoverForeColor = System.Drawing.Color.White;
+            this.edit.OnHoverImage = null;
+            this.edit.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.edit.OnPressedColor = System.Drawing.Color.Black;
+            this.edit.Radius = 6;
+            this.edit.Size = new System.Drawing.Size(135, 29);
+            this.edit.TabIndex = 20;
+            this.edit.Text = "EDIT ACC";
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // minimize_button
             // 
@@ -367,21 +363,6 @@
             this.esc_button.Size = new System.Drawing.Size(40, 40);
             this.esc_button.TabIndex = 5;
             this.esc_button.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
-            // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaCirclePictureBox1.Image = global::AppDev_System.Properties.Resources.user;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(1273, 11);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(46, 41);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 0;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            this.gunaCirclePictureBox1.Click += new System.EventHandler(this.gunaCirclePictureBox1_Click_1);
             // 
             // gunaPictureBox1
             // 
@@ -577,16 +558,74 @@
             this.LOGOUTButt.Text = "LogOut";
             this.LOGOUTButt.Click += new System.EventHandler(this.LOGOUTButt_Click);
             // 
-            // monthlyEarnigs
+            // userControl_MultData1
             // 
-            this.monthlyEarnigs.AutoSize = true;
-            this.monthlyEarnigs.BackColor = System.Drawing.Color.White;
-            this.monthlyEarnigs.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthlyEarnigs.Location = new System.Drawing.Point(793, 583);
-            this.monthlyEarnigs.Name = "monthlyEarnigs";
-            this.monthlyEarnigs.Size = new System.Drawing.Size(194, 54);
-            this.monthlyEarnigs.TabIndex = 17;
-            this.monthlyEarnigs.Text = "Ahn Yujin";
+            this.userControl_MultData1.BackColor = System.Drawing.Color.White;
+            this.userControl_MultData1.Location = new System.Drawing.Point(350, 110);
+            this.userControl_MultData1.Name = "userControl_MultData1";
+            this.userControl_MultData1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_MultData1.TabIndex = 15;
+            // 
+            // userControl_Multicabs1
+            // 
+            this.userControl_Multicabs1.BackColor = System.Drawing.Color.White;
+            this.userControl_Multicabs1.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Multicabs1.Name = "userControl_Multicabs1";
+            this.userControl_Multicabs1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Multicabs1.TabIndex = 13;
+            // 
+            // userControl_Booking1
+            // 
+            this.userControl_Booking1.BackColor = System.Drawing.Color.White;
+            this.userControl_Booking1.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Booking1.Name = "userControl_Booking1";
+            this.userControl_Booking1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Booking1.TabIndex = 6;
+            // 
+            // userControl_Routes
+            // 
+            this.userControl_Routes.BackColor = System.Drawing.Color.White;
+            this.userControl_Routes.Location = new System.Drawing.Point(350, 110);
+            this.userControl_Routes.Name = "userControl_Routes";
+            this.userControl_Routes.Size = new System.Drawing.Size(1570, 970);
+            this.userControl_Routes.TabIndex = 5;
+            // 
+            // userControl1_Dash1
+            // 
+            this.userControl1_Dash1.Location = new System.Drawing.Point(350, 110);
+            this.userControl1_Dash1.Name = "userControl1_Dash1";
+            this.userControl1_Dash1.Size = new System.Drawing.Size(1570, 970);
+            this.userControl1_Dash1.TabIndex = 4;
+            // 
+            // gunaAdvenceButton2
+            // 
+            this.gunaAdvenceButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaAdvenceButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton2.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton2.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton2.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.CheckedImage = global::AppDev_System.Properties.Resources.close;
+            this.gunaAdvenceButton2.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaAdvenceButton2.ForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.Image = global::AppDev_System.Properties.Resources.refresh_BLACK31;
+            this.gunaAdvenceButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(45, 41);
+            this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton2.Location = new System.Drawing.Point(1258, 12);
+            this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
+            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.Gainsboro;
+            this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.OnHoverImage = global::AppDev_System.Properties.Resources.refresh_BLACK31;
+            this.gunaAdvenceButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.Size = new System.Drawing.Size(45, 40);
+            this.gunaAdvenceButton2.TabIndex = 17;
+            this.gunaAdvenceButton2.Click += new System.EventHandler(this.gunaAdvenceButton2_Click_1);
             // 
             // Dashboard
             // 
@@ -594,6 +633,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.edit);
+            this.Controls.Add(this.monthlyTicket);
+            this.Controls.Add(this.onlineEarnings);
             this.Controls.Add(this.monthlyEarnigs);
             this.Controls.Add(this.total_num_multicabs);
             this.Controls.Add(this.userControl_MultData1);
@@ -617,7 +659,6 @@
             this.gunaPanel1.PerformLayout();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -629,7 +670,6 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel userName;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaAdvenceButton DashboardButton;
         private Guna.UI.WinForms.GunaAdvenceButton MulticabsButton;
@@ -652,10 +692,13 @@
         private Guna.UI.WinForms.GunaAdvenceButton minimize_button;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
         private UserControls.UserControl_MultData userControl_MultData1;
-        private Guna.UI.WinForms.GunaAdvenceButton refresh;
         private Guna.UI.WinForms.GunaLabel total_num_multicabs;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaPanel gunaPanel3;
         private Guna.UI.WinForms.GunaLabel monthlyEarnigs;
+        private Guna.UI.WinForms.GunaLabel onlineEarnings;
+        private Guna.UI.WinForms.GunaLabel monthlyTicket;
+        private Guna.UI.WinForms.GunaAdvenceButton edit;
+        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
     }
 }

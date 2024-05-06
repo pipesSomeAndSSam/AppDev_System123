@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Contexts;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,7 +96,7 @@ namespace AppDev_System
                 }
                 else
                 {
-                    string query = "insert into users(user_name,email,password,contact_num,loggedIn) value('" + user_name + "','" + email + "','" + password + "','" + contact_num + "','" + 0 + "')";
+                    string query = "insert into users(user_name,email,password,contact_num,loggedIn,earnings_while_loggedIn,totalTickets_while_loggedIn) value('" + user_name + "','" + email + "','" + password + "','" + contact_num + "','" + 0 + "','" + 0 + "','" + 0 + "')";
                     MySqlCommand cmd = new MySqlCommand(query, con);
 
 
@@ -119,6 +120,7 @@ namespace AppDev_System
 
         public Boolean insertRoute(string barangay_name, float distance, float regular_fare_new, float special_fare_new)
         {
+           
             bool res = false;
             try
             {
@@ -155,6 +157,49 @@ namespace AppDev_System
 
         public Boolean insertBooking(Booking bookig)
         {
+            float erningMonthly = 0;
+            try
+            {
+                string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
+                MySqlConnection conConn = new MySqlConnection(conne);
+                conConn.Open();
+
+                string sql_users = "SELECT * FROM managementsystem.users WHERE loggedIn ='" + 1 + "';";
+
+                MySqlCommand cmd_users = new MySqlCommand(sql_users, conConn);
+                MySqlDataReader reader_mult = cmd_users.ExecuteReader();
+
+                while (reader_mult.Read())
+                {
+                    erningMonthly = reader_mult.GetFloat(reader_mult.GetOrdinal("earnings_while_loggedIn"));
+                }
+                conConn.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
+            int num = 0;
+            try
+            {
+                string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
+                MySqlConnection conConn = new MySqlConnection(conne);
+                conConn.Open();
+
+                string sql_users = "SELECT * FROM managementsystem.users WHERE loggedIn ='" + 1 + "';";
+
+                MySqlCommand cmd_users = new MySqlCommand(sql_users, conConn);
+                MySqlDataReader reader_mult = cmd_users.ExecuteReader();
+
+                while (reader_mult.Read())
+                {
+                    num = reader_mult.GetInt32(reader_mult.GetOrdinal("totalTickets_while_loggedIn"));
+                }
+                conConn.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+            num++;
+
             bool res = false;
 
             try
@@ -166,7 +211,7 @@ namespace AppDev_System
                 int i = cmd.ExecuteNonQuery();
                 if (i > -1)
                 {
-                    MessageBox.Show("Successful input in Database");
+                    //MessageBox.Show("Successful input in Database");
                 }
                 res = true;
             }
@@ -176,6 +221,28 @@ namespace AppDev_System
             }
             con.Close();
 
+            try
+            {
+                con.Open();
+
+                erningMonthly += bookig.amount;
+                string updt = "UPDATE users SET earnings_while_loggedIn = '" + erningMonthly + "', totalTickets_while_loggedIn = '" + num + "' WHERE loggedIn = '"+1+ "'";
+
+                MySqlCommand command_update = new MySqlCommand(updt, con);
+
+
+                command_update.ExecuteNonQuery();
+                //MessageBox.Show("Queue Successful");
+
+                res = true;
+            }
+            catch
+            {
+
+                MessageBox.Show("asdas");
+            }
+
+            con.Clone();
             return res;
         }
 
@@ -193,6 +260,133 @@ namespace AppDev_System
 
 
         //EDIT
+        public Boolean editEarningsUser(float n)
+        {
+            bool res = false;
+
+            string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
+            MySqlConnection conConn = new MySqlConnection(conne);
+            conConn.Open();
+
+            float erningMonthly = 0;
+            try
+            {
+                
+                
+
+                string sql_users = "SELECT * FROM managementsystem.users WHERE loggedIn ='" + 1 + "';";
+
+                MySqlCommand cmd_users = new MySqlCommand(sql_users, conConn);
+                MySqlDataReader reader_mult = cmd_users.ExecuteReader();
+
+                while (reader_mult.Read())
+                {
+                    erningMonthly = reader_mult.GetFloat(reader_mult.GetOrdinal("earnings_while_loggedIn"));
+                }
+                
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
+            conConn.Close();
+
+            erningMonthly -= n;
+
+            conConn.Open();
+            try
+            {
+               // con.Open();
+
+
+
+                MySqlCommand comToCheck = new MySqlCommand("SELECT * FROM users WHERE loggedIn = '" + 1 + "'", conConn);
+
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    string updt = "UPDATE users SET earnings_while_loggedIn = '" + erningMonthly + "'  WHERE loggedIn = '" + 1 + "'";
+
+                    MySqlCommand command_update = new MySqlCommand(updt, conConn);
+
+                    command_update.ExecuteNonQuery();
+                    //MessageBox.Show("Queue Successful");
+
+                    res = true;
+                }
+                else
+                {
+                    //MessageBox.Show("IT DOES NOT EXIST EXISTS");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            conConn.Close();
+
+            int num = 0;
+            try
+            {
+                conConn.Open();
+
+                string sql_users = "SELECT * FROM managementsystem.users WHERE loggedIn ='" + 1 + "';";
+
+                MySqlCommand cmd_users = new MySqlCommand(sql_users, conConn);
+                MySqlDataReader reader_mult = cmd_users.ExecuteReader();
+
+                while (reader_mult.Read())
+                {
+                    num = reader_mult.GetInt32(reader_mult.GetOrdinal("totalTickets_while_loggedIn"));
+                }
+                conConn.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+            num--;
+
+            if (num < 0)
+                num = 0;
+
+            conConn.Open();
+            try
+            {
+                // con.Open();
+
+
+
+                MySqlCommand comToCheck = new MySqlCommand("SELECT * FROM users WHERE loggedIn = '" + 1 + "'", conConn);
+
+                MySqlDataAdapter sd = new MySqlDataAdapter(comToCheck);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    string updt = "UPDATE users SET totalTickets_while_loggedIn = '" + num + "'  WHERE loggedIn = '" + 1 + "'";
+
+                    MySqlCommand command_update = new MySqlCommand(updt, conConn);
+
+                    command_update.ExecuteNonQuery();
+                    //MessageBox.Show("Queue Successful");
+
+                    res = true;
+                }
+                else
+                {
+                    //MessageBox.Show("IT DOES NOT EXIST EXISTS");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            conConn.Close();
+
+            return res;
+        }
 
         public Boolean editUser_logout(string email)
         {
@@ -212,7 +406,7 @@ namespace AppDev_System
 
                 if (dt.Rows.Count > 0)
                 {
-                    string updt = "UPDATE users SET loggedIn = '" + 0 + "', date_time_logout = '" + DateTime.Now.ToString("yyyy-MM-dd H:m:s")+ "'  WHERE email = '" + email +"'";
+                    string updt = "UPDATE users SET loggedIn = '" + 0 + "', date_time_logout = '" + DateTime.Now.ToString("yyyy-MM-dd H:m:s")+ "', lastOnline_month = '" + DateTime.Now.ToString("MM")+ "'  WHERE email = '" + email +"'";
 
                     MySqlCommand command_update = new MySqlCommand(updt, con);
 
@@ -270,6 +464,8 @@ namespace AppDev_System
             {
                 MessageBox.Show("mali kay duy");
             }
+
+
 
             return res;
         }
@@ -598,6 +794,36 @@ namespace AppDev_System
 
 
         //GET TOTAL NUMBER
+        public string getMonthlytickets()
+        {
+            int num = 0;
+            try
+            {
+                string conne = "server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem";
+                MySqlConnection conConn = new MySqlConnection(conne);
+                conConn.Open();
+
+                string sql_users = "SELECT * FROM managementsystem.users WHERE loggedIn ='" + 1 + "';";
+
+                MySqlCommand cmd_users = new MySqlCommand(sql_users, conConn);
+                MySqlDataReader reader_mult = cmd_users.ExecuteReader();
+
+                while (reader_mult.Read())
+                {
+                    num = reader_mult.GetInt32(reader_mult.GetOrdinal("totalTickets_while_loggedIn"));
+                }
+                conConn.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
+            if (num < 0)
+                num = 0;
+
+            string x = num.ToString();
+            return x;
+        }
+
         public string getMonthlyEarnings()
         {
             float sum = 0;

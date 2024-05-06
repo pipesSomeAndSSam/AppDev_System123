@@ -493,6 +493,26 @@ namespace AppDev_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap refresh_BLACK3_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-BLACK3.512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_BLACK31 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-BLACK31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap refresh_left_square_blue_2_512x512 {
             get {
                 object obj = ResourceManager.GetObject("refresh-left-square(blue)2.512x512", resourceCulture);

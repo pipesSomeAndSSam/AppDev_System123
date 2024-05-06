@@ -508,6 +508,12 @@
   <ItemGroup>
     <None Include="Resources\user_is_online.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-BLACK3.512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-BLACK3.512x5121.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
