@@ -1,8 +1,9 @@
 # Multicab Management System Project
+## CabMan
 
 - This project is a requirement for two courses within my *BS in Computer Science* program.
-- The **Multicab Management System** is designed have a systemized procedure in queueing multicabs, storing information, and works as ticketing in the VSU multicab terminal.
-  as it offers structured and securred wau to data storage and create a more efficient procedure in multicab manangement.
+- The **CabMan** is designed to have a systemized procedure in queueing multicabs, storing information, and works as ticketing in the VSU multicab terminal.
+- It offers structured and secured way to data storage and create a more efficient procedure in multicab manangement.
 - This system is scoped for admin users only, these users should be in management itself.
 
 ### Sign In Page
