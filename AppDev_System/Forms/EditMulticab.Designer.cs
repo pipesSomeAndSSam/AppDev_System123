@@ -225,7 +225,6 @@
             this.Controls.Add(this.editPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EditMulticab";
-            this.Text = "EditMulticab";
             this.editPanel.ResumeLayout(false);
             this.editPanel.PerformLayout();
             this.ResumeLayout(false);

@@ -481,7 +481,7 @@
             this.Controls.Add(this.gunaPasswordPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.gunaLOGINPanel.ResumeLayout(false);
             this.gunaLOGINPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPadlockPictureBox1)).EndInit();

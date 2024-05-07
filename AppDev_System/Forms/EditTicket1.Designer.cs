@@ -298,7 +298,6 @@
             this.Controls.Add(this.gunaPanel12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EditTicket1";
-            this.Text = "EditTicket1";
             this.Load += new System.EventHandler(this.EditTicket1_Load);
             this.gunaPanel12.ResumeLayout(false);
             this.gunaPanel12.PerformLayout();

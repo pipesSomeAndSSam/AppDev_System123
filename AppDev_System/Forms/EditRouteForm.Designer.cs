@@ -336,7 +336,6 @@
             this.Controls.Add(this.Edit_Route);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EditRouteForm";
-            this.Text = "EditRouteForm";
             this.gunaPanel1.ResumeLayout(false);
             this.personDeets.ResumeLayout(false);
             this.personDeets.PerformLayout();

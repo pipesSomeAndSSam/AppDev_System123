@@ -225,7 +225,6 @@
             this.Controls.Add(this.dequeuePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MulticabAction";
-            this.Text = "MulticabAction";
             this.dequeuePanel.ResumeLayout(false);
             this.dequeuePanel.PerformLayout();
             this.ResumeLayout(false);

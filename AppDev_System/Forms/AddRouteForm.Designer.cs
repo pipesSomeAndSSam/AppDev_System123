@@ -592,7 +592,6 @@
             this.Controls.Add(this.gunaLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddRouteForm";
-            this.Text = "AddRouteForm";
             this.gunaPanel12.ResumeLayout(false);
             this.gunaPanel12.PerformLayout();
             this.gunaPanel7.ResumeLayout(false);

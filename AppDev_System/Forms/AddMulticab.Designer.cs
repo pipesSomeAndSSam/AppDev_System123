@@ -192,7 +192,6 @@
             this.Controls.Add(this.gunaPanel9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddMulticab";
-            this.Text = "AddMulticab";
             this.Load += new System.EventHandler(this.AddMulticab_Load);
             this.gunaPanel9.ResumeLayout(false);
             this.gunaPanel9.PerformLayout();

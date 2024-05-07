@@ -555,7 +555,6 @@
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddBooking";
-            this.Text = "AddBooking";
             this.Load += new System.EventHandler(this.AddBooking_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel2.ResumeLayout(false);

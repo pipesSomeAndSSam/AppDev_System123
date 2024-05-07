@@ -470,7 +470,6 @@
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddMulticab_2";
-            this.Text = "AddMulticab_2";
             this.gunaPanel5.ResumeLayout(false);
             this.gunaPanel5.PerformLayout();
             this.gunaPanel1.ResumeLayout(false);
