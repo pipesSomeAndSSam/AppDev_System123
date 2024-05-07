@@ -39,14 +39,14 @@ namespace AppDev_System.UserControls
                     if (!reader_mult.IsDBNull(7))
                     {
                         DateTime d = reader_mult.GetDateTime(7);
-                        string x = lastOnline.Text;
+                        string x = "Last Online: ";
                        // x += "\n";
                         x += d.ToString("yyyy-MM-dd, h:mm:ss tt");
                         lastOnline.Text = x;
                     }
                     else
                     {
-                        string x = lastOnline.Text;
+                        string x = "Last Online: ";
                       //  x += "\n";
                         x += DateTime.Now.ToString("yyyy-MM-dd, h:mm:ss tt");
                         lastOnline.Text = x;

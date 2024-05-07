@@ -116,26 +116,16 @@ namespace AppDev_System
             monthlyEarnigs.Text += q.getMonthlyEarnings();
             monthlyTicket.Text += q.getMonthlytickets();
 
-            if (monthlyTicket.Text == "0")
-            {
-                monthlyTicket.Text = "0";
-            }
-            else
-            {
+           
                 monthlyTicket.Text = "Ticketed Passengers this Month: ";
                 monthlyTicket.Text += q.getMonthlytickets();
-            }
+           
 
 
-            if (get_onlineEarnings() == "0")
-            {
-                onlineEarnings.Text += get_onlineEarnings();
-            }
-            else
-            {
+           
                 onlineEarnings.Text = "Monthly Earnings while online: ₱ ";
                 onlineEarnings.Text += get_onlineEarnings();
-            }
+            
 
             monthlyTicket.BringToFront();
             totalBookingsNum.BringToFront();

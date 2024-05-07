@@ -292,6 +292,9 @@ namespace AppDev_System
 
             erningMonthly -= n;
 
+            if (erningMonthly < 0)
+                erningMonthly = 0;
+
             conConn.Open();
             try
             {
