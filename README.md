@@ -51,3 +51,6 @@
 
 ### ERD:
 ![ERD_appdev_](https://github.com/pipesSomeAndSSam/AppDev_System123/assets/144916002/781e5de1-e8a9-4ca3-99f4-6ef9918d76bb)
+
+### Class Diagram:
+![ClassDiagram](https://github.com/pipesSomeAndSSam/AppDev_System123/assets/144916002/9c0f4cdf-c6fa-4943-b73c-0ca4af651ffa)
