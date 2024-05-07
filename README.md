@@ -1,4 +1,4 @@
-![User Case](https://github.com/pipesSomeAndSSam/AppDev_System123/assets/144916002/6c03ba3c-8c62-452f-ada2-45276f09bb4e)# Multicab Management System Project
+# Multicab Management System Project
 
 - This project is a requirement for two courses within my *BS in Computer Science* program.
 - The **Multicab Management System** is designed have a systemized procedure in queueing multicabs, storing information, and works as ticketing in the VSU multicab terminal.
@@ -47,7 +47,7 @@
 - Represents individuals interacting with the system.
 
 ### Use Case Diagram:
-![User Case](https://github.com/pipesSomeAndSSam/AppDev_System123/assets/144916002/348d22a9-4a24-4b2b-bdfb-b9ff4e5fadbb)
+![User Case (white bg)](https://github.com/pipesSomeAndSSam/AppDev_System123/assets/144916002/8404b58f-617b-48d6-89e4-e783c1d91d34)
 
 ### ERD:
 ![ERD_appdev_](https://github.com/pipesSomeAndSSam/AppDev_System123/assets/144916002/781e5de1-e8a9-4ca3-99f4-6ef9918d76bb)
