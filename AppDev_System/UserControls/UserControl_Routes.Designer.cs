@@ -35,11 +35,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Routes));
             this.gunaDataGridView2 = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sercc = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.searchButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.numOfRts = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaDataGridView2
@@ -84,8 +87,9 @@
             this.gunaDataGridView2.RowHeadersVisible = false;
             this.gunaDataGridView2.RowHeadersWidth = 51;
             this.gunaDataGridView2.RowTemplate.Height = 24;
+            this.gunaDataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gunaDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView2.Size = new System.Drawing.Size(1480, 834);
+            this.gunaDataGridView2.Size = new System.Drawing.Size(1480, 751);
             this.gunaDataGridView2.TabIndex = 2;
             this.gunaDataGridView2.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Blue;
             this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
@@ -118,19 +122,66 @@
             this.gunaLabel.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel.Location = new System.Drawing.Point(3, 10);
             this.gunaLabel.Name = "gunaLabel";
-            this.gunaLabel.Size = new System.Drawing.Size(284, 46);
+            this.gunaLabel.Size = new System.Drawing.Size(364, 46);
             this.gunaLabel.TabIndex = 6;
-            this.gunaLabel.Text = "Routes Status";
+            this.gunaLabel.Text = "Destination Status";
             // 
-            // pictureBox1
+            // sercc
             // 
-            this.pictureBox1.Image = global::AppDev_System.Properties.Resources.white_bar;
-            this.pictureBox1.Location = new System.Drawing.Point(1418, 158);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.sercc.AutoSize = true;
+            this.sercc.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sercc.Location = new System.Drawing.Point(600, 90);
+            this.sercc.Name = "sercc";
+            this.sercc.Size = new System.Drawing.Size(82, 31);
+            this.sercc.TabIndex = 14;
+            this.sercc.Text = "Search";
+            // 
+            // gunaLineTextBox1
+            // 
+            this.gunaLineTextBox1.BackColor = System.Drawing.Color.White;
+            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.Black;
+            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLineTextBox1.ForeColor = System.Drawing.Color.Silver;
+            this.gunaLineTextBox1.LineColor = System.Drawing.SystemColors.AppWorkspace;
+            this.gunaLineTextBox1.Location = new System.Drawing.Point(697, 81);
+            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
+            this.gunaLineTextBox1.PasswordChar = '\0';
+            this.gunaLineTextBox1.Size = new System.Drawing.Size(302, 40);
+            this.gunaLineTextBox1.TabIndex = 15;
+            this.gunaLineTextBox1.Text = "Input Brgy. Name";
+            this.gunaLineTextBox1.Enter += new System.EventHandler(this.gunaLineTextBox1_Enter);
+            this.gunaLineTextBox1.Leave += new System.EventHandler(this.gunaLineTextBox1_Leave);
+            // 
+            // searchButton
+            // 
+            this.searchButton.AnimationHoverSpeed = 0.07F;
+            this.searchButton.AnimationSpeed = 0.03F;
+            this.searchButton.BaseColor = System.Drawing.Color.Black;
+            this.searchButton.BorderColor = System.Drawing.Color.Black;
+            this.searchButton.CheckedBaseColor = System.Drawing.Color.DimGray;
+            this.searchButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.searchButton.CheckedForeColor = System.Drawing.Color.White;
+            this.searchButton.CheckedImage = ((System.Drawing.Image)(resources.GetObject("searchButton.CheckedImage")));
+            this.searchButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.Color.White;
+            this.searchButton.Image = global::AppDev_System.Properties.Resources.search_512x512;
+            this.searchButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.searchButton.ImageSize = new System.Drawing.Size(25, 25);
+            this.searchButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.searchButton.Location = new System.Drawing.Point(1022, 81);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
+            this.searchButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.searchButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.searchButton.OnHoverImage = null;
+            this.searchButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.searchButton.OnPressedColor = System.Drawing.Color.Black;
+            this.searchButton.Radius = 6;
+            this.searchButton.Size = new System.Drawing.Size(40, 40);
+            this.searchButton.TabIndex = 16;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // gunaAdvenceButton1
             // 
@@ -149,9 +200,9 @@
             this.gunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(35, 35);
             this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(334, 85);
+            this.gunaAdvenceButton1.Location = new System.Drawing.Point(414, 85);
             this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaAdvenceButton1.OnHoverImage = null;
@@ -182,23 +233,50 @@
             this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaAdvenceButton2.Location = new System.Drawing.Point(52, 85);
             this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
-            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaAdvenceButton2.OnHoverImage = null;
             this.gunaAdvenceButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaAdvenceButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton2.Radius = 6;
-            this.gunaAdvenceButton2.Size = new System.Drawing.Size(261, 40);
+            this.gunaAdvenceButton2.Size = new System.Drawing.Size(336, 40);
             this.gunaAdvenceButton2.TabIndex = 1;
-            this.gunaAdvenceButton2.Text = "ADD ROUTE DETAILS";
+            this.gunaAdvenceButton2.Text = "ADD DESTINATION DETAILS";
             this.gunaAdvenceButton2.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(1316, 91);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(201, 30);
+            this.gunaLabel1.TabIndex = 17;
+            this.gunaLabel1.Text = "No. of Destinations:";
+            // 
+            // numOfRts
+            // 
+            this.numOfRts.AutoSize = true;
+            this.numOfRts.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOfRts.Location = new System.Drawing.Point(1534, 91);
+            this.numOfRts.Margin = new System.Windows.Forms.Padding(0);
+            this.numOfRts.Name = "numOfRts";
+            this.numOfRts.Size = new System.Drawing.Size(37, 30);
+            this.numOfRts.TabIndex = 18;
+            this.numOfRts.Text = "99";
             // 
             // UserControl_Routes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.numOfRts);
+            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.gunaLineTextBox1);
+            this.Controls.Add(this.sercc);
             this.Controls.Add(this.gunaAdvenceButton1);
             this.Controls.Add(this.gunaDataGridView2);
             this.Controls.Add(this.gunaLabel);
@@ -206,7 +284,6 @@
             this.Name = "UserControl_Routes";
             this.Size = new System.Drawing.Size(1570, 970);
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +294,10 @@
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
         private Guna.UI.WinForms.GunaLabel gunaLabel;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI.WinForms.GunaLabel sercc;
+        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
+        private Guna.UI.WinForms.GunaAdvenceButton searchButton;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel numOfRts;
     }
 }

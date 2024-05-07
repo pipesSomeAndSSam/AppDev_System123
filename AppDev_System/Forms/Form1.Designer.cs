@@ -33,11 +33,14 @@
             this.gunaPasswordTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.gunaUserLoginLabel = new Guna.UI.WinForms.GunaLabel();
             this.gunaLOGINPanel = new Guna.UI.WinForms.GunaPanel();
+            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaCreateAccountAdvenceButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLOGINAdvenceButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPadlockPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaUserCirclePictureBox = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaREGISTERPanel = new Guna.UI.WinForms.GunaPanel();
+            this.gunaCheckBox2 = new Guna.UI.WinForms.GunaCheckBox();
+            this.INPUT_PASSS_AGAIN = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLOGINButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaPhonePictureBox = new Guna.UI.WinForms.GunaPictureBox();
@@ -49,7 +52,6 @@
             this.gunaPasswordTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaUsernameTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPasswordPictureBox = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaLOGINPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPadlockPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaUserCirclePictureBox)).BeginInit();
@@ -111,6 +113,7 @@
             // 
             // gunaLOGINPanel
             // 
+            this.gunaLOGINPanel.BackColor = System.Drawing.Color.White;
             this.gunaLOGINPanel.Controls.Add(this.gunaCheckBox1);
             this.gunaLOGINPanel.Controls.Add(this.gunaUserLoginLabel);
             this.gunaLOGINPanel.Controls.Add(this.gunaCreateAccountAdvenceButton);
@@ -124,15 +127,28 @@
             this.gunaLOGINPanel.Size = new System.Drawing.Size(397, 485);
             this.gunaLOGINPanel.TabIndex = 8;
             // 
+            // gunaCheckBox1
+            // 
+            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaCheckBox1.CheckedOnColor = System.Drawing.SystemColors.Highlight;
+            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.Location = new System.Drawing.Point(219, 265);
+            this.gunaCheckBox1.Name = "gunaCheckBox1";
+            this.gunaCheckBox1.Size = new System.Drawing.Size(126, 20);
+            this.gunaCheckBox1.TabIndex = 8;
+            this.gunaCheckBox1.Text = "Show Password";
+            this.gunaCheckBox1.CheckedChanged += new System.EventHandler(this.gunaCheckBox1_CheckedChanged);
+            // 
             // gunaCreateAccountAdvenceButton
             // 
             this.gunaCreateAccountAdvenceButton.AnimationHoverSpeed = 0.07F;
             this.gunaCreateAccountAdvenceButton.AnimationSpeed = 0.03F;
-            this.gunaCreateAccountAdvenceButton.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaCreateAccountAdvenceButton.BaseColor = System.Drawing.Color.Transparent;
             this.gunaCreateAccountAdvenceButton.BorderColor = System.Drawing.Color.Transparent;
             this.gunaCreateAccountAdvenceButton.CheckedBaseColor = System.Drawing.Color.Transparent;
             this.gunaCreateAccountAdvenceButton.CheckedBorderColor = System.Drawing.Color.Transparent;
-            this.gunaCreateAccountAdvenceButton.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaCreateAccountAdvenceButton.CheckedForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.gunaCreateAccountAdvenceButton.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaCreateAccountAdvenceButton.CheckedImage")));
             this.gunaCreateAccountAdvenceButton.CheckedLineColor = System.Drawing.Color.DimGray;
             this.gunaCreateAccountAdvenceButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,10 +159,10 @@
             this.gunaCreateAccountAdvenceButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaCreateAccountAdvenceButton.Location = new System.Drawing.Point(71, 429);
             this.gunaCreateAccountAdvenceButton.Name = "gunaCreateAccountAdvenceButton";
-            this.gunaCreateAccountAdvenceButton.OnHoverBaseColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaCreateAccountAdvenceButton.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.gunaCreateAccountAdvenceButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaCreateAccountAdvenceButton.OnHoverForeColor = System.Drawing.Color.Black;
-            this.gunaCreateAccountAdvenceButton.OnHoverImage = null;
+            this.gunaCreateAccountAdvenceButton.OnHoverForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.gunaCreateAccountAdvenceButton.OnHoverImage = global::AppDev_System.Properties.Resources.right_arrow_blue;
             this.gunaCreateAccountAdvenceButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaCreateAccountAdvenceButton.OnPressedColor = System.Drawing.Color.Black;
             this.gunaCreateAccountAdvenceButton.Size = new System.Drawing.Size(323, 53);
@@ -173,7 +189,7 @@
             this.gunaLOGINAdvenceButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaLOGINAdvenceButton.Location = new System.Drawing.Point(52, 300);
             this.gunaLOGINAdvenceButton.Name = "gunaLOGINAdvenceButton";
-            this.gunaLOGINAdvenceButton.OnHoverBaseColor = System.Drawing.Color.SteelBlue;
+            this.gunaLOGINAdvenceButton.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.gunaLOGINAdvenceButton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaLOGINAdvenceButton.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaLOGINAdvenceButton.OnHoverImage = null;
@@ -211,6 +227,9 @@
             // 
             // gunaREGISTERPanel
             // 
+            this.gunaREGISTERPanel.BackColor = System.Drawing.Color.White;
+            this.gunaREGISTERPanel.Controls.Add(this.gunaCheckBox2);
+            this.gunaREGISTERPanel.Controls.Add(this.INPUT_PASSS_AGAIN);
             this.gunaREGISTERPanel.Controls.Add(this.gunaTextBox2);
             this.gunaREGISTERPanel.Controls.Add(this.gunaLOGINButton2);
             this.gunaREGISTERPanel.Controls.Add(this.gunaPhonePictureBox);
@@ -227,6 +246,39 @@
             this.gunaREGISTERPanel.TabIndex = 9;
             this.gunaREGISTERPanel.Visible = false;
             // 
+            // gunaCheckBox2
+            // 
+            this.gunaCheckBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaCheckBox2.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaCheckBox2.CheckedOnColor = System.Drawing.SystemColors.Highlight;
+            this.gunaCheckBox2.FillColor = System.Drawing.Color.White;
+            this.gunaCheckBox2.Location = new System.Drawing.Point(219, 294);
+            this.gunaCheckBox2.Name = "gunaCheckBox2";
+            this.gunaCheckBox2.Size = new System.Drawing.Size(126, 20);
+            this.gunaCheckBox2.TabIndex = 13;
+            this.gunaCheckBox2.Text = "Show Password";
+            this.gunaCheckBox2.CheckedChanged += new System.EventHandler(this.gunaCheckBox2_CheckedChanged);
+            // 
+            // INPUT_PASSS_AGAIN
+            // 
+            this.INPUT_PASSS_AGAIN.BaseColor = System.Drawing.Color.LightGray;
+            this.INPUT_PASSS_AGAIN.BorderColor = System.Drawing.Color.LightGray;
+            this.INPUT_PASSS_AGAIN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.INPUT_PASSS_AGAIN.FocusedBaseColor = System.Drawing.Color.White;
+            this.INPUT_PASSS_AGAIN.FocusedBorderColor = System.Drawing.Color.Gray;
+            this.INPUT_PASSS_AGAIN.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.INPUT_PASSS_AGAIN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.INPUT_PASSS_AGAIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.INPUT_PASSS_AGAIN.Location = new System.Drawing.Point(68, 237);
+            this.INPUT_PASSS_AGAIN.Name = "INPUT_PASSS_AGAIN";
+            this.INPUT_PASSS_AGAIN.PasswordChar = '\0';
+            this.INPUT_PASSS_AGAIN.Radius = 6;
+            this.INPUT_PASSS_AGAIN.Size = new System.Drawing.Size(277, 42);
+            this.INPUT_PASSS_AGAIN.TabIndex = 12;
+            this.INPUT_PASSS_AGAIN.Text = "Input Password Again";
+            this.INPUT_PASSS_AGAIN.Enter += new System.EventHandler(this.INPUT_PASSS_AGAIN_Enter);
+            this.INPUT_PASSS_AGAIN.Leave += new System.EventHandler(this.INPUT_PASSS_AGAIN_Leave);
+            // 
             // gunaTextBox2
             // 
             this.gunaTextBox2.BaseColor = System.Drawing.Color.LightGray;
@@ -237,7 +289,7 @@
             this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaTextBox2.Location = new System.Drawing.Point(68, 271);
+            this.gunaTextBox2.Location = new System.Drawing.Point(68, 327);
             this.gunaTextBox2.Name = "gunaTextBox2";
             this.gunaTextBox2.PasswordChar = '\0';
             this.gunaTextBox2.Radius = 6;
@@ -251,7 +303,8 @@
             // 
             this.gunaLOGINButton2.AnimationHoverSpeed = 0.07F;
             this.gunaLOGINButton2.AnimationSpeed = 0.03F;
-            this.gunaLOGINButton2.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaLOGINButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLOGINButton2.BaseColor = System.Drawing.Color.Transparent;
             this.gunaLOGINButton2.BorderColor = System.Drawing.Color.Black;
             this.gunaLOGINButton2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLOGINButton2.ForeColor = System.Drawing.Color.DimGray;
@@ -259,9 +312,9 @@
             this.gunaLOGINButton2.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaLOGINButton2.Location = new System.Drawing.Point(319, 552);
             this.gunaLOGINButton2.Name = "gunaLOGINButton2";
-            this.gunaLOGINButton2.OnHoverBaseColor = System.Drawing.Color.LightGray;
+            this.gunaLOGINButton2.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.gunaLOGINButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaLOGINButton2.OnHoverForeColor = System.Drawing.Color.DimGray;
+            this.gunaLOGINButton2.OnHoverForeColor = System.Drawing.SystemColors.Highlight;
             this.gunaLOGINButton2.OnHoverImage = null;
             this.gunaLOGINButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaLOGINButton2.Size = new System.Drawing.Size(75, 29);
@@ -273,7 +326,7 @@
             // 
             this.gunaPhonePictureBox.BaseColor = System.Drawing.Color.White;
             this.gunaPhonePictureBox.Image = global::AppDev_System.Properties.Resources.phone_call;
-            this.gunaPhonePictureBox.Location = new System.Drawing.Point(22, 332);
+            this.gunaPhonePictureBox.Location = new System.Drawing.Point(22, 388);
             this.gunaPhonePictureBox.Name = "gunaPhonePictureBox";
             this.gunaPhonePictureBox.Size = new System.Drawing.Size(40, 40);
             this.gunaPhonePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,11 +343,11 @@
             this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaTextBox1.Location = new System.Drawing.Point(68, 332);
+            this.gunaTextBox1.Location = new System.Drawing.Point(68, 388);
             this.gunaTextBox1.Name = "gunaTextBox1";
             this.gunaTextBox1.PasswordChar = '\0';
             this.gunaTextBox1.Radius = 6;
-            this.gunaTextBox1.Size = new System.Drawing.Size(112, 42);
+            this.gunaTextBox1.Size = new System.Drawing.Size(115, 42);
             this.gunaTextBox1.TabIndex = 8;
             this.gunaTextBox1.Text = "Number";
             this.gunaTextBox1.Enter += new System.EventHandler(this.gunaTextBox1_Enter);
@@ -305,7 +358,7 @@
             this.gunaRegisterLabel.AutoSize = true;
             this.gunaRegisterLabel.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaRegisterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaRegisterLabel.Location = new System.Drawing.Point(75, 62);
+            this.gunaRegisterLabel.Location = new System.Drawing.Point(75, 22);
             this.gunaRegisterLabel.Name = "gunaRegisterLabel";
             this.gunaRegisterLabel.Size = new System.Drawing.Size(261, 44);
             this.gunaRegisterLabel.TabIndex = 7;
@@ -329,7 +382,7 @@
             this.gunaRegisterAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaRegisterAdvenceButton2.Location = new System.Drawing.Point(52, 479);
             this.gunaRegisterAdvenceButton2.Name = "gunaRegisterAdvenceButton2";
-            this.gunaRegisterAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.SteelBlue;
+            this.gunaRegisterAdvenceButton2.OnHoverBaseColor = System.Drawing.SystemColors.MenuHighlight;
             this.gunaRegisterAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaRegisterAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaRegisterAdvenceButton2.OnHoverImage = null;
@@ -346,7 +399,7 @@
             // 
             this.gunaPadlockPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPadlockPictureBox2.Image = global::AppDev_System.Properties.Resources.padlock1;
-            this.gunaPadlockPictureBox2.Location = new System.Drawing.Point(22, 207);
+            this.gunaPadlockPictureBox2.Location = new System.Drawing.Point(22, 177);
             this.gunaPadlockPictureBox2.Name = "gunaPadlockPictureBox2";
             this.gunaPadlockPictureBox2.Size = new System.Drawing.Size(40, 40);
             this.gunaPadlockPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -357,7 +410,7 @@
             // 
             this.gunaUserCirclePictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaUserCirclePictureBox2.Image = global::AppDev_System.Properties.Resources.user;
-            this.gunaUserCirclePictureBox2.Location = new System.Drawing.Point(22, 146);
+            this.gunaUserCirclePictureBox2.Location = new System.Drawing.Point(22, 116);
             this.gunaUserCirclePictureBox2.Name = "gunaUserCirclePictureBox2";
             this.gunaUserCirclePictureBox2.Size = new System.Drawing.Size(40, 40);
             this.gunaUserCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,7 +428,7 @@
             this.gunaPasswordTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaPasswordTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaPasswordTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaPasswordTextBox2.Location = new System.Drawing.Point(68, 207);
+            this.gunaPasswordTextBox2.Location = new System.Drawing.Point(68, 177);
             this.gunaPasswordTextBox2.Name = "gunaPasswordTextBox2";
             this.gunaPasswordTextBox2.PasswordChar = '\0';
             this.gunaPasswordTextBox2.Radius = 6;
@@ -395,7 +448,7 @@
             this.gunaUsernameTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaUsernameTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaUsernameTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaUsernameTextBox2.Location = new System.Drawing.Point(68, 146);
+            this.gunaUsernameTextBox2.Location = new System.Drawing.Point(68, 116);
             this.gunaUsernameTextBox2.Name = "gunaUsernameTextBox2";
             this.gunaUsernameTextBox2.PasswordChar = '\0';
             this.gunaUsernameTextBox2.Radius = 6;
@@ -407,28 +460,16 @@
             // 
             // gunaPasswordPictureBox
             // 
+            this.gunaPasswordPictureBox.BackColor = System.Drawing.Color.White;
             this.gunaPasswordPictureBox.BaseColor = System.Drawing.Color.White;
             this.gunaPasswordPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaPasswordPictureBox.Image = global::AppDev_System.Properties.Resources.main;
+            this.gunaPasswordPictureBox.Image = global::AppDev_System.Properties.Resources.forms1_pic2;
             this.gunaPasswordPictureBox.Location = new System.Drawing.Point(0, 0);
             this.gunaPasswordPictureBox.Name = "gunaPasswordPictureBox";
             this.gunaPasswordPictureBox.Size = new System.Drawing.Size(878, 635);
             this.gunaPasswordPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPasswordPictureBox.TabIndex = 0;
             this.gunaPasswordPictureBox.TabStop = false;
-            // 
-            // gunaCheckBox1
-            // 
-            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.Location = new System.Drawing.Point(219, 265);
-            this.gunaCheckBox1.Name = "gunaCheckBox1";
-            this.gunaCheckBox1.Size = new System.Drawing.Size(126, 20);
-            this.gunaCheckBox1.TabIndex = 8;
-            this.gunaCheckBox1.Text = "Show Password";
-            this.gunaCheckBox1.CheckedChanged += new System.EventHandler(this.gunaCheckBox1_CheckedChanged);
             // 
             // Form1
             // 
@@ -440,7 +481,7 @@
             this.Controls.Add(this.gunaPasswordPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.gunaLOGINPanel.ResumeLayout(false);
             this.gunaLOGINPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPadlockPictureBox1)).EndInit();
@@ -478,6 +519,8 @@
         private Guna.UI.WinForms.GunaButton gunaLOGINButton2;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
         private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
+        private Guna.UI.WinForms.GunaTextBox INPUT_PASSS_AGAIN;
+        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox2;
     }
 }
 

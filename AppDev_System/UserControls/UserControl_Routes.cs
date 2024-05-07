@@ -3,28 +3,33 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppDev_System.UserControls
 {
     public partial class UserControl_Routes : UserControl
     {
         public DataTable dt_users;
-
+        private bool gjh = false;
+        Query q = new Query();
 
         MySqlConnection con = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem");
         //private bool addRoute_isOpen = false;
 
         public UserControl_Routes()
         {
+            
             InitializeComponent();
+            numOfRts.Text = q.get_total_numOfRoutes();
             customizeDataGridView();
-
+           // pictureBox1.BringToFront();
         }
         private void customizeDataGridView()
         {
@@ -109,10 +114,23 @@ namespace AppDev_System.UserControls
             gunaDataGridView2.Columns[8].Width = 80;
             gunaDataGridView2.Columns[9].Width = 80;
 
+
+            /*
+            gunaDataGridView2.ScrollBars = ScrollBars.Horizontal;
+
+
+            gunaVScrollBar1.Maximum = gunaDataGridView2.RowCount-1;
+
+            if (gunaDataGridView2.RowCount < 20)
+                gunaVScrollBar1.Hide();
+            else
+                gunaVScrollBar1.Show();*/
+
+
             //gunaDataGridView2.Columns[8].
 
-           // gunaDataGridView2.Columns[8].DefaultCellStyle.ForeColor = Color.White;
-           // gunaDataGridView2.Columns[9].DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(223, 0, 0); ;
+            // gunaDataGridView2.Columns[8].DefaultCellStyle.ForeColor = Color.White;
+            // gunaDataGridView2.Columns[9].DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(223, 0, 0); ;
 
 
             /*
@@ -197,42 +215,145 @@ namespace AppDev_System.UserControls
                 addroutefrm.Show();
             }
         }
+        
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e) //REFRESHES THE DATA DISPLAYED IN THE GRIDVIEW IN ROUTES USERCONTROL
         {
+            //MessageBox.Show(gunaDataGridView2.RowCount.ToString());
+            
+
             string sqlstm = "SELECT * FROM routes";
             MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
             DataSet DS = new System.Data.DataSet();
             SDA.Fill(DS, "routes");
             gunaDataGridView2.DataSource = DS.Tables[0];
+
+            numOfRts.Text = q.get_total_numOfRoutes();
+            /*
+            if (gunaDataGridView2.RowCount < 20)
+                gunaVScrollBar1.Hide();
+            else
+                gunaVScrollBar1.Show();*/
+
+
         }
 
         private void gunaDataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) //FOR EDIT AND DELETE BUTTON COLUMN
         {
-            if(e.ColumnIndex == gunaDataGridView2.Columns["Del_button"].Index) //DELETE
+            try
             {
-
-            }
-            else if (e.ColumnIndex == gunaDataGridView2.Columns["Edit_button"].Index) //EDIT
-            {
-                bool isOpen_Edit = false;
-                foreach (Form f in Application.OpenForms)
+                if (e.ColumnIndex == gunaDataGridView2.Columns["Del_button"].Index) //DELETE
                 {
-                    if (f.Text == "EditRouteForm")
+                    DataGridViewRow row_to_DELETE = gunaDataGridView2.Rows[e.RowIndex];
+                    if (MessageBox.Show(string.Format("Do you want to delete Destination: " + (gunaDataGridView2[3, e.RowIndex].Value).ToString() + " ?", row_to_DELETE.Cells["id"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        isOpen_Edit = true;
-                        f.BringToFront();
-                        break;
+                        using (MySqlConnection con1 = new MySqlConnection("server= localhost ;uid=root;pwd=PeCoMaRuSuiSoAmKro123123;database=managementsystem"))
+                        {
+                            using (MySqlCommand cmd1 = new MySqlCommand("DELETE from routes WHERE id=@id", con1))
+                            {
+                                cmd1.Parameters.AddWithValue("id", row_to_DELETE.Cells["id"].Value);
+                                con1.Open();
+                                cmd1.ExecuteNonQuery();
+                                con1.Close();
+                            }
+                        }
+
                     }
                 }
-                if (isOpen_Edit == false)
+                else if (e.ColumnIndex == gunaDataGridView2.Columns["Edit_button"].Index) //EDIT
                 {
-                    EditRouteForm edit_routefrm = new EditRouteForm();
-                  //  MessageBox.Show((e.RowIndex + 1).ToString());
-                    edit_routefrm.setrowNumber((e.RowIndex));
-                    edit_routefrm.Show();
+                    bool isOpen_Edit = false;
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Text == "EditRouteForm")
+                        {
+                            isOpen_Edit = true;
+                            f.BringToFront();
+                            break;
+                        }
+                    }
+                    if (isOpen_Edit == false)
+                    {
+                        EditRouteForm edit_routefrm = new EditRouteForm();
+                        //  MessageBox.Show((e.RowIndex + 1).ToString());
+                        DataGridViewRow row_to_edit = gunaDataGridView2.Rows[e.RowIndex];
+
+
+                        // MessageBox.Show(row_to_edit.Cells[3].Value.ToString() + ", " + row_to_edit.Cells[4].Value.ToString() + ", " + row_to_edit.Cells[5].Value.ToString() + ", " + row_to_edit.Cells[6].Value.ToString());
+
+                        string idye = row_to_edit.Cells[2].Value.ToString(); //MAO NI ID
+                        string value_distance = row_to_edit.Cells[4].Value.ToString(); //distance
+                        string value_regFare = row_to_edit.Cells[5].Value.ToString(); //reg_new
+                        string value_specFre = row_to_edit.Cells[6].Value.ToString(); //spec_new
+
+
+                        //MessageBox.Show(value_regFare);
+
+                        //   Routes rts_to_ed = new Routes(row_to_edit.Cells[3].Value.ToString(), float.Parse(value_distance, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_regFare, CultureInfo.InvariantCulture.NumberFormat), float.Parse(value_specFre, CultureInfo.InvariantCulture.NumberFormat));
+                        //edit_routefrm.edit_set_row(row_to_edit);
+                        edit_routefrm.routeID = Int32.Parse(idye);
+                        edit_routefrm.setrowNumber((e.RowIndex));
+                        //   edit_routefrm.edit_set_routes(rts_to_ed);
+                        edit_routefrm.Show();
+                    }
+                    //load_the_gridView();
+                }
+            }
+            catch
+            {
+                int x55 = 0;
+            }
+
+        }
+
+        private void gunaLineTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (gunaLineTextBox1.Text == "Input Brgy. Name")
+            {
+                gunaLineTextBox1.Text = "";
+                gunaLineTextBox1.ForeColor = Color.Black;
+
+                
+            }
+        }
+
+        private void gunaLineTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (gunaLineTextBox1.Text == "")
+            {
+                gunaLineTextBox1.Text = "Input Brgy. Name";
+                gunaLineTextBox1.ForeColor = Color.Silver;
+
+                if(gjh == true)
+                {
+                    string sqlstm = "SELECT * FROM routes";
+                    MySqlDataAdapter SDA = new MySqlDataAdapter(sqlstm, con);
+                    DataSet DS = new System.Data.DataSet();
+                    SDA.Fill(DS, "routes");
+                    gunaDataGridView2.DataSource = DS.Tables[0];
+
+                    gjh = false;
                 }
             }
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (gunaLineTextBox1.Text != "Input Brgy. Name")
+            {
+                MySqlDataAdapter da;
+                DataTable dt;
+                con.Open();
+                da = new MySqlDataAdapter("SELECT * FROM routes WHERE barangay_name = '" + gunaLineTextBox1.Text + "'", con);
+                dt = new DataTable();
+                da.Fill(dt);
+                gunaDataGridView2.DataSource = dt;
+                con.Close();
+
+                gjh = true;
+            }
+            
+        }
+
     }
 }

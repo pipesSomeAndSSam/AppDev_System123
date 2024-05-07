@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AppDev_System.Classes.Booking">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAgAACACAABSAAAEA=</HashCode>
+      <FileName>Classes\Booking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppDev_System.Multicab">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAJAEAUAAAQEEAAgBBAgAAAAABAADAAAWAhIAAAA=</HashCode>
+      <FileName>Classes\Multicab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppDev_System.Query">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AMACCAhAAEAAGQQEAAABAQMECAAIADMKAAAUAwMEkAA=</HashCode>
+      <FileName>Classes\Query.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppDev_System.Routes">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEAAAAAAAAACAAAAAEAAEAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Routes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppDev_System.User">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAgBAQAAAEAkAAAAAAAAgAAAAAAAAAABAgAAAAA=</HashCode>
+      <FileName>Classes\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

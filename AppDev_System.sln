@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDev_System", "AppDev_System\AppDev_System.csproj", "{888A4393-0BCC-426A-BE7D-B2FEECD9A7FE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Cab-Man-Installer", "Cab-Man-Installer\Cab-Man-Installer.vdproj", "{1BF8288C-8BD8-4C1E-8B7F-51DD039F1736}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{888A4393-0BCC-426A-BE7D-B2FEECD9A7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{888A4393-0BCC-426A-BE7D-B2FEECD9A7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{888A4393-0BCC-426A-BE7D-B2FEECD9A7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF8288C-8BD8-4C1E-8B7F-51DD039F1736}.Debug|Any CPU.ActiveCfg = Debug
+		{1BF8288C-8BD8-4C1E-8B7F-51DD039F1736}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
